@@ -1,57 +1,68 @@
 [submodule "oh-my-zsh"]
 	path = submodules/oh-my-zsh
 	url = git@github.com:/robbyrussell/oh-my-zsh.git
+
 [submodule "submodules/vim/ctrlp.vim"]
 	path = submodules/vim/ctrlp.vim
 	url = git@github.com:ctrlpvim/ctrlp.vim
+
 [submodule "submodules/vim/vim-surround"]
 	path = submodules/vim/vim-surround
 	url = git@github.com:tpope/vim-surround
+
 [submodule "submodules/vim/vim-fugitive"]
 	path = submodules/vim/vim-fugitive
 	url = git@github.com:tpope/vim-fugitive
+
 [submodule "submodules/vim/vim-colorschemes"]
 	path = submodules/vim/vim-colorschemes
 	url = git@github.com:flazz/vim-colorschemes
+
 [submodule "submodules/vim/vim-commentary"]
 	path = submodules/vim/vim-commentary
 	url = git@github.com:tpope/vim-commentary
+
 [submodule "submodules/vim/vim-matlab"]
 	path = submodules/vim/vim-matlab
 	url = git@github.com:lazywei/vim-matlab
+
 [submodule "submodules/vim/vim-matlab-daeyun"]
 	path = submodules/vim/vim-matlab-daeyun
 	url = git@github.com:daeyun/vim-matlab
-[submodule "submodules/deoplete-jedi"]
-	path = submodules/nvim/deoplete-jedi
-	url = git@github.com:zchee/deoplete-jedi
+
 [submodule "submodules/deoplete.nvim"]
 	path = submodules/nvim/deoplete.nvim
 	url = git@github.com:Shougo/deoplete.nvim
+
 [submodule "submodules/nvim/neocomplete"]
 	path = submodules/nvim/neocomplete
 	url = git@github.com:Shougo/neocomplete
+
 [submodule "submodules/nvim/neosnippet"]
 	path = submodules/nvim/neosnippet
 	url = git@github.com:Shougo/neosnippet
+
 [submodule "submodules/nvim/neosnippet-snippets"]
 	path = submodules/nvim/neosnippet-snippets
 	url = git@github.com:Shougo/neosnippet-snippets
+
 [submodule "submodules/nvim/vim-airline"]
 	path = submodules/nvim/vim-airline
-	url = git@github.com:vim-airline/vim-airline
+	url = https://github.com/vim-airline/vim-airline
+
 [submodule "submodules/vim/lightline.vim"]
 	path = submodules/vim/lightline.vim
 	url = https://github.com/itchyny/lightline.vim
+
 [submodule "submodules/nvim/vim-airline-themes"]
 	path = submodules/nvim/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes
+
 [submodule "submodules/nvim/neocomplcache"]
 	path = submodules/nvim/neocomplcache
 	url = git@github.com:Shougo/neocomplcache
-[submodule "submodules/oh-my-zsh"]
-	path = submodules/oh-my-zsh
-	url = git@github.com:/robbyrussell/oh-my-zsh.git
+
 [submodule "submodules/nvim/deoplete-jedi"]
 	path = submodules/nvim/deoplete-jedi
 	url = git@github.com:zchee/deoplete-jedi
+
