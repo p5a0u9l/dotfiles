@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+# configure work session
+tmux new-session -s home
+sleep 1
+tmux new-window -n dots -c ~/dotfiles nvim ~/dotfiles/symlinkme/zshrc
+tmux new-window -n cmus cmus 2>/dev/null
+tmux new-window -n htop htop
+tmux new-window -n mans man tmux
+sleep 1
