@@ -25,9 +25,6 @@
 [submodule "submodules/deoplete-jedi"]
 	path = submodules/nvim/deoplete-jedi
 	url = git@github.com:zchee/deoplete-jedi
-[submodule "submodules/neocomplcache.nvim"]
-	path = submodules/nvim/neocomplcache.nvim
-	url = git@github.com:Shougo/neocomplcache.nvim
 [submodule "submodules/deoplete.nvim"]
 	path = submodules/nvim/deoplete.nvim
 	url = git@github.com:Shougo/deoplete.nvim
@@ -51,4 +48,10 @@
 	url = https://github.com/vim-airline/vim-airline-themes
 [submodule "submodules/nvim/neocomplcache"]
 	path = submodules/nvim/neocomplcache
-	url = https://github.com/Shougo/neocomplcache
+	url = git@github.com:Shougo/neocomplcache
+[submodule "submodules/oh-my-zsh"]
+	path = submodules/oh-my-zsh
+	url = git@github.com:/robbyrussell/oh-my-zsh.git
+[submodule "submodules/nvim/deoplete-jedi"]
+	path = submodules/nvim/deoplete-jedi
+	url = git@github.com:zchee/deoplete-jedi
