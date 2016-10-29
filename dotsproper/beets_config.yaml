@@ -1,0 +1,12 @@
+directory: ~/music
+
+library: ~/.config/beets/musiclibrary.blb
+
+import:
+    move: yes
+
+pluginpath: [/Users/paul/anaconda2/lib/python2.7/site-packages/beets/]
+plugins: chroma edit mbsync cmus
+
+chroma:
+    auto: yes

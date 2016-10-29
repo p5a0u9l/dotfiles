@@ -1,0 +1,10 @@
+## A gist from py docs to add autocompletion functionality
+# Store the file in ~/.pystartup, and set an environment variable to point
+# to it:  "export PYTHONSTARTUP=~/.pystartup" in bash.
+
+## my global imports
+from glob import glob
+import time
+import sys
+import os
+

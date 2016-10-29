@@ -1,0 +1,26 @@
+Host github.com
+    IdentityFile ~/.ssh/github.com/p5a0u9l-id_rsa
+
+Host ganymede.jupiter.lan
+    IdentitiesOnly yes
+    IdentityFile ~/.ssh/jupiter.lan/ganymede-id_rsa
+
+Host callisto
+    IdentitiesOnly yes
+    IdentityFile ~/.ssh/jupiter.lan/callisto-id_rsa
+
+Host io.jupiter.lan
+    IdentitiesOnly yes
+    IdentityFile ~/.ssh/jupiter.lan/io-id_rsa
+
+Host amalthea.jupiter.lan
+    IdentitiesOnly yes
+    IdentityFile ~/.ssh/jupiter.lan/amalthea-id_rsa
+
+Host thebes
+    IdentitiesOnly yes
+    IdentityFile ~/.ssh/jupiter.lan/thebes-id_rsa
+
+Host europa
+    IdentitiesOnly yes
+    IdentityFile ~/.ssh/jupiter.lan/europa-id_rsa
