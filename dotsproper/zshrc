@@ -131,12 +131,14 @@ fi
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
 
+
 # --------
 ## Aliases
 # --------
 alias h="history"
 alias lgrep="ls|grep $1"
 alias hgrep="history|grep -n2 $1"
+alias and="&&"
 
 # ----------
 ## Functions

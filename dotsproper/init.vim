@@ -78,7 +78,7 @@ set so=15
 set showcmd                       " show the command
 
 " Folding settings
-set foldcolumn=2                  " room for fold markers
+set foldcolumn=1
 
 " Ignore compiled files
 set wildignore=*.o,*~,*.pyc
@@ -291,15 +291,15 @@ let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
 let Grep_Skip_Dirs = 'RCS CVS SCCS .svn generated'
 set grepprg=/bin/grep\ -nH
 
-" let g:airline_left_sep = '▶'
-" let g:airline_right_sep = '◀'
-" let g:airline_symbols.crypt = '🔒'
-" let g:airline_symbols.linenr = '¶'
-" let g:airline_symbols.maxlinenr = '☰'
-" let g:airline_symbols.branch = '⎇'
-" let g:airline_symbols.paste = 'ρ'
-" let g:airline_symbols.spell = 'Ꞩ'
-" let g:airline_symbols.notexists = '∄'
-" let g:airline_symbols.whitespace = 'Ξ'
-
-
+" let g:airline_powerline_fonts=1
+let g:airline_symbols = {}
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.crypt = '🔒'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.maxlinenr = '☰'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.spell = 'Ꞩ'
+let g:airline_symbols.notexists = '∄'
+let g:airline_symbols.whitespace = 'Ξ'

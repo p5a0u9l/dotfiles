@@ -12,6 +12,7 @@ subsnv = join(subs, "nvim")
 
 
 dotpaths = {
+        join(dots, "ftplugin", "cpp.vim"): join(xdg, "nvim", "ftplugin", "cpp.vim"),
         join(dots, "zshrc"): join(home, ".zshrc"),
         join(dots, "pyrc"): join(home, ".pyrc"),
         join(dots, "gitconfig"): join(home, ".gitconfig"),
@@ -48,7 +49,8 @@ subpaths = {
         join(subsnv, "neosnippet"): join(xdg, "nvim", "bundle", "neosnippet"),
         join(subsnv, "neosnippet-snippets"): join(xdg, "nvim", "bundle", "neosnippet-snippets"),
         join(subsnv, "vim-airline"): join(xdg, "nvim", "bundle", "vim-airline"),
-        join(subsnv, "vim-airline-themes"): join(xdg, "nvim", "bundle", "vim-airline"),
+        join(subsnv, "dwm.vim"): join(xdg, "nvim", "conditional", "dwm.vim"),
+        join(subsnv, "vim-airline-themes"): join(xdg, "nvim", "bundle", "vim-airline-themes"),
         join(subsv, "vim-lightline"): join(home, ".vim", "bundle", "vim-lightline")
             }
 
