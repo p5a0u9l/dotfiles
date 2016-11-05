@@ -66,3 +66,6 @@
 	path = submodules/nvim/deoplete-jedi
 	url = git@github.com:zchee/deoplete-jedi
 
+[submodule "submodules/dracula-theme"]
+	path = submodules/dracula-theme
+	url = git@github.com:dracula/vim.git

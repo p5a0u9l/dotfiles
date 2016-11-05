@@ -38,6 +38,8 @@ subpaths = {
         join(subsv, "vim-colorschemes"): join(xdg, "nvim", "bundle", "vim-colorschemes"),
         join(subsv, "vim-commentary"): join(home, ".vim", "bundle", "vim-commentary"),
         join(subsv, "vim-commentary"): join(xdg, "nvim", "bundle", "vim-commentary"),
+        join(subs, "dracula-theme"): join(xdg, "nvim", "bundle", "dracula-theme"),
+        join(subs, "dracula-theme"): join(home, ".vim", "bundle", "dracula-theme"),
         join(subsv, "vim-matlab"): join(home, ".vim", "bundle", "vim-matlab"),
         join(subsv, "vim-matlab"): join(xdg, "nvim", "bundle", "vim-matlab"),
         join(subsv, "vim-matlab-daeyun"): join(home, ".vim", "bundle", "vim-matlab-daeyun"),
