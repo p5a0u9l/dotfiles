@@ -3,70 +3,72 @@ import os
 from os.path import join
 
 home = os.path.expanduser('~')
+homevb = join(home, ".vim", "bundle")
 xdg = join(home, ".config")
+xdgnb = join(xdg, "nvim", "bundle")
 repo_dir = join(home, "dotfiles")
 dots = join(repo_dir, "dotsproper")
 subs = join(repo_dir, "submodules")
 subsv = join(subs, "vim")
 subsnv = join(subs, "nvim")
 
-
+#       sym link                                    source file
 dotpaths = {
-        join(dots, "ftplugin", "cpp.vim"): join(xdg, "nvim", "ftplugin", "cpp.vim"),
-        join(dots, "zshrc"): join(home, ".zshrc"),
-        join(dots, "pyrc"): join(home, ".pyrc"),
-        join(dots, "gitconfig"): join(home, ".gitconfig"),
-        join(dots, "tmux.conf"): join(home, ".tmux.conf"),
-        join(dots, "vimrc"): join(home, ".vimrc"),
-        join(dots, "ssh_config"): join(home, ".ssh/config"),
-        join(dots, "gpg-agent.conf"): join(home, ".gnupg", "gpg-agent.conf"),
-        join(dots, "gpg.conf"): join(home, ".gnupg", "gpg.conf"),
-        join(dots, "init.vim"): join(xdg, "nvim", "init.vim"),
-        join(dots, "bpython_config"): join(xdg, "bpython", "config"),
-        join(dots, "cmus_autosave"): join(xdg, "cmus", "autosave")
+        join(xdg, "nvim", "ftplugin", "cpp.vim"):   join(dots, "ftplugin", "cpp.vim"),
+        join(home, ".zshrc"):                       join(dots, "zshrc"),
+        join(home, ".pyrc"):                        join(dots, "pyrc"),
+        join(home, ".gitconfig"):                   join(dots, "gitconfig"),
+        join(home, ".tmux.conf"):                   join(dots, "tmux.conf"),
+        join(home, ".vimrc"):                       join(dots, "vimrc"),
+        join(home, ".ssh/config"):                  join(dots, "ssh_config"),
+        join(home, ".gnupg", "gpg-agent.conf"):     join(dots, "gpg-agent.conf"),
+        join(home, ".gnupg", "gpg.conf"):           join(dots, "gpg.conf"),
+        join(xdg, "nvim", "init.vim"):              join(dots, "init.vim"),
+        join(xdg, "bpython", "config"):             join(dots, "bpython_config"),
+        join(xdg, "cmus", "autosave"):              join(dots, "cmus_autosave")
         }
 
+#       sym link                            source file
 subpaths = {
-        join(subs, "oh-my-zsh"): join(home, ".oh-my-zsh"),
-        join(subsv, "ctrlp.vim"): join(home, ".vim", "bundle", "ctrlp.vim"),
-        join(subsv, "ctrlp.vim"): join(xdg, "nvim", "bundle", "ctrlp.vim"),
-        join(subsv, "vim-surround"): join(home, ".vim", "bundle", "vim-surround"),
-        join(subsv, "vim-surround"): join(xdg, "nvim", "bundle", "vim-surround"),
-        join(subsv, "vim-fugitive"): join(home, ".vim", "bundle", "vim-fugitive"),
-        join(subsv, "vim-fugitive"): join(xdg, "nvim", "bundle", "vim-fugitive"),
-        join(subsv, "vim-colorschemes"): join(home, ".vim", "bundle", "vim-colorschemes"),
-        join(subsv, "vim-colorschemes"): join(xdg, "nvim", "bundle", "vim-colorschemes"),
-        join(subsv, "vim-commentary"): join(home, ".vim", "bundle", "vim-commentary"),
-        join(subsv, "vim-commentary"): join(xdg, "nvim", "bundle", "vim-commentary"),
-        join(subs, "dracula-theme"): join(xdg, "nvim", "bundle", "dracula-theme"),
-        join(subs, "dracula-theme"): join(home, ".vim", "bundle", "dracula-theme"),
-        join(subsv, "vim-matlab"): join(home, ".vim", "bundle", "vim-matlab"),
-        join(subsv, "vim-matlab"): join(xdg, "nvim", "bundle", "vim-matlab"),
-        join(subsv, "vim-matlab-daeyun"): join(home, ".vim", "bundle", "vim-matlab-daeyun"),
-        join(subsv, "vim-matlab-daeyun"): join(xdg, "nvim", "bundle", "vim-matlab-daeyun"),
-        join(subsnv, "deoplete-jedi"): join(xdg, "nvim", "bundle", "deoplete-jedi"),
-        join(subsnv, "deoplete.nvim"): join(xdg, "nvim", "bundle", "deoplete.nvim"),
-        join(subsnv, "neocomplete"): join(xdg, "nvim", "bundle", "neocomplete"),
-        join(subsnv, "neocomplcache"): join(xdg, "nvim", "bundle", "neocomplcache"),
-        join(subsnv, "neosnippet"): join(xdg, "nvim", "bundle", "neosnippet"),
-        join(subsnv, "neosnippet-snippets"): join(xdg, "nvim", "bundle", "neosnippet-snippets"),
-        join(subsnv, "vim-airline"): join(xdg, "nvim", "bundle", "vim-airline"),
-        join(subsnv, "dwm.vim"): join(xdg, "nvim", "conditional", "dwm.vim"),
-        join(subsnv, "vim-airline-themes"): join(xdg, "nvim", "bundle", "vim-airline-themes"),
-        join(subsv, "vim-lightline"): join(home, ".vim", "bundle", "vim-lightline")
+        join(home, ".oh-my-zsh"):           join(subs, "oh-my-zsh"),
+        join(homevb, "ctrlp.vim"):          join(subsv, "ctrlp.vim"),
+        join(homevb, "vim-surround"):       join(subsv, "vim-surround"),
+        join(homevb, "vim-fugitive"):       join(subsv, "vim-fugitive"),
+        join(homevb, "vim-colorschemes"):   join(subsv, "vim-colorschemes"),
+        join(homevb, "vim-commentary"):     join(subsv, "vim-commentary"),
+        join(homevb, "dracula-theme"):      join(subs, "dracula-theme"),
+        join(homevb, "vim-matlab"):         join(subsv, "vim-matlab"),
+        join(homevb, "vim-matlab-daeyun"):  join(subsv, "vim-matlab-daeyun"),
+        join(homevb, "vim-lightline"):      join(subsv, "vim-lightline"),
+        join(xdgnb, "vim-surround"):        join(subsv, "vim-surround"),
+        join(xdgnb, "ctrlp.vim"):           join(subsv, "ctrlp.vim"),
+        join(xdgnb, "vim-fugitive"):        join(subsv, "vim-fugitive"),
+        join(xdgnb, "vim-colorschemes"):    join(subsv, "vim-colorschemes"),
+        join(xdgnb, "vim-commentary"):      join(subsv, "vim-commentary"),
+        join(xdgnb, "dracula-theme"):       join(subs, "dracula-theme"),
+        join(xdgnb, "vim-matlab"):          join(subsv, "vim-matlab"),
+        join(xdgnb, "vim-matlab-daeyun"):   join(subsv, "vim-matlab-daeyun"),
+        join(xdgnb, "deoplete-jedi"):       join(subsnv, "deoplete-jedi"),
+        join(xdgnb, "deoplete.nvim"):       join(subsnv, "deoplete.nvim"),
+        join(xdgnb, "neocomplete"):         join(subsnv, "neocomplete"),
+        join(xdgnb, "neocomplcache"):       join(subsnv, "neocomplcache"),
+        join(xdgnb, "neosnippet"):          join(subsnv, "neosnippet"),
+        join(xdgnb, "neosnippet-snippets"): join(subsnv, "neosnippet-snippets"),
+        join(xdgnb, "vim-airline"):         join(subsnv, "vim-airline"),
+        join(xdgnb, "vim-airline-themes"):  join(subsnv, "vim-airline-themes"),
             }
 
 
 def symlink(lu):
-    for s, l in lu.items():
+    for slink, source in lu.items():
         try:
-            if os.path.exists(l) or os.path.islink(l):
-                os.remove(l)
-            os.symlink(s, l)
-            print('Linked original %s to shadow %s' % (s, l))
+            if os.path.exists(slink) or os.path.islink(slink):
+                os.remove(slink)
+            os.symlink(source, slink)
+            print('original: %s\nshadow:   %s\n\n' % (source, slink))
 
         except:
-            print('%s failed for some reason' % (l))
+            print('%s failed for some reason' % (slink))
 
 def main():
     for lu in [dotpaths, subpaths]:
