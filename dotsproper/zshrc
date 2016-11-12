@@ -9,6 +9,7 @@ DISABLE_AUTO_UPDATE=true
 # ------
 # "powerline" "random" "zhann" "nebirhos" "awesomepanda" "agnoster" "jispwoso"
 ZSH_THEME="gnzh"
+ZSH_THEME="dracula"
 
 # Uncomment the following line to use case-sensitive completion.
 CASE_SENSITIVE="true"
@@ -63,6 +64,13 @@ if which shairport-sync > /dev/null; then
         fi
     fi
     unset METATXT METACMD META CONF CMD
+fi
+
+# ----
+# PASS
+# ----
+if which pass > /dev/null; then
+    # source /usr/local/etc/bash_completion.d/password-store
 fi
 
 # ----

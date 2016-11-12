@@ -69,3 +69,9 @@
 [submodule "submodules/dracula-theme"]
 	path = submodules/dracula-theme
 	url = git@github.com:dracula/vim.git
+[submodule "submodules/zsh"]
+	path = submodules/zsh
+	url = https://github.com/dracula/zsh.git
+[submodule "submodules/dracula.zsh"]
+	path = submodules/dracula.zsh
+	url = https://github.com/dracula/zsh.git

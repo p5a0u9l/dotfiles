@@ -31,6 +31,7 @@ dotpaths = {
 #       sym link                            source file
 subpaths = {
         join(home, ".oh-my-zsh"):           join(subs, "oh-my-zsh"),
+        join(home, ".oh-my-zsh"):           join(subs, "oh-my-zsh"),
         join(homevb, "ctrlp.vim"):          join(subsv, "ctrlp.vim"),
         join(homevb, "vim-surround"):       join(subsv, "vim-surround"),
         join(homevb, "vim-fugitive"):       join(subsv, "vim-fugitive"),

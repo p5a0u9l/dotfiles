@@ -39,8 +39,12 @@ noremap <leader>gst :Gstatus<cr>
 " indent it after pasting.
 noremap gV `[v`]
 
-" easier to type
+" move lines
+noremap - ddp
+noremap _ ddkP
+
 noremap ciq ci"
+" easier to type
 noremap diq di"
 
 " Stay in visual mode when indenting. You will never have to run gv after
