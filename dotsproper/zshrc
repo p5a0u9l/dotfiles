@@ -31,7 +31,7 @@ setopt EXTENDED_HISTORY
 # -------------
 # OH-MY-PLUGINS
 # -------------
-plugins=(git colored-man-pages tmux)
+plugins=(git colored-man-pages tmux zsh-autosuggestions)
 
 # -------
 # End OMZ

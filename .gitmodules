@@ -1,5 +1,17 @@
-[submodule "oh-my-zsh"]
-	path = submodules/oh-my-zsh
+[submodule "submodules/dracula-theme"]
+	path = submodules/dracula-theme
+	url = git@github.com:dracula/vim.git
+
+; [submodule "submodules/zsh/dracula.zsh"]
+; 	path = submodules/zsh/dracula.zsh
+; 	url = https://github.com/dracula/zsh.git
+
+[submodule "submodules/zsh/zsh-autosuggestions"]
+	path = submodules/zsh/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
+
+[submodule "submodules/zsh/oh-my-zsh"]
+	path = submodules/zsh/oh-my-zsh
 	url = git@github.com:/robbyrussell/oh-my-zsh.git
 
 [submodule "submodules/vim/ctrlp.vim"]
@@ -66,12 +78,3 @@
 	path = submodules/nvim/deoplete-jedi
 	url = git@github.com:zchee/deoplete-jedi
 
-[submodule "submodules/dracula-theme"]
-	path = submodules/dracula-theme
-	url = git@github.com:dracula/vim.git
-[submodule "submodules/zsh"]
-	path = submodules/zsh
-	url = https://github.com/dracula/zsh.git
-[submodule "submodules/dracula.zsh"]
-	path = submodules/dracula.zsh
-	url = https://github.com/dracula/zsh.git
