@@ -43,6 +43,7 @@ source $ZSH/oh-my-zsh.sh
 source $DOTS/submodules/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $DOTS/submodules/zsh/dracula.zsh/dracula.zsh-theme
 
+
 # ---------------
 # PATH APPENDAGES
 # ---------------
@@ -157,6 +158,9 @@ alias hgrep="history|grep -n2 $1"
 TRAPWINCH() {
     zle && zle .reset-prompt && zle -R
 }
+
+# PER README, must be sourced at end of zshrc
+source $DOTS/submodules/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # --------------
 # Welcome Banner
