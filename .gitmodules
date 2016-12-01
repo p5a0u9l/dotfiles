@@ -2,9 +2,9 @@
 	path = submodules/dracula-theme
 	url = git@github.com:dracula/vim.git
 
-; [submodule "submodules/zsh/dracula.zsh"]
-; 	path = submodules/zsh/dracula.zsh
-; 	url = https://github.com/dracula/zsh.git
+[submodule "submodules/zsh/dracula.zsh"]
+	path = submodules/zsh/dracula.zsh
+	url = https://github.com/dracula/zsh.git
 
 [submodule "submodules/zsh/zsh-autosuggestions"]
 	path = submodules/zsh/zsh-autosuggestions
