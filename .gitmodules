@@ -78,3 +78,6 @@
 	path = submodules/nvim/deoplete-jedi
 	url = git@github.com:zchee/deoplete-jedi
 
+[submodule "submodules/zsh/zsh-syntax-highlighting"]
+	path = submodules/zsh/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting
