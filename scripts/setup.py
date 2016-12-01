@@ -62,8 +62,17 @@ subpaths = {
 def symlink(lu):
     for slink, source in lu.items():
         try:
-            if os.path.exists(slink) or os.path.islink(slink):
-                os.remove(slink)
+
+            if os.path.exists(slink) or os.path.islink(slink): os.remove(slink)
+
+            # ensure the parent dir(s) exists
+            parent = [os.path.split(slink)[0]]
+            while not os.path.exists(parent[-1]): parent.append(path.split(parent)[0])
+            parent.reverse()
+
+            while not os.path.exists(parent[-1]):
+                os.mkdir(parent.pop())
+
             os.symlink(source, slink)
             print('original: %s\nshadow:   %s\n\n' % (source, slink))
 
