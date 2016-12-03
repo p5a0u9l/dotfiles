@@ -20,6 +20,7 @@ dotpaths = {
         join(home, ".gitconfig"):                   join(dots, "gitconfig"),
         join(home, ".tmux.conf"):                   join(dots, "tmux.conf"),
         join(home, ".vimrc"):                       join(dots, "vimrc"),
+        join(home, ".pandoc/default.latex"):        join(dots, "pandoc_default.latex"),
         join(home, ".ssh/config"):                  join(dots, "ssh_config"),
         join(home, ".gnupg", "gpg-agent.conf"):     join(dots, "gpg-agent.conf"),
         join(home, ".gnupg", "gpg.conf"):           join(dots, "gpg.conf"),
