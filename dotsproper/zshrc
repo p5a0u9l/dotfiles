@@ -7,11 +7,10 @@ export MACBOOKHOST="amalthea"
 if [ "$HOST" = "$MACBOOKHOST" ]; then
     export CXX=/usr/local/gcc-6.2.0/bin/g++-6.2.0
     export CC=/usr/local/gcc-6.2.0/bin/gcc-6.2.0
-    export HOMEBREW_GITHUB_API_TOKEN="2109514253fbe24ee72c25c1162f5d57170b66c7"
     ZSH_THEME="gnzh"
 else
     # "powerline" "random" "zhann" "nebirhos" "awesomepanda" "agnoster" "jispwoso"
-    ZSH_THEME="agnoster"
+    ZSH_THEME="jispwoso"
 fi
 
 # ENV
@@ -121,6 +120,7 @@ TRAPWINCH() {
 source $DOTS/submodules/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Welcome Banner
+knamestr=`uname`
 echo "--------------------------------------------------------------------------------------"
 echo "`date`"
 echo ""
