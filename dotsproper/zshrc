@@ -1,24 +1,22 @@
-# OH-MY-ZSH
-export ZSH=$HOME/.oh-my-zsh
-DISABLE_AUTO_UPDATE=true
-
 # PLATFORM SPECIFIC
 export MACBOOKHOST="amalthea"
+export DOTS=$HOME/dotfiles
 if [ "$HOST" = "$MACBOOKHOST" ]; then
     export CXX=/usr/local/gcc-6.2.0/bin/g++-6.2.0
     export CC=/usr/local/gcc-6.2.0/bin/gcc-6.2.0
-    ZSH_THEME="gnzh"
+    ZSH_THEME="zhann"
 else
     # "powerline" "random" "zhann" "nebirhos" "awesomepanda" "agnoster" "jispwoso"
-    ZSH_THEME="jispwoso"
+    ZSH_THEME="agnoster"
 fi
 
 # ENV
-export DOTS=$HOME/dotfiles
+DISABLE_AUTO_UPDATE=true
 CASE_SENSITIVE="true"
 export LANG=en_US.UTF-8
 fpath=(/usr/local/share/zsh-completions $fpath)
 export PAGER=less
+export ZSH=$HOME/.oh-my-zsh
 
 # CMD HISTORY
 HIST_STAMPS="mm/dd/yyyy"
@@ -30,9 +28,8 @@ setopt EXTENDED_HISTORY
 plugins=(git colored-man-pages tmux)
 
 # SOURCE
-source $ZSH/oh-my-zsh.sh
 source $DOTS/submodules/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $DOTS/submodules/zsh/dracula.zsh/dracula.zsh-theme
+source $ZSH/oh-my-zsh.sh
 
 # PATH APPENDAGES
 export PATH=$HOME/anaconda3/bin:$PATH
@@ -120,7 +117,7 @@ TRAPWINCH() {
 source $DOTS/submodules/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Welcome Banner
-knamestr=`uname`
+unamestr=`uname`
 echo "--------------------------------------------------------------------------------------"
 echo "`date`"
 echo ""
