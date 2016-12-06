@@ -81,3 +81,9 @@
 [submodule "submodules/zsh/zsh-syntax-highlighting"]
 	path = submodules/zsh/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting
+[submodule "submodules/zsh/conda-completion"]
+	path = submodules/zsh/conda-completion
+	url = https://github.com/esc/conda-zsh-completion/
+[submodule "submodules/vim/pathogen"]
+	path = submodules/vim/pathogen
+	url = https://github.com/tpope/vim-pathogen

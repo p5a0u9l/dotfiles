@@ -32,6 +32,7 @@ dotpaths = {
 #       sym link                            source file
 subpaths = {
         join(home, ".oh-my-zsh"):           join(subs, "zsh/oh-my-zsh"),
+        join(home, ".vim", "autoload"):     join(subsv, "pathogen/autoload"),
         join(homevb, "ctrlp.vim"):          join(subsv, "ctrlp.vim"),
         join(homevb, "vim-surround"):       join(subsv, "vim-surround"),
         join(homevb, "vim-fugitive"):       join(subsv, "vim-fugitive"),
@@ -41,6 +42,7 @@ subpaths = {
         join(homevb, "vim-matlab"):         join(subsv, "vim-matlab"),
         join(homevb, "vim-matlab-daeyun"):  join(subsv, "vim-matlab-daeyun"),
         join(homevb, "vim-lightline"):      join(subsv, "vim-lightline"),
+        join(xdg, "nvim", "autoload"):      join(subsv, "pathogen/autoload"),
         join(xdgnb, "vim-surround"):        join(subsv, "vim-surround"),
         join(xdgnb, "ctrlp.vim"):           join(subsv, "ctrlp.vim"),
         join(xdgnb, "vim-fugitive"):        join(subsv, "vim-fugitive"),
