@@ -27,12 +27,12 @@ echo "${TAG_INDEX}" > "$CURTAG_FILE"
 if cmus-remote -Q > /dev/null 2> /dev/null; then
     CMUS_STATUS=`cmus-remote -Q`
     STATUS=$(echo "$CMUS_STATUS" | grep status | head -n 1 | cut -d' ' -f2-)
-    if [ "$STATUS" == "playing" ]; then
-        WHOSE="CMUS"
+    if [ "$STATUS" = "playing" ]; then
+        WHOSE=1
     fi
 fi
 
-if [ "$WHOSE" == "CMUS" ]; then
+if [ "$WHOSE" -eq 1 ]; then
     CMUS_STATUS=`cmus-remote -Q`
     STATUS=$(echo "$CMUS_STATUS" | grep status | head -n 1 | cut -d' ' -f2-)
     ARTIST=$(echo "$CMUS_STATUS" | grep 'tag artist' | head -n 1 | cut -d' ' -f3-)

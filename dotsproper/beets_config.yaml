@@ -1,12 +1,13 @@
-directory: ~/music
+directory: ~/music/beets
 
 library: ~/.config/beets/musiclibrary.blb
 
 import:
-    move: yes
+    move: no
 
 pluginpath: [/Users/paul/anaconda2/lib/python2.7/site-packages/beets/]
-plugins: chroma edit mbsync cmus
 
-chroma:
-    auto: yes
+plugins: edit
+
+edit:
+    itemfields: track title album artist composer albumartist

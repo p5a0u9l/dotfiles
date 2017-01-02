@@ -12,7 +12,7 @@ Host callisto
     IdentitiesOnly yes
     IdentityFile ~/.ssh/jupiter.lan/callisto-id_rsa
 
-Host io.jupiter.lan
+Host io
     IdentitiesOnly yes
     IdentityFile ~/.ssh/jupiter.lan/io-id_rsa
 
@@ -23,6 +23,10 @@ Host amalthea.jupiter.lan
 Host thebes
     IdentitiesOnly yes
     IdentityFile ~/.ssh/jupiter.lan/thebes-id_rsa
+
+Host 192.168.1.104
+    IdentitiesOnly yes
+    IdentityFile ~/.ssh/jupiter.lan/europa-id_rsa
 
 Host europa
     IdentitiesOnly yes

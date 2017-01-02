@@ -13,8 +13,6 @@ xmap <C-k>     <Plug>(neosnippet_expand_target)
 let g:python3_host_prog="/Users/paul/.pyenv/versions/neovim3/bin/python"
 let g:python2_host_prog = "/Users/paul/.pyenv/versions/neovim2/bin/python"
 let g:deoplete#enable_at_startup=1
-let g:deoplete#sources#clang#libclang_path="/usr/local/opt/llvm/lib/libclang.dylib"
-let g:deoplete#sources#clang#clang_header="/usr/local/opt/llvm/lib/clang"
 
 " Enable filetype plugins
 filetype plugin on
@@ -23,7 +21,7 @@ filetype indent on
 set number
 
 let base16colorspace=256  " Access colors present in 256 colorspace
-silent! colorscheme Tomorrow-Night-Eighties
+silent! colorscheme obsidian
 
 " don't show the mode, vim-airline will do that for us
 set noshowmode
@@ -82,7 +80,7 @@ set so=15
 set showcmd                       " show the command
 
 " Folding settings
-set foldcolumn=1
+set foldcolumn=0
 
 " Ignore compiled files
 set wildignore=*.o,*~,*.pyc

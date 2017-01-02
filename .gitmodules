@@ -87,3 +87,6 @@
 [submodule "submodules/vim/pathogen"]
 	path = submodules/vim/pathogen
 	url = https://github.com/tpope/vim-pathogen
+[submodule "submodules/zsh/virtualenv-prompt"]
+	path = submodules/zsh/virtualenv-prompt
+	url = https://github.com/tonyseek/oh-my-zsh-virtualenv-prompt
