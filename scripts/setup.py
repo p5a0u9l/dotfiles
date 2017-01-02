@@ -24,6 +24,7 @@ dotpaths = {
         join(home, ".ssh/config"):                  join(dots, "ssh_config"),
         join(home, ".gnupg", "gpg-agent.conf"):     join(dots, "gpg-agent.conf"),
         join(home, ".gnupg", "gpg.conf"):           join(dots, "gpg.conf"),
+        join(xdg, "shairport-sync/shairport-sync.conf"):  join(dots, "shairport-sync.conf"),
         join(xdg, "nvim", "init.vim"):              join(dots, "init.vim"),
         join(xdg, "bpython", "config"):             join(dots, "bpython_config"),
         join(xdg, "cmus", "autosave"):              join(dots, "cmus_autosave")
