@@ -38,16 +38,18 @@ export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 
 # shairport-sync
-if which shairport-sync > /dev/null; then
+# if which shairport-sync > /dev/null; then
+ if which dookiebreath > /dev/null; then
     CONF="~/.config/shairport-sync/shairport-sync.conf"
     CMD="/usr/local/bin/shairport-sync"
     METACMD="/usr/local/bin/shairport-sync-metadata-reader"
     METAB="/tmp/shairport-sync-metadata"
     METATXT="/tmp/shairport-sync-metadata.txt"
-    alias shairport-sync="$CMD -d -c $CONF && $METACMD < $METAB > $METATXT&"
+    # alias shairport-sync="$CMD -d -c $CONF && $METACMD < $METAB > $METATXT&"
     if ! ( pgrep "shairport-sync" > /dev/null ) ; then
-        $CMD -d -c $CONF 2> /dev/null
-        $METACMD < $METAB > $METATXT&
+        $CMD -d -c $CONF
+        # $METACMD < $METAB > $METATXT&
+        shairport-sync
         if ( pgrep "shairport-sync" > /dev/null ) ; then
             echo "started shairport-sync daemon..."
         else
@@ -117,9 +119,9 @@ source $DOTS/submodules/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Welcome Banner
 unamestr=`uname`
-echo "--------------------------------------------------------------------------------------"
-echo "`date`"
-echo ""
-echo "Hello $USERNAME@`hostname`, you're using zsh-theme $ZSH_THEME running $unamestr"
-echo "--------------------------------------------------------------------------------------"
+echo "|--------------------------------------------------------------------------------------|"
+echo "| `date`                                                                               "
+echo "|                                                                                      "
+echo "| Hello $USERNAME@`hostname`, you're using zsh-theme $ZSH_THEME running $unamestr.     "
+echo "|--------------------------------------------------------------------------------------|"
 echo ""

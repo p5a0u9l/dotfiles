@@ -14,7 +14,7 @@ else
 fi
 
 # increment the INDEX
-INDEX=`expr ${INDEX} + 5`
+INDEX=`expr ${INDEX} + 3`
 
 # and save it for next time
 echo "${INDEX}" > "$CURTAG_FILE"
@@ -31,11 +31,11 @@ fi
 if [ "$WHOSE" -eq 1 ]; then
     CMUS_STATUS=`cmus-remote -Q`
     STATUS=$(echo "$CMUS_STATUS" | grep status | head -n 1 | cut -d' ' -f2-)
+    ARTIST=$(echo "$CMUS_STATUS" | grep 'tag artist' | head -n 1 | cut -d' ' -f3-)
     ALARTIST=$(echo "$CMUS_STATUS" | grep 'tag albumartist' | head -n 1 | cut -d' ' -f3-)
     TITLE=$(echo "$CMUS_STATUS" | grep 'tag title' | cut -d' ' -f3-)
     COMPOSER=$(echo "$CMUS_STATUS" | grep 'tag composer' | cut -d' ' -f3-)
-
-    OUTPUT="$COMPOSER, $ALARTIST, $TITLE"
+    OUTPUT="$COMPOSER, $ARTIST, $TITLE"
 fi
 
 output_length=${#OUTPUT}
