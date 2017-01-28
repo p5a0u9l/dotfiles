@@ -90,3 +90,9 @@
 [submodule "submodules/zsh/virtualenv-prompt"]
 	path = submodules/zsh/virtualenv-prompt
 	url = https://github.com/tonyseek/oh-my-zsh-virtualenv-prompt
+[submodule "submodules/nvim/neosnippt"]
+	path = submodules/nvim/neosnippet
+	url = git@github.com:Shougo/neosnippet
+[submodule "submodules/nvim/deoplete"]
+	path = submodules/nvim/deoplete
+	url = git@github.com:Shougo/deoplete.nvim
