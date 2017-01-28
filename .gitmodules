@@ -46,10 +46,6 @@
 	path = submodules/nvim/deoplete.nvim
 	url = git@github.com:Shougo/deoplete.nvim
 
-[submodule "submodules/nvim/neocomplete"]
-	path = submodules/nvim/neocomplete
-	url = git@github.com:Shougo/neocomplete
-
 [submodule "submodules/nvim/neosnippet"]
 	path = submodules/nvim/neosnippet
 	url = git@github.com:Shougo/neosnippet

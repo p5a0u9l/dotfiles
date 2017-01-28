@@ -31,7 +31,7 @@ plugins=(git colored-man-pages)
 # SOURCE
 source $DOTS/submodules/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZSH/oh-my-zsh.sh
-source $DOTS/submodules/zsh/virtualenv-prompt/virtualenv-prompt.plugin.zsh
+# source $DOTS/submodules/zsh/virtualenv-prompt/virtualenv-prompt.plugin.zsh
 
 # PATH APPENDAGES
 export PATH=/usr/local/bin:$PATH
@@ -114,14 +114,11 @@ TRAPWINCH() {
     zle && zle .reset-prompt && zle -R
 }
 
-# PER README, must be sourced at end of zshrc
-source $DOTS/submodules/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 # Welcome Banner
 unamestr=`uname`
 echo "|--------------------------------------------------------------------------------------|"
-echo "| `date`                                                                               "
-echo "|                                                                                      "
-echo "| Hello $USERNAME@`hostname`, you're using zsh-theme $ZSH_THEME running $unamestr.     "
+echo "  `date`                                                                               "
+echo "                                                                                       "
+echo "  Hello $USERNAME@`hostname`, you're using zsh-theme $ZSH_THEME running $unamestr.     "
 echo "|--------------------------------------------------------------------------------------|"
 echo ""
