@@ -66,10 +66,6 @@
 	path = submodules/nvim/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes
 
-[submodule "submodules/nvim/neocomplcache"]
-	path = submodules/nvim/neocomplcache
-	url = git@github.com:Shougo/neocomplcache
-
 [submodule "submodules/nvim/deoplete-jedi"]
 	path = submodules/nvim/deoplete-jedi
 	url = git@github.com:zchee/deoplete-jedi
@@ -91,4 +87,7 @@
 	url = git@github.com:Shougo/neosnippet
 [submodule "submodules/nvim/deoplete"]
 	path = submodules/nvim/deoplete
+	url = git@github.com:Shougo/deoplete.nvim
+[submodule "submodules/submodules/nvim/deoplete"]
+	path = submodules/submodules/nvim/deoplete
 	url = git@github.com:Shougo/deoplete.nvim
