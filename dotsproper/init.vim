@@ -37,6 +37,7 @@ noremap <leader>gst :Gstatus<cr>
 " indent it after pasting.
 noremap gV `[v`]
 
+" insert a python function docstring using google-conventions
 " move lines
 noremap - ddp
 noremap _ ddkP
