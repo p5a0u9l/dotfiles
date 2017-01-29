@@ -10,8 +10,14 @@ imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>     <Plug>(neosnippet_expand_target)
 
+" Neomake make on write
+autocmd! BufWritePost * Neomake
+
+" CRITICAL neovim python locations
+let g:python2_host_prog="/Users/paul/.pyenv/versions/neovim2/bin/python"
 let g:python3_host_prog="/Users/paul/.pyenv/versions/neovim3/bin/python"
-let g:python2_host_prog = "/Users/paul/.pyenv/versions/neovim2/bin/python"
+
+" deoplete
 let g:deoplete#enable_at_startup=1
 
 " Enable filetype plugins

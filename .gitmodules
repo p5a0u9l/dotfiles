@@ -42,14 +42,6 @@
 	path = submodules/vim/vim-matlab-daeyun
 	url = git@github.com:daeyun/vim-matlab
 
-[submodule "submodules/deoplete.nvim"]
-	path = submodules/nvim/deoplete.nvim
-	url = git@github.com:Shougo/deoplete.nvim
-
-[submodule "submodules/nvim/neosnippet"]
-	path = submodules/nvim/neosnippet
-	url = git@github.com:Shougo/neosnippet
-
 [submodule "submodules/nvim/neosnippet-snippets"]
 	path = submodules/nvim/neosnippet-snippets
 	url = git@github.com:Shougo/neosnippet-snippets
@@ -73,21 +65,15 @@
 [submodule "submodules/zsh/zsh-syntax-highlighting"]
 	path = submodules/zsh/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting
-[submodule "submodules/zsh/conda-completion"]
-	path = submodules/zsh/conda-completion
-	url = https://github.com/esc/conda-zsh-completion/
 [submodule "submodules/vim/pathogen"]
 	path = submodules/vim/pathogen
 	url = https://github.com/tpope/vim-pathogen
 [submodule "submodules/zsh/virtualenv-prompt"]
 	path = submodules/zsh/virtualenv-prompt
 	url = https://github.com/tonyseek/oh-my-zsh-virtualenv-prompt
-[submodule "submodules/nvim/neosnippt"]
-	path = submodules/nvim/neosnippet
-	url = git@github.com:Shougo/neosnippet
 [submodule "submodules/nvim/deoplete"]
 	path = submodules/nvim/deoplete
 	url = git@github.com:Shougo/deoplete.nvim
-[submodule "submodules/submodules/nvim/deoplete"]
-	path = submodules/submodules/nvim/deoplete
-	url = git@github.com:Shougo/deoplete.nvim
+[submodule "submodules/nvim/neomake"]
+	path = submodules/nvim/neomake
+	url = https://github.com/neomake/neomake
