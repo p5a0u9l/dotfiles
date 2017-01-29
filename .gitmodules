@@ -77,3 +77,6 @@
 [submodule "submodules/nvim/neomake"]
 	path = submodules/nvim/neomake
 	url = https://github.com/neomake/neomake
+[submodule "submodules/nvim/neocomplcache"]
+	path = submodules/nvim/neocomplcache
+	url = git@github.com:Shougo/neocomplcache
