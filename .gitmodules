@@ -6,28 +6,28 @@
 	url = https://github.com/zsh-users/zsh-autosuggestions
 [submodule "modules/zsh/oh-my-zsh"]
 	path = modules/zsh/oh-my-zsh
-	url = git@github.com:/robbyrussell/oh-my-zsh.git
+	url = https://github.com/robbyrussell/oh-my-zsh.git
 [submodule "modules/vim/ctrlp.vim"]
 	path = modules/vim/ctrlp.vim
-	url = git@github.com:ctrlpvim/ctrlp.vim
+	url = https://github.com/ctrlpvim/ctrlp.vim
 [submodule "modules/vim/vim-surround"]
 	path = modules/vim/vim-surround
-	url = git@github.com:tpope/vim-surround
+	url = https://github.com/tpope/vim-surround
 [submodule "modules/vim/vim-fugitive"]
 	path = modules/vim/vim-fugitive
-	url = git@github.com:tpope/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
 [submodule "modules/vim/vim-colorschemes"]
 	path = modules/vim/vim-colorschemes
-	url = git@github.com:flazz/vim-colorschemes
+	url = https://github.com/flazz/vim-colorschemes
 [submodule "modules/vim/vim-pathogen"]
 	path = modules/vim/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen
 [submodule "modules/vim/vim-commentary"]
 	path = modules/vim/vim-commentary
-	url = git@github.com:tpope/vim-commentary
+	url = https://github.com/tpope/vim-commentary
 [submodule "modules/vim/vim-matlab"]
 	path = modules/vim/vim-matlab
-	url = git@github.com:lazywei/vim-matlab
+	url = https://github.com/lazywei/vim-matlab
 [submodule "modules/vim/vim-easytags"]
 	path = modules/vim/vim-easytags
 	url = https://github.com/xolox/vim-easytags
@@ -36,22 +36,22 @@
 	url = https://github.com/xolox/vim-misc
 [submodule "modules/vim/neocomplcache"]
 	path = modules/vim/neocomplcache
-	url = git@github.com:Shougo/neocomplcache
+	url = https://github.com/Shougo/neocomplcache
 [submodule "modules/vim/deoplete.nvim"]
 	path = modules/vim/deoplete.nvim
-	url = git@github.com:Shougo/deoplete.nvim
+	url = https://github.com/Shougo/deoplete.nvim
 [submodule "modules/vim/neocomplete"]
 	path = modules/vim/neocomplete
-	url = git@github.com:Shougo/neocomplete
+	url = https://github.com/Shougo/neocomplete
 [submodule "modules/vim/neosnippet"]
 	path = modules/vim/neosnippet
-	url = git@github.com:Shougo/neosnippet
+	url = https://github.com/Shougo/neosnippet
 [submodule "modules/vim/neosnippet-snippets"]
 	path = modules/vim/neosnippet-snippets
-	url = git@github.com:Shougo/neosnippet-snippets
+	url = https://github.com/Shougo/neosnippet-snippets
 [submodule "modules/vim/deoplete-jedi"]
 	path = modules/vim/deoplete-jedi
-	url = git@github.com:zchee/deoplete-jedi
+	url = https://github.com/zchee/deoplete-jedi
 [submodule "modules/vim/vim-airline"]
 	path = modules/vim/vim-airline
 	url = https://github.com/vim-airline/vim-airline
