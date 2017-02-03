@@ -42,25 +42,9 @@
 	path = submodules/vim/vim-matlab-daeyun
 	url = git@github.com:daeyun/vim-matlab
 
-[submodule "submodules/nvim/neosnippet-snippets"]
-	path = submodules/nvim/neosnippet-snippets
-	url = git@github.com:Shougo/neosnippet-snippets
-
-[submodule "submodules/nvim/vim-airline"]
-	path = submodules/nvim/vim-airline
-	url = https://github.com/vim-airline/vim-airline
-
 [submodule "submodules/vim/lightline.vim"]
 	path = submodules/vim/lightline.vim
 	url = https://github.com/itchyny/lightline.vim
-
-[submodule "submodules/nvim/vim-airline-themes"]
-	path = submodules/nvim/vim-airline-themes
-	url = https://github.com/vim-airline/vim-airline-themes
-
-[submodule "submodules/nvim/deoplete-jedi"]
-	path = submodules/nvim/deoplete-jedi
-	url = git@github.com:zchee/deoplete-jedi
 
 [submodule "submodules/zsh/zsh-syntax-highlighting"]
 	path = submodules/zsh/zsh-syntax-highlighting
@@ -71,12 +55,6 @@
 [submodule "submodules/zsh/virtualenv-prompt"]
 	path = submodules/zsh/virtualenv-prompt
 	url = https://github.com/tonyseek/oh-my-zsh-virtualenv-prompt
-[submodule "submodules/nvim/deoplete"]
-	path = submodules/nvim/deoplete
-	url = git@github.com:Shougo/deoplete.nvim
-[submodule "submodules/nvim/neomake"]
-	path = submodules/nvim/neomake
-	url = https://github.com/neomake/neomake
-[submodule "submodules/nvim/neocomplcache"]
-	path = submodules/nvim/neocomplcache
-	url = git@github.com:Shougo/neocomplcache
+[submodule "submodules/nvim/bundle/vim-easytags"]
+	path = submodules/nvim/bundle/vim-easytags
+	url = https://github.com/xolox/vim-easytags
