@@ -58,3 +58,6 @@
 [submodule "submodules/nvim/bundle/vim-easytags"]
 	path = submodules/nvim/bundle/vim-easytags
 	url = https://github.com/xolox/vim-easytags
+[submodule "submodules/nvim/bundle/vim-misc"]
+	path = submodules/nvim/bundle/vim-misc
+	url = https://github.com/xolox/vim-misc

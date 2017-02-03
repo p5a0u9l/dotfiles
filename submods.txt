@@ -1,0 +1,74 @@
+submodules
+├── dracula-theme
+│   ├── autoload
+│   │   └── airline
+│   └── colors
+├── nvim
+│   └── bundle
+│       ├── deoplete
+│       ├── deoplete-jedi
+│       ├── dracula-theme
+│       ├── neocomplcache
+│       ├── neomake
+│       ├── neosnippet-snippets
+│       ├── vim-airline
+│       ├── vim-airline-themes
+│       ├── vim-easytags
+│       └── vim-misc
+├── vim
+│   ├── ctrlp.vim
+│   │   ├── autoload
+│   │   ├── doc
+│   │   └── plugin
+│   ├── pathogen
+│   │   └── autoload
+│   ├── vim-colorschemes
+│   │   └── colors
+│   ├── vim-commentary
+│   │   ├── doc
+│   │   └── plugin
+│   ├── vim-fugitive
+│   │   ├── doc
+│   │   └── plugin
+│   ├── vim-matlab
+│   │   ├── compiler
+│   │   ├── doc
+│   │   ├── ftplugin
+│   │   ├── indent
+│   │   └── syntax
+│   ├── vim-matlab-daeyun
+│   │   ├── docs
+│   │   ├── ftplugin
+│   │   ├── indent
+│   │   ├── rplugin
+│   │   ├── scripts
+│   │   ├── snippets
+│   │   ├── syntax
+│   │   └── tests
+│   └── vim-surround
+│       ├── doc
+│       └── plugin
+└── zsh
+    ├── dracula.zsh
+    ├── oh-my-zsh
+    │   ├── cache
+    │   ├── custom
+    │   ├── lib
+    │   ├── log
+    │   ├── plugins
+    │   ├── templates
+    │   ├── themes
+    │   └── tools
+    ├── virtualenv-prompt
+    ├── zsh-autosuggestions
+    │   ├── script
+    │   ├── src
+    │   ├── test
+    │   └── vendor
+    └── zsh-syntax-highlighting
+        ├── docs
+        ├── highlighters
+        ├── images
+        └── tests
+
+71 directories
