@@ -1,5 +1,6 @@
 #!/bin/zsh
 #
+#
 
 DOT_HOME=$HOME/dotfiles
 DOT_DOTS=$DOT_HOME/dots
@@ -10,9 +11,9 @@ link_me() {
     # inputs:
     # 1 --> src
     # 2 --> dst
-    if [[ -h $2 ]]; then 
+    if [[ -h $2 ]]; then
 	echo "removing link $2..."
-        rm -f $2; 
+        rm -f $2;
     fi
     echo "creating new link $1 --> $2..."
     ln -s $1 $2
@@ -38,6 +39,7 @@ link_me $DOT_DOTS/vimrc $HOME/.vimrc
 link_me $DOT_DOTS/zshrc $HOME/.zshrc
 
 # modules
-link_me modules/zsh/oh-my-zsh.git $HOME/.oh-my-zsh.git
-link_me modules/vim/bundle $HOME/.config/nvim/bundle
-link_me modules/vim/bundle/vim-pathogen/autoload $HOME/.config/nvim/autoload
+link_me $DOT_MODS/zsh/oh-my-zsh.git $HOME/.oh-my-zsh.git
+link_me $DOT_MODS/vim/bundle $XDG/nvim/bundle
+link_me $DOT_MODS/vim/bundle/vim-pathogen/autoload $XDG/nvim/autoload
+link_me $DOT_MODS/vim/filetypes.vim $HOME/.config/nvim/filetypes.vim

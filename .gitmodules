@@ -58,3 +58,6 @@
 [submodule "modules/vim/bundle/neomake"]
 	path = modules/vim/bundle/neomake
 	url = https://github.com/neomake/neomake
+[submodule "modules/vim/ale"]
+	path = modules/vim/ale
+	url = https://github.com/w0rp/ale

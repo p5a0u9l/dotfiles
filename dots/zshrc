@@ -1,6 +1,10 @@
 # PLATFORM SPECIFIC
 export MACBOOKHOST="amalthea"
-export DOTS=$HOME/dotfiles
+export DOT_HOME=$HOME/dotfiles
+export DOT_DOTS=$DOT_HOME/dots
+export DOT_MODS=$DOT_HOME/modules
+export XDG=$HOME/.config
+
 if [ "$HOST" = "$MACBOOKHOST" ]; then
     # export CXX=/usr/local/gcc-6.2.0/bin/g++-6.2.0
     # export CC=/usr/local/gcc-6.2.0/bin/gcc-6.2.0
@@ -28,8 +32,9 @@ setopt EXTENDED_HISTORY
 plugins=(git colored-man-pages)
 
 # SOURCE
-source $DOTS/modules/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $DOT_MODS/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZSH/oh-my-zsh.sh
+source $DOT_MODS/zsh/dracula-theme/dracula.zsh-theme
 
 # PATH APPENDAGES
 export PATH=/usr/local/bin:$PATH
@@ -37,7 +42,7 @@ export PATH=/usr/local/sbin:$PATH
 
 # shairport-sync
 # if which shairport-sync > /dev/null; then
- if which dookiebreath > /dev/null; then
+ if false; then
     CONF="~/.config/shairport-sync/shairport-sync.conf"
     CMD="/usr/local/bin/shairport-sync"
     METACMD="/usr/local/bin/shairport-sync-metadata-reader"
@@ -120,3 +125,6 @@ echo "                                                                          
 echo "  Hello $USERNAME@`hostname`, you're using zsh-theme $ZSH_THEME running $unamestr.     "
 echo "|--------------------------------------------------------------------------------------|"
 echo ""
+
+# fix stupid default tmux window name
+tmux rename-window 'zsh*'
