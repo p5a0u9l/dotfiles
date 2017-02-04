@@ -1,12 +1,6 @@
-[submodule "modules/zsh/dracula.zsh-theme"]
-	path = modules/zsh/dracula.zsh-theme
-	url = https://github.com/dracula/zsh.git
 [submodule "modules/zsh/zsh-autosuggestions"]
 	path = modules/zsh/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions
-[submodule "modules/zsh/oh-my-zsh"]
-	path = modules/zsh/oh-my-zsh
-	url = https://github.com/robbyrussell/oh-my-zsh.git
 [submodule "modules/vim/ctrlp.vim"]
 	path = modules/vim/ctrlp.vim
 	url = https://github.com/ctrlpvim/ctrlp.vim
