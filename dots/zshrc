@@ -1,48 +1,65 @@
-# PLATFORM SPECIFIC
+# my zshrc file
+
+# -------
+# EXPORTS
+# -------
 export MACBOOKHOST="amalthea"
+# dotfiles
 export DOT_HOME=$HOME/dotfiles
 export DOT_DOTS=$DOT_HOME/dots
 export DOT_MODS=$DOT_HOME/modules
 export XDG=$HOME/.config
+export LANG=en_US.UTF-8
+export PAGER=less
+export ZSH=$HOME/.oh-my-zsh
+export HISTSIZE=1000000000
+export SAVEHIST=$HISTSIZE
+# PATH APPENDAGES
+export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/sbin:$PATH
+# GPG
+export GPG_TTY=$TTY
+export PINENTRY_USER_DATA="USE_CURSES=1"
+export TARGPGKEY=834E117E  # key ID for encryption
+export PASSGPGKEY=EB47B5CA # alt key ID for encryption
+export PYTHONSTARTUP=~/.pyrc
 
+# -----------------
+# PLATFORM SPECIFIC
+# -----------------
 if [ "$HOST" = "$MACBOOKHOST" ]; then
     # export CXX=/usr/local/gcc-6.2.0/bin/g++-6.2.0
     # export CC=/usr/local/gcc-6.2.0/bin/gcc-6.2.0
     ZSH_THEME="zhann"
+    source $DOT_MODS/zsh/dracula-theme/dracula.zsh-theme
 else
     # "powerline" "random" "zhann" "nebirhos" "awesomepanda" "agnoster" "jispwoso"
     ZSH_THEME="agnoster"
 fi
 
-# ENV
+# ------------
+# ZSH SETTINGS
+# ------------
 DISABLE_AUTO_UPDATE=true
 CASE_SENSITIVE="true"
-export LANG=en_US.UTF-8
 fpath+=/usr/local/share/zsh-completions
-export PAGER=less
-export ZSH=$HOME/.oh-my-zsh
-
-# CMD HISTORY
 HIST_STAMPS="mm/dd/yyyy"
-export HISTSIZE=1000000000
-export SAVEHIST=$HISTSIZE
 setopt EXTENDED_HISTORY
+unset SSH_AUTH_SOCK
 
-# OH-MY-PLUGINS
+# ---------
+# OH-MY-ZSH
+# ---------
 plugins=(git colored-man-pages)
-
-# SOURCE
-source $DOT_MODS/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZSH/oh-my-zsh.sh
-source $DOT_MODS/zsh/dracula-theme/dracula.zsh-theme
 
-# PATH APPENDAGES
-export PATH=/usr/local/bin:$PATH
-export PATH=/usr/local/sbin:$PATH
+source $DOT_MODS/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# shairport-sync
-# if which shairport-sync > /dev/null; then
- if false; then
+
+# --------------------
+# APPLICATION SPECIFIC
+# --------------------
+if false; then
     CONF="~/.config/shairport-sync/shairport-sync.conf"
     CMD="/usr/local/bin/shairport-sync"
     METACMD="/usr/local/bin/shairport-sync-metadata-reader"
@@ -62,22 +79,19 @@ export PATH=/usr/local/sbin:$PATH
     unset METATXT METACMD META CONF CMD
 fi
 
-# PASS
-if which pass > /dev/null; then
-    # source /usr/local/etc/bash_completion.d/password-store
+if false && which pass > /dev/null; then
+    source /usr/local/etc/bash_completion.d/password-store
 fi
 
-# cmus
 if which cmus > /dev/null; then
     # bc OSX has an irritating warning related to soudn library
     alias cmus="/usr/local/bin/cmus 2>/dev/null"
 fi
 
-# pyenv
 if which pyenv-virtualenv-init > /dev/null; then
-     eval "$(pyenv init -)"
-     eval "$(pyenv virtualenv-init -)";
-     export PYENV_VIRTUALENV_DISABLE_PROMPT=0
+    eval "$(pyenv init -)"
+    eval "$(pyenv virtualenv-init -)";
+    export PYENV_VIRTUALENV_DISABLE_PROMPT=0
 fi
 
 # One editor to rule them all
@@ -87,19 +101,6 @@ else
     export EDITOR='vim'
 fi
 
-# GPG
-export GPG_TTY=$TTY
-export PINENTRY_USER_DATA="USE_CURSES=1"
-export TARGPGKEY=834E117E  # key ID for encryption
-export PASSGPGKEY=EB47B5CA # alt key ID for encryption
-#alias gpg=gpg2
-
-# Python
-export PYTHONSTARTUP=~/.pyrc
-
-# ssh
-unset SSH_AUTH_SOCK
-
 # google cli
 if which googler > /dev/null; then
     compdef $HOME/buildrepos/googler/auto-completion/zsh/_googler
@@ -107,12 +108,16 @@ if which googler > /dev/null; then
     alias define="googler -n 2 define"
 fi
 
-## Aliases
+# -------
+# Aliases
+# -------
 alias h="history"
 alias lgrep="ls|grep $1"
 alias hgrep="history|grep -n2 $1"
 
-## Functions
+# ---------
+# Functions
+# ---------
 TRAPWINCH() {
     zle && zle .reset-prompt && zle -R
 }
@@ -122,7 +127,7 @@ unamestr=`uname`
 echo "|--------------------------------------------------------------------------------------|"
 echo "  `date`                                                                               "
 echo "                                                                                       "
-echo "  Hello $USERNAME@`hostname`, you're using zsh-theme $ZSH_THEME running $unamestr.     "
+echo "  Hello $USERNAME@`hostname`, you're running $unamestr.     "
 echo "|--------------------------------------------------------------------------------------|"
 echo ""
 

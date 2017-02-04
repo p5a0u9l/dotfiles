@@ -27,7 +27,7 @@ filetype indent on
 set number
 
 let base16colorspace=256  " Access colors present in 256 colorspace
-silent! colorscheme obsidian
+colorscheme dracula
 
 " don't show the mode, vim-airline will do that for us
 set noshowmode
