@@ -13,3 +13,48 @@
 [submodule "modules/vim/bundle/vim-pathogen"]
 	path = modules/vim/bundle/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen
+[submodule "modules/vim/bundle/ctrlp.vim"]
+	path = modules/vim/bundle/ctrlp.vim
+	url = https://github.com/ctrlpvim/ctrlp.vim
+[submodule "modules/vim/bundle/vim-surround"]
+	path = modules/vim/bundle/vim-surround
+	url = https://github.com/tpope/vim-surround
+[submodule "modules/vim/bundle/vim-fugitive"]
+	path = modules/vim/bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
+[submodule "modules/vim/bundle/vim-commentary"]
+	path = modules/vim/bundle/vim-commentary
+	url = https://github.com/tpope/vim-commentary
+[submodule "modules/vim/bundle/vim-matlab"]
+	path = modules/vim/bundle/vim-matlab
+	url = https://github.com/lazywei/vim-matlab
+[submodule "modules/vim/bundle/vim-easytags"]
+	path = modules/vim/bundle/vim-easytags
+	url = https://github.com/xolox/vim-easytags
+[submodule "modules/vim/bundle/vim-misc"]
+	path = modules/vim/bundle/vim-misc
+	url = https://github.com/xolox/vim-misc
+[submodule "modules/vim/bundle/neocomplcache"]
+	path = modules/vim/bundle/neocomplcache
+	url = https://github.com/Shougo/neocomplcache
+[submodule "modules/vim/bundle/deoplete.nvim"]
+	path = modules/vim/bundle/deoplete.nvim
+	url = https://github.com/Shougo/deoplete.nvim
+[submodule "modules/vim/bundle/neosnippet"]
+	path = modules/vim/bundle/neosnippet
+	url = https://github.com/Shougo/neosnippet
+[submodule "modules/vim/bundle/neosnippet-snippets"]
+	path = modules/vim/bundle/neosnippet-snippets
+	url = https://github.com/Shougo/neosnippet-snippets
+[submodule "modules/vim/bundle/deoplete-jedi"]
+	path = modules/vim/bundle/deoplete-jedi
+	url = https://github.com/zchee/deoplete-jedi
+[submodule "modules/vim/bundle/vim-airline"]
+	path = modules/vim/bundle/vim-airline
+	url = https://github.com/vim-airline/vim-airline
+[submodule "modules/vim/bundle/vim-airline-themes"]
+	path = modules/vim/bundle/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes
+[submodule "modules/vim/bundle/neomake"]
+	path = modules/vim/bundle/neomake
+	url = https://github.com/neomake/neomake
