@@ -9,8 +9,8 @@ git submodule add https://github.com/robbyrussell/oh-my-zsh.git modules/zsh/oh-m
 git submodule add https://github.com/ctrlpvim/ctrlp.vim modules/vim/bundle/ctrlp.vim
 git submodule add https://github.com/tpope/vim-surround modules/vim/bundle/vim-surround
 git submodule add https://github.com/tpope/vim-fugitive modules/vim/bundle/vim-fugitive
-git submodule add https://github.com/flazz/vim-colorschemes modules/bundle/vim/vim-colorschemes
-git submodule add https://github.com/tpope/vim-pathogen modules/vim/vim-pathogen
+git submodule add https://github.com/flazz/vim-colorschemes modules/vim/bundle/vim-colorschemes
+git submodule add https://github.com/tpope/vim-pathogen modules/vim/bundle/vim-pathogen
 git submodule add https://github.com/tpope/vim-commentary modules/vim/bundle/vim-commentary
 git submodule add https://github.com/lazywei/vim-matlab modules/vim/bundle/vim-matlab
 git submodule add https://github.com/xolox/vim-easytags modules/vim/bundle/vim-easytags

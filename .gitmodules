@@ -1,63 +1,15 @@
-[submodule "modules/zsh/zsh-autosuggestions"]
-	path = modules/zsh/zsh-autosuggestions
-	url = https://github.com/zsh-users/zsh-autosuggestions
-[submodule "modules/vim/ctrlp.vim"]
-	path = modules/vim/ctrlp.vim
-	url = https://github.com/ctrlpvim/ctrlp.vim
-[submodule "modules/vim/vim-surround"]
-	path = modules/vim/vim-surround
-	url = https://github.com/tpope/vim-surround
-[submodule "modules/vim/vim-fugitive"]
-	path = modules/vim/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive
-[submodule "modules/vim/vim-colorschemes"]
-	path = modules/vim/vim-colorschemes
-	url = https://github.com/flazz/vim-colorschemes
-[submodule "modules/vim/vim-pathogen"]
-	path = modules/vim/vim-pathogen
-	url = https://github.com/tpope/vim-pathogen
-[submodule "modules/vim/vim-commentary"]
-	path = modules/vim/vim-commentary
-	url = https://github.com/tpope/vim-commentary
-[submodule "modules/vim/vim-matlab"]
-	path = modules/vim/vim-matlab
-	url = https://github.com/lazywei/vim-matlab
-[submodule "modules/vim/vim-easytags"]
-	path = modules/vim/vim-easytags
-	url = https://github.com/xolox/vim-easytags
-[submodule "modules/vim/vim-misc"]
-	path = modules/vim/vim-misc
-	url = https://github.com/xolox/vim-misc
-[submodule "modules/vim/neocomplcache"]
-	path = modules/vim/neocomplcache
-	url = https://github.com/Shougo/neocomplcache
-[submodule "modules/vim/deoplete.nvim"]
-	path = modules/vim/deoplete.nvim
-	url = https://github.com/Shougo/deoplete.nvim
-[submodule "modules/vim/neocomplete"]
-	path = modules/vim/neocomplete
-	url = https://github.com/Shougo/neocomplete
-[submodule "modules/vim/neosnippet"]
-	path = modules/vim/neosnippet
-	url = https://github.com/Shougo/neosnippet
-[submodule "modules/vim/neosnippet-snippets"]
-	path = modules/vim/neosnippet-snippets
-	url = https://github.com/Shougo/neosnippet-snippets
-[submodule "modules/vim/deoplete-jedi"]
-	path = modules/vim/deoplete-jedi
-	url = https://github.com/zchee/deoplete-jedi
-[submodule "modules/vim/vim-airline"]
-	path = modules/vim/vim-airline
-	url = https://github.com/vim-airline/vim-airline
-[submodule "modules/vim/vim-airline-themes"]
-	path = modules/vim/vim-airline-themes
-	url = https://github.com/vim-airline/vim-airline-themes
-[submodule "modules/vim/neomake"]
-	path = modules/vim/neomake
-	url = https://github.com/neomake/neomake
 [submodule "modules/zsh/dracula-theme"]
 	path = modules/zsh/dracula-theme
 	url = https://github.com/dracula/zsh.git
+[submodule "modules/zsh/zsh-autosuggestions"]
+	path = modules/zsh/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
 [submodule "modules/zsh/oh-my-zsh.git"]
 	path = modules/zsh/oh-my-zsh.git
 	url = https://github.com/robbyrussell/oh-my-zsh.git
+[submodule "modules/vim/bundle/vim-colorschemes"]
+	path = modules/vim/bundle/vim-colorschemes
+	url = https://github.com/flazz/vim-colorschemes
+[submodule "modules/vim/bundle/vim-pathogen"]
+	path = modules/vim/bundle/vim-pathogen
+	url = https://github.com/tpope/vim-pathogen
