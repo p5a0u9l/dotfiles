@@ -15,7 +15,6 @@ DISABLE_AUTO_UPDATE=true
 CASE_SENSITIVE="true"
 export LANG=en_US.UTF-8
 fpath+=/usr/local/share/zsh-completions
-fpath+=$DOTS/submodules/zsh/conda-completions
 export PAGER=less
 export ZSH=$HOME/.oh-my-zsh
 
@@ -29,9 +28,8 @@ setopt EXTENDED_HISTORY
 plugins=(git colored-man-pages)
 
 # SOURCE
-source $DOTS/submodules/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $DOTS/modules/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZSH/oh-my-zsh.sh
-# source $DOTS/submodules/zsh/virtualenv-prompt/virtualenv-prompt.plugin.zsh
 
 # PATH APPENDAGES
 export PATH=/usr/local/bin:$PATH

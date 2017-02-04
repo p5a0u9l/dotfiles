@@ -1,21 +1,21 @@
 #!/bin/zsh
 #
 
-DOT_HOME=$HOME/dotfiles/
-DOT_DOTS=$HOME/dots/
-DOT_MODS=$HOME/modules/
-XDG=$HOME/.config/
+DOT_HOME=$HOME/dotfiles
+DOT_DOTS=$DOT_HOME/dots
+DOT_MODS=$DOT_HOME/modules
+XDG=$HOME/.config
 
 link_me() {
     # inputs:
     # 1 --> src
     # 2 --> dst
-    if [[ -h $dst ]]; then 
-	echo "removing link $dst..."
-        rm -f $dst; 
+    if [[ -h $2 ]]; then 
+	echo "removing link $2..."
+        rm -f $2; 
     fi
-    echo "creating new link $src --> $dst..."
-    ln -s $src $dst
+    echo "creating new link $1 --> $2..."
+    ln -s $1 $2
 }
 
 # dot file names should follow convention
@@ -38,4 +38,6 @@ link_me $DOT_DOTS/vimrc $HOME/.vimrc
 link_me $DOT_DOTS/zshrc $HOME/.zshrc
 
 # modules
-ln -s modules/zsh/oh-my-zsh.git $HOME/.oh-my-zsh.git
+link_me modules/zsh/oh-my-zsh.git $HOME/.oh-my-zsh.git
+link_me modules/vim/bundle $HOME/.config/nvim/bundle
+link_me modules/vim/bundle/vim-pathogen/autoload $HOME/.config/nvim/autoload
