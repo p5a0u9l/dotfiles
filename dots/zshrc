@@ -24,6 +24,15 @@ export TARGPGKEY=834E117E  # key ID for encryption
 export PASSGPGKEY=EB47B5CA # alt key ID for encryption
 export PYTHONSTARTUP=~/.pyrc
 
+# ---------
+# OH-MY-ZSH
+# ---------
+plugins=(git colored-man-pages)
+CASE_SENSITIVE="true"
+DISABLE_AUTO_UPDATE=true
+source $ZSH/oh-my-zsh.sh
+source $DOT_MODS/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 # -----------------
 # PLATFORM SPECIFIC
 # -----------------
@@ -40,20 +49,10 @@ fi
 # ------------
 # ZSH SETTINGS
 # ------------
-DISABLE_AUTO_UPDATE=true
-CASE_SENSITIVE="true"
 fpath+=/usr/local/share/zsh-completions
 HIST_STAMPS="mm/dd/yyyy"
 setopt EXTENDED_HISTORY
 unset SSH_AUTH_SOCK
-
-# ---------
-# OH-MY-ZSH
-# ---------
-plugins=(git colored-man-pages)
-source $ZSH/oh-my-zsh.sh
-
-source $DOT_MODS/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 
 # --------------------
