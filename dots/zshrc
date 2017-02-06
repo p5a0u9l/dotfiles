@@ -132,3 +132,5 @@ echo ""
 
 # fix stupid default tmux window name
 tmux rename-window 'zsh*'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

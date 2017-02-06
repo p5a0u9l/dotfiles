@@ -64,3 +64,6 @@
 [submodule "modules/vim/bundle/dracula-theme"]
 	path = modules/vim/bundle/dracula-theme
 	url = git@github.com:dracula/vim.git
+[submodule "modules/vim/bundle/ale"]
+	path = modules/vim/bundle/ale
+	url = https://github.com/w0rp/ale
