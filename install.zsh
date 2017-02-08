@@ -41,6 +41,7 @@ link_dots() {
 
 # modules
 link_modules() {
+    # git submodules
     link_me $DOT_MODS/zsh/oh-my-zsh.git $HOME/.oh-my-zsh.git
     link_me $DOT_MODS/vim/bundle $XDG/nvim/bundle
     link_me $DOT_MODS/vim/bundle/vim-pathogen/autoload $XDG/nvim/autoload

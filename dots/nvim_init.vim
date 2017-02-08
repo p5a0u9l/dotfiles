@@ -14,8 +14,8 @@ xmap <C-k>     <Plug>(neosnippet_expand_target)
 autocmd! BufWritePost * Neomake
 
 " CRITICAL neovim python locations
-let g:python2_host_prog="/Users/paul/.pyenv/versions/neovim2/bin/python"
-let g:python3_host_prog="/Users/paul/.pyenv/versions/neovim3/bin/python"
+let g:python2_host_prog="$HOME/.pyenv/versions/neovim2/bin/python"
+let g:python3_host_prog="$HOME/.pyenv/versions/neovim3/bin/python"
 
 " deoplete
 let g:deoplete#enable_at_startup=1

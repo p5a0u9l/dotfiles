@@ -93,6 +93,11 @@ if which pyenv-virtualenv-init > /dev/null; then
     export PYENV_VIRTUALENV_DISABLE_PROMPT=0
 fi
 
+# fzf
+if which fzf > /dev/null; then
+    [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+fi
+
 # One editor to rule them all
 if which nvim > /dev/null; then
     export EDITOR='nvim'
@@ -133,4 +138,3 @@ echo ""
 # fix stupid default tmux window name
 tmux rename-window 'zsh*'
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
