@@ -67,3 +67,6 @@
 [submodule "modules/vim/bundle/ale"]
 	path = modules/vim/bundle/ale
 	url = https://github.com/w0rp/ale
+[submodule "modules/zsh/prezto"]
+	path = modules/zsh/prezto
+	url = https://github.com/zsh-users/prezto

@@ -1,13 +1,22 @@
 # my zshrc file
 
 # -------
+# Aliases
+# -------
+alias H="history"
+alias lgrep="ls|grep $1"
+alias hgrep="history|grep -n2 $1"
+alias C="|wc -l"
+
+# -------
 # EXPORTS
 # -------
 export MACBOOKHOST="amalthea"
 # dotfiles
-export DOT_HOME=$HOME/dotfiles
-export DOT_DOTS=$DOT_HOME/dots
-export DOT_MODS=$DOT_HOME/modules
+export DOTHOME=$HOME/dotfiles
+export DOTDOTS=$DOTHOME/dots
+export DOTMODS=$DOTHOME/modules
+export ZDOTDIR=$DOTMODS/zsh/
 export XDG=$HOME/.config
 export LANG=en_US.UTF-8
 export PAGER=less
@@ -22,16 +31,17 @@ export GPG_TTY=$TTY
 export PINENTRY_USER_DATA="USE_CURSES=1"
 export TARGPGKEY=834E117E  # key ID for encryption
 export PASSGPGKEY=EB47B5CA # alt key ID for encryption
+# PYTHON
 export PYTHONSTARTUP=~/.pyrc
+CASE_SENSITIVE="true"
 
 # ---------
 # OH-MY-ZSH
 # ---------
-plugins=(git colored-man-pages)
-CASE_SENSITIVE="true"
-DISABLE_AUTO_UPDATE=true
-source $ZSH/oh-my-zsh.sh
-source $DOT_MODS/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+# plugins=(git colored-man-pages)
+# DISABLE_AUTO_UPDATE=true
+# source $ZSH/oh-my-zsh.sh
+# source $DOTMODS/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # -----------------
 # PLATFORM SPECIFIC
@@ -39,8 +49,8 @@ source $DOT_MODS/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 if [ "$HOST" = "$MACBOOKHOST" ]; then
     # export CXX=/usr/local/gcc-6.2.0/bin/g++-6.2.0
     # export CC=/usr/local/gcc-6.2.0/bin/gcc-6.2.0
-    ZSH_THEME="zhann"
-    source $DOT_MODS/zsh/dracula-theme/dracula.zsh-theme
+    # ZSH_THEME="zhann"
+    source $DOTMODS/zsh/dracula-theme/dracula.zsh-theme
 else
     # "powerline" "random" "zhann" "nebirhos" "awesomepanda" "agnoster" "jispwoso"
     ZSH_THEME="agnoster"
@@ -93,11 +103,6 @@ if which pyenv-virtualenv-init > /dev/null; then
     export PYENV_VIRTUALENV_DISABLE_PROMPT=0
 fi
 
-# fzf
-if which fzf > /dev/null; then
-    [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-fi
-
 # One editor to rule them all
 if which nvim > /dev/null; then
     export EDITOR='nvim'
@@ -111,13 +116,6 @@ if which googler > /dev/null; then
     alias googler="googler -n 3"
     alias define="googler -n 2 define"
 fi
-
-# -------
-# Aliases
-# -------
-alias h="history"
-alias lgrep="ls|grep $1"
-alias hgrep="history|grep -n2 $1"
 
 # ---------
 # Functions
