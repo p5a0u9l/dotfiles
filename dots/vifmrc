@@ -175,7 +175,7 @@ fileviewer *.mp3 mp3info
 
 filetype *.flac
         \ {Open in nvim}
-        \ $HOME/code/python/lp2flac/gretaflac.sh
+        \ $HOME/code/python/clamm/clamm/scripts/gretaflac.sh
 
 " fileviewer *.flac metaflac --list %c | grep "ALBUM\|ARTIST\|COMPOSER\|TITLE"
 fileviewer *.flac metaflac --list --block-number=1 %c | grep "comment"

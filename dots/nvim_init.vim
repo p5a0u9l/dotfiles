@@ -5,20 +5,21 @@ call pathogen#helptags()
 
 source ~/.config/nvim/filetypes.vim
 
+" Neomake make on write
+autocmd! BufWritePost * Neomake
+
+" CRITICAL neovim python locations
+let g:python3_host_prog="/Users/paul/.pyenv/versions/neovim3/bin/python"
+let g:python_host_prog="/Users/paul/.pyenv/versions/neovim2/bin/python"
+
 " Plugin key-mappings.
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>     <Plug>(neosnippet_expand_target)
 
-" Neomake make on write
-autocmd! BufWritePost * Neomake
-
-" CRITICAL neovim python locations
-let g:python2_host_prog="/Users/paul/.pyenv/versions/neovim2/bin/python"
-let g:python3_host_prog="/Users/paul/.pyenv/versions/neovim3/bin/python"
-
 " deoplete
 let g:deoplete#enable_at_startup=1
+let g:deoplete#sources#jedi#python_path="/Users/paul/.pyenv/versions/neovim3/bin/python"
 
 " Enable filetype plugins
 filetype plugin on
@@ -70,12 +71,12 @@ inoremap <C-a> <C-o>0
 inoremap <C-f> <C-o><Right>
 inoremap <C-b> <C-o><Left>
 
-nnoremap <leader>db i import pdb; pdb.set_trace()<esc>
+nnoremap <leader>db iimport bpdb; bpdb.set_trace()<esc>
 
 " Fast saving
-nmap <leader>w :w!<cr>$a <esc>:%s/\s\+$//<cr>:w!<cr>
+nmap <leader>w :w!<cr>
 "
-nmap <CR> o <esc>
+nmap <CR> o<esc>
 
 " Allows you to easily replace the current word and all its occurrences.
 nnoremap <Leader>rc :%s/\<<C-r><C-w>\>/
@@ -87,7 +88,7 @@ set so=15
 set showcmd                       " show the command
 
 " Folding settings
-set foldcolumn=0
+set foldcolumn=2
 
 " Ignore compiled files
 set wildignore=*.o,*~,*.pyc
@@ -192,13 +193,12 @@ set viminfo^=%
 " Remap VIM 0 to first non-blank character
 map 0 ^
 
-" Delete trailing white space on save, useful for Python and CoffeeScript ;)
+" Delete trailing white space on save, useful for Python
 func! DeleteTrailingWS()
     exe "normal mz"
     %s/\s\+$//ge
     exe "normal `z"
 endfunc
-autocmd BufWrite *.py :call DeleteTrailingWS()
 
 " When you press <leader>r you can search and replace the selected text
 vnoremap <silent> <leader>r :call VisualSelection('replace', '')<CR>
@@ -300,15 +300,25 @@ let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
 let Grep_Skip_Dirs = 'RCS CVS SCCS .svn generated'
 set grepprg=/bin/grep\ -nH
 
-" let g:airline_powerline_fonts=1
-" let g:airline_symbols = {}
-" let g:airline_left_sep = '▶'
-" let g:airline_right_sep = '◀'
-" let g:airline_symbols.crypt = '🔒'
-" let g:airline_symbols.linenr = '¶'
-" let g:airline_symbols.maxlinenr = '☰'
-" let g:airline_symbols.branch = '⎇'
-" let g:airline_symbols.paste = 'ρ'
-" let g:airline_symbols.spell = 'Ꞩ'
-" let g:airline_symbols.notexists = '∄'
-" let g:airline_symbols.whitespace = 'Ξ'
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+" unicode symbols
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.crypt = '🔒'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.maxlinenr = '☰'
+let g:airline_symbols.maxlinenr = ''
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.spell = 'Ꞩ'
+let g:airline_symbols.notexists = '∄'
+let g:airline_symbols.whitespace = 'Ξ'

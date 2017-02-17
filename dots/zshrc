@@ -12,6 +12,9 @@ alias H="history"
 alias lgrep="ls|grep $1"
 alias hgrep="history|grep -n2 $1"
 alias C="|wc -l"
+alias trew="tmux rename-window"
+alias gst='git status'
+alias gca='git commit -v -a'
 
 # -------
 # EXPORTS
@@ -63,6 +66,7 @@ fi
 # ------------
 # ZSH SETTINGS
 # ------------
+unsetopt correct
 fpath+=/usr/local/share/zsh-completions
 HIST_STAMPS="mm/dd/yyyy"
 unset SSH_AUTH_SOCK
