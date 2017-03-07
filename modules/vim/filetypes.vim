@@ -7,3 +7,14 @@ au FileType python map <buffer> F :set foldmethod=indent<cr>
 au FileType python map <buffer> <leader>1 /\<class\><cr>
 au FileType python map <buffer> <leader>2 /\<def\><cr>
 autocmd BufWrite *.py :call DeleteTrailingWS()
+
+""""""""""""""""""""""""""""""
+" => Julia section
+""""""""""""""""""""""""""""""
+autocmd BufWrite *.jl :call DeleteTrailingWS()
+
+""""""""""""""""""""""""""""""
+" => Matlab section
+""""""""""""""""""""""""""""""
+autocmd BufWrite *.m :call DeleteTrailingWS()
+

@@ -4,7 +4,7 @@ Host ee.washington.edu
 Host github.com
     IdentityFile ~/.ssh/github.com/p5a0u9l-id_rsa
 
-Host ganymede.jupiter.lan
+Host ganymede
     IdentitiesOnly yes
     IdentityFile ~/.ssh/jupiter.lan/ganymede-id_rsa
 

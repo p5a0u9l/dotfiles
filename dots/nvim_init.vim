@@ -18,12 +18,14 @@ smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>     <Plug>(neosnippet_expand_target)
 
 " deoplete
+let g:ale_set_highlights=0
 let g:deoplete#enable_at_startup=1
 let g:deoplete#sources#jedi#python_path="/Users/paul/.pyenv/versions/neovim3/bin/python"
 
 " Enable filetype plugins
 filetype plugin on
 filetype indent on
+set colorcolumn=80
 
 set number
 
@@ -88,7 +90,7 @@ set so=15
 set showcmd                       " show the command
 
 " Folding settings
-set foldcolumn=2
+set foldcolumn=0
 
 " Ignore compiled files
 set wildignore=*.o,*~,*.pyc
@@ -167,6 +169,8 @@ map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove
 map <leader>t<leader> :tabnext
+noremap <C-w>h tabmove -1
+noremap <C-w>l tabmove +1
 
 " Let 'tl' toggle between this and the last accessed tab
 let g:lasttab = 1

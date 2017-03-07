@@ -15,6 +15,7 @@ alias C="|wc -l"
 alias trew="tmux rename-window"
 alias gst='git status'
 alias gca='git commit -v -a'
+alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit --no-verify -m "--wip-- [skip ci]"'
 
 # -------
 # EXPORTS
