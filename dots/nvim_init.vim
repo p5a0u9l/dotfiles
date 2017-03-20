@@ -5,9 +5,6 @@ call pathogen#helptags()
 
 source ~/.config/nvim/filetypes.vim
 
-" Neomake make on write
-autocmd! BufWritePost * Neomake
-
 " CRITICAL neovim python locations
 let g:python3_host_prog="/Users/paul/.pyenv/versions/neovim3/bin/python"
 let g:python_host_prog="/Users/paul/.pyenv/versions/neovim2/bin/python"
@@ -18,9 +15,16 @@ smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>     <Plug>(neosnippet_expand_target)
 
 " deoplete
-let g:ale_set_highlights=0
 let g:deoplete#enable_at_startup=1
 let g:deoplete#sources#jedi#python_path="/Users/paul/.pyenv/versions/neovim3/bin/python"
+
+"tagbar
+let g:tagbar_width = 40
+autocmd VimEnter * nested :TagbarOpen
+nnoremap <silent> <F9> :TagbarToggle<CR>
+
+" neomake
+autocmd! BufWritePost * Neomake
 
 " Enable filetype plugins
 filetype plugin on
