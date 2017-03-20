@@ -1,17 +1,6 @@
 # my zshrc file
 
 # -------
-# Aliases
-# -------
-alias H="history"
-alias lgrep="ls|grep $1"
-alias hgrep="history|grep -n2 $1"
-alias C="|wc -l"
-alias trew="tmux rename-window"
-alias cddf="cd $HOME/dotfiles/dots"
-alias cddm="cd $HOME/dotfiles/modules"
-
-# -------
 # EXPORTS
 # -------
 export MACBOOKHOST="amalthea"
@@ -36,6 +25,18 @@ export PASSGPGKEY=EB47B5CA      # alt key ID for encryption
 # PYTHON
 export PYTHONSTARTUP=~/.pyrc
 CASE_SENSITIVE="true"
+
+# -------
+# Aliases
+# -------
+alias H="history"
+alias lgrep="ls|grep $1"
+alias hgrep="history|grep -n2 $1"
+alias C="|wc -l"
+alias trew="tmux rename-window"
+alias cdd="cd $DOTHOME"
+alias cddf="cd $DOTDOTS"
+alias cddm="cd $DOTMODS"
 
 # ---------
 # OH-MY-ZSH

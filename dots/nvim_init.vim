@@ -18,11 +18,6 @@ xmap <C-k>     <Plug>(neosnippet_expand_target)
 let g:deoplete#enable_at_startup=1
 let g:deoplete#sources#jedi#python_path="/Users/paul/.pyenv/versions/neovim3/bin/python"
 
-"tagbar
-let g:tagbar_width = 40
-autocmd VimEnter * nested :TagbarOpen
-nnoremap <silent> <F9> :TagbarToggle<CR>
-
 " neomake
 autocmd! BufWritePost * Neomake
 
