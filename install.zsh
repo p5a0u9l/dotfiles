@@ -37,9 +37,8 @@ link_dots() {
 link_modules() {
     # git submodules
     link_me $DOTMODS/zsh/oh-my-zsh $HOME/.oh-my-zsh
-    link_me $DOTMODS/vim/bundle $XDG/nvim/bundle
-    link_me $DOTMODS/vim/bundle/vim-pathogen/autoload $XDG/nvim/autoload
-    link_me $DOTMODS/vim/filetypes.vim $HOME/.config/nvim/filetypes.vim
+    link_me $DOTMODS/vim $XDG/nvim
+    link_me $DOTMODS/vim $HOME/.vim
 }
 
 # main

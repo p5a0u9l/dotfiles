@@ -5,10 +5,11 @@
 # -------
 export MACBOOKHOST="amalthea"
 # dotfiles
+export VIMHOME=$HOME/.vim
+export XDG=$HOME/.config
 export DOTHOME=$HOME/dotfiles
 export DOTDOTS=$DOTHOME/dots
 export DOTMODS=$DOTHOME/modules
-export XDG=$HOME/.config
 export LANG=en_US.UTF-8
 export PAGER=less
 setopt EXTENDED_HISTORY

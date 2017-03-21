@@ -1,4 +1,3 @@
-" -------
 " PLUGINS
 " -------
     call pathogen#infect('~/.config/nvim/bundle/{}')
@@ -48,7 +47,6 @@
     let g:airline_symbols.notexists = '∄'
     let g:airline_symbols.whitespace = 'Ξ'
 
-" --------
 " SETTINGS
 " --------
     filetype plugin on        " Enable filetype plugins
@@ -91,7 +89,6 @@
     let g:mapleader = "\<Space>"
     colorscheme dracula
 
-" ----
 " MAPS
 " ----
     " Whwn you press <leader>r you can search and replace the selected text
