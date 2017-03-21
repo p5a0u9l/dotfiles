@@ -1,232 +1,152 @@
-" Plugins
-"
-call pathogen#infect('~/.config/nvim/bundle/{}')
-call pathogen#helptags()
+" -------
+" PLUGINS
+" -------
+    call pathogen#infect('~/.config/nvim/bundle/{}')
+    call pathogen#helptags()
+    source ~/.config/nvim/filetypes.vim
 
-source ~/.config/nvim/filetypes.vim
+    " CRITICAL neovim python locations
+    let g:python3_host_prog="/Users/paul/.pyenv/versions/neovim3/bin/python"
+    let g:python_host_prog="/Users/paul/.pyenv/versions/neovim2/bin/python"
 
-" CRITICAL neovim python locations
-let g:python3_host_prog="/Users/paul/.pyenv/versions/neovim3/bin/python"
-let g:python_host_prog="/Users/paul/.pyenv/versions/neovim2/bin/python"
+    " deoplete
+    let g:deoplete#enable_at_startup=1
+    let g:deoplete#sources#jedi#python_path="/Users/paul/.pyenv/versions/neovim3/bin/python"
 
-" Plugin key-mappings.
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
+    " neomake
+    autocmd! BufWritePost * Neomake
 
-" deoplete
-let g:deoplete#enable_at_startup=1
-let g:deoplete#sources#jedi#python_path="/Users/paul/.pyenv/versions/neovim3/bin/python"
+    " fugitive
+    noremap <leader>gs :Gstatus<cr>
 
-" neomake
-autocmd! BufWritePost * Neomake
+    " CTRL-P
+    let g:ctrlp_working_path_mode=0
+    map <c-b> :CtrlPBuffer<cr>
+    let g:ctrlp_max_height=20
+    let g:ctrlp_custom_ignore='node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
+    " airline
+    if !exists('g:airline_symbols')
+        let g:airline_symbols = {}
+    endif
 
-" Enable filetype plugins
-filetype plugin on
-filetype indent on
-set colorcolumn=80
+    " unicode symbols
+    let g:airline_left_sep = '»'
+    let g:airline_left_sep = '▶'
+    let g:airline_right_sep = '«'
+    let g:airline_right_sep = '◀'
+    let g:airline_symbols.crypt = '🔒'
+    let g:airline_symbols.linenr = '␊'
+    let g:airline_symbols.linenr = '␤'
+    let g:airline_symbols.linenr = '¶'
+    let g:airline_symbols.maxlinenr = '☰'
+    let g:airline_symbols.maxlinenr = ''
+    let g:airline_symbols.branch = '⎇'
+    let g:airline_symbols.paste = 'ρ'
+    let g:airline_symbols.paste = 'Þ'
+    let g:airline_symbols.paste = '∥'
+    let g:airline_symbols.spell = 'Ꞩ'
+    let g:airline_symbols.notexists = '∄'
+    let g:airline_symbols.whitespace = 'Ξ'
 
-set number
+" --------
+" SETTINGS
+" --------
+    filetype plugin on        " Enable filetype plugins
+    filetype indent on
+    set colorcolumn=80
+    set number
+    set noshowmode            " don't show the mode
+    set so=15                 " when moving vertically using j/k
+    set showcmd               " show the command
+    let base16colorspace=256  " Access colors present in 256 colorspace
+    let mapleader = "\<Space>"
+    set foldcolumn=0  " Folding settings
+    set wildignore=*.o,*~,*.pyc  " Ignore compiled files
+    set wildignore+=.git\*,.hg\*,.svn\*
+    set ruler
+    set noswapfile
+    set cmdheight=1  " Height of the command bar
+    set whichwrap+=<,>,h,l
+    set magic  " For regular expressions turn magic on
+    set showmatch  " Show matching brackets
+    set noerrorbells  " No annoying sound on errors
+    set novisualbell
+    set fdm=indent
+    syntax enable  " Enable syntax highlighting
+    set background=dark
+    set ffs=unix,dos,mac
+    set expandtab  " Use spaces instead of tabs
+    set shiftwidth=4
+    set tabstop=4
+    set linespace=10                   " prefer a slight higher line height
+    set tw=500
+    set viminfo^=%  " Remember info about open buffers on close
+    set wrap "Wrap lines
+    " Let 'tl' toggle between this and the last accessed tab
+    let g:lasttab=1
+    nmap <Leader>tl :exe "tabn ".g:lasttab<CR>
+    au TabLeave * let g:lasttab = tabpagenr()
 
-let base16colorspace=256  " Access colors present in 256 colorspace
-colorscheme dracula
 
-" don't show the mode, vim-airline will do that for us
-set noshowmode
+    let g:mapleader = "\<Space>"
+    colorscheme dracula
 
-" With a map leader it's possible to do extra key combinations
-" like <leader>w saves the current file
-let mapleader = "\<Space>"
-let g:mapleader = "\<Space>"
+" ----
+" MAPS
+" ----
+    " Whwn you press <leader>r you can search and replace the selected text
+    vnoremap <silent> <leader>r :call VisualSelection('replace', '')<CR>
+    " Pressing ,ss will toggle and untoggle spell checking
+    map <leader>ss :setlocal spell!<cr>
+    " Shortcuts using <leader>
+    map <leader>sn ]s
+    map <leader>sp [s
+    map <leader>sa zg
+    map <leader>s? z=
+    " move between windows
+    noremap <c-k> gt
+    noremap <c-j> gT
+    " move lines +-
+    noremap - ddp
+    noremap _ ddkP
+    " change in quotes (easier to type)
+    noremap ciq ci"
+    noremap diq di"
+    " yank everything from the cursor to the end of the line. 
+    noremap Y y$
+    " cmd-like navigation
+    inoremap <C-e> <C-o>$
+    inoremap <C-a> <C-o>0
+    inoremap <C-f> <C-o><Right>
+    inoremap <C-b> <C-o><Left>
+    " Fast saving
+    nmap <leader>w :w!<cr>
+    " inset line below cursor
+    nmap <CR> o<esc>
+    " replace the current word and all its occurrences.
+    nnoremap <Leader>rc :%s/\<<C-r><C-w>\>/
+    vnoremap <Leader>rc y:%s/<C-r>"/
+    " Visual mode pressing * or # searches for the current selection
+    vnoremap <silent> * :call VisualSelection('f', '')<CR>
+    vnoremap <silent> # :call VisualSelection('b', '')<CR>
+    " Disable highlight when <leader><cr> is pressed
+    map <silent> <leader><cr> :noh<cr>
+    " managing tabs
+    noremap <C-w>h :tabmove -1<cr>
+    noremap <C-w>l :tabmove +1<cr>
+    " Open a new tab with the current buffer's path
+    map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
+    " Switch CWD to the directory of the open buffer
+    map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
-noremap <leader>gst :Gstatus<cr>
-"
-"" Quickly select the text that was just pasted. This allows you to, e.g.,
-" indent it after pasting.
-noremap gV `[v`]
+    " Return to last edit position when opening files (You want this!)
+    autocmd BufReadPost *
+                \ if line("'\"") > 0 && line("'\"") <= line("$") |
+                \   exe "normal! g`\"" |
+                \ endif
+    " Toggle paste mode on and off
+    map <leader>pp :setlocal paste!<cr>
 
-" insert a python function docstring using google-conventions
-" move lines
-noremap - ddp
-noremap _ ddkP
-
-noremap ciq ci"
-" easier to type
-noremap diq di"
-
-" Stay in visual mode when indenting. You will never have to run gv after
-" performing an indentation.
-vnoremap < <gv
-vnoremap > >gv
-
-" Make Y yank everything from the cursor to the end of the line. This makes Y
-" act more like C or D because by default, Y yanks the current line (i.e. the
-" same as yy).
-noremap Y y$
-
-" Make Ctrl-e jump to the end of the current line in the insert mode. This is
-" handy when you are in the middle of a line and would like to go to its end
-" without switching to the normal mode.
-inoremap <C-e> <C-o>$
-inoremap <C-a> <C-o>0
-inoremap <C-f> <C-o><Right>
-inoremap <C-b> <C-o><Left>
-
-nnoremap <leader>db iimport bpdb; bpdb.set_trace()<esc>
-
-" Fast saving
-nmap <leader>w :w!<cr>
-"
-nmap <CR> o<esc>
-
-" Allows you to easily replace the current word and all its occurrences.
-nnoremap <Leader>rc :%s/\<<C-r><C-w>\>/
-vnoremap <Leader>rc y:%s/<C-r>"/
-
-" Set 7 lines to the cursor - when moving vertically using j/k
-set so=15
-
-set showcmd                       " show the command
-
-" Folding settings
-set foldcolumn=0
-
-" Ignore compiled files
-set wildignore=*.o,*~,*.pyc
-set wildignore+=.git\*,.hg\*,.svn\*
-
-set ruler
-set noswapfile
-
-" Height of the command bar
-set cmdheight=1
-
-set whichwrap+=<,>,h,l
-
-" For regular expressions turn magic on
-set magic
-
-" Show matching brackets when text indicator is over them
-set showmatch
-
-" How many tenths of a second to blink when matching brackets
-set mat=2
-
-" No annoying sound on errors
-set noerrorbells
-set novisualbell
-
-set fdm=indent
-
-" => Colors and Fonts  <=
-" Enable syntax highlighting
-syntax enable
-set background=dark
-
-" Use Unix as the standard file type
-set ffs=unix,dos,mac
-
-" => Text, tab and indent related <= {{{
-"
-" Use spaces instead of tabs
-set expandtab
-set shiftwidth=4
-set tabstop=4
-set linespace=10                   " prefer a slight higher line height
-
-" Linebreak on 500 characters
-set lbr
-set tw=500
-
-set wrap "Wrap lines
-"
-" Visual mode pressing * or # searches for the current selection
-" Super useful! From an idea by Michael Naumann
-vnoremap <silent> * :call VisualSelection('f', '')<CR>
-vnoremap <silent> # :call VisualSelection('b', '')<CR>
-
-" Treat long lines as break lines (useful when moving around in them)
-map j gj
-map k gk
-
-" Disable highlight when <leader><cr> is pressed
-map <silent> <leader><cr> :noh<cr>
-
-" Smart way to move between windows
-noremap <c-k> gt
-noremap <c-j> gT
-
-" Close the current buffer
-map <leader>bd :Bclose<cr>:tabclose<cr>gT
-
-" Close all the buffers
-map <leader>ba :bufdo bd<cr>
-
-" Useful mappings for managing tabs
-map <leader>tn :tabnew<cr>
-map <leader>to :tabonly<cr>
-map <leader>tc :tabclose<cr>
-map <leader>tm :tabmove
-map <leader>t<leader> :tabnext
-noremap <C-w>h tabmove -1
-noremap <C-w>l tabmove +1
-
-" Let 'tl' toggle between this and the last accessed tab
-let g:lasttab = 1
-nmap <Leader>tl :exe "tabn ".g:lasttab<CR>
-au TabLeave * let g:lasttab = tabpagenr()
-
-" Opens a new tab with the current buffer's path
-" Super useful when editing files in the same directory
-map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
-
-" Switch CWD to the directory of the open buffer
-map <leader>cd :cd %:p:h<cr>:pwd<cr>
-
-" Return to last edit position when opening files (You want this!)
-autocmd BufReadPost *
-            \ if line("'\"") > 0 && line("'\"") <= line("$") |
-            \   exe "normal! g`\"" |
-            \ endif
-
-" Remember info about open buffers on close
-set viminfo^=%
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Remap VIM 0 to first non-blank character
-map 0 ^
-
-" Delete trailing white space on save, useful for Python
-func! DeleteTrailingWS()
-    exe "normal mz"
-    %s/\s\+$//ge
-    exe "normal `z"
-endfunc
-
-" When you press <leader>r you can search and replace the selected text
-vnoremap <silent> <leader>r :call VisualSelection('replace', '')<CR>
-
-" => Spell checking <= {{{
-"
-" Pressing ,ss will toggle and untoggle spell checking
-map <leader>ss :setlocal spell!<cr>
-
-" Shortcuts using <leader>
-map <leader>sn ]s
-map <leader>sp [s
-map <leader>sa zg
-map <leader>s? z=
-
-" => Misc <= {{{
-"
-" Remove the Windows ^M - when the encodings gets messed up
-noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
-
-" Toggle paste mode on and off
-map <leader>pp :setlocal paste!<cr>
-"}}}
-" => Helper functions <= {{{
-"
 function! VisualSelection(direction, extra_filter) range
     let l:saved_reg = @"
     execute "normal! vgvy"
@@ -248,80 +168,6 @@ function! VisualSelection(direction, extra_filter) range
     let @" = l:saved_reg
 endfunction
 
-" Returns true if paste mode is enabled
-function! HasPaste()
-    if &paste
-        return 'PASTE MODE  '
-    endif
-    return ''
-endfunction
-
-" Don't close window, when deleting a buffer
-command! Bclose call <SID>BufcloseCloseIt()
-function! <SID>BufcloseCloseIt()
-    let l:currentBufNum = bufnr("%")
-    let l:alternateBufNum = bufnr("#")
-
-    if buflisted(l:alternateBufNum)
-        buffer #
-    else
-        bnext
-    endif
-
-    if bufnr("%") == l:currentBufNum
-        new
-    endif
-
-    if buflisted(l:currentBufNum)
-        execute("bdelete! ".l:currentBufNum)
-    endif
-endfunction
-"
-"=> Plugin Settings <= {{{
-""""""""""""""""""""""""""""""
-" => bufExplorer plugin
-""""""""""""""""""""""""""""""
-let g:bufExplorerDefaultHelp=0
-let g:bufExplorerShowRelativePath=1
-let g:bufExplorerFindActive=1
-let g:bufExplorerSortBy='name'
-map <leader>o :BufExplorer<cr>
-
-""""""""""""""""""""""""""""""
-" => CTRL-P
-""""""""""""""""""""""""""""""
-let g:ctrlp_working_path_mode = 0
-
-map <c-b> :CtrlPBuffer<cr>
-
-let g:ctrlp_max_height = 20
-let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
-
-""""""""""""""""""""""""""""""
 " => Vim grep
-""""""""""""""""""""""""""""""
 let Grep_Skip_Dirs = 'RCS CVS SCCS .svn generated'
-set grepprg=/bin/grep\ -nH
-
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
-
-" unicode symbols
-let g:airline_left_sep = '»'
-let g:airline_left_sep = '▶'
-let g:airline_right_sep = '«'
-let g:airline_right_sep = '◀'
-let g:airline_symbols.crypt = '🔒'
-let g:airline_symbols.linenr = '␊'
-let g:airline_symbols.linenr = '␤'
-let g:airline_symbols.linenr = '¶'
-let g:airline_symbols.maxlinenr = '☰'
-let g:airline_symbols.maxlinenr = ''
-let g:airline_symbols.branch = '⎇'
-let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.paste = 'Þ'
-let g:airline_symbols.paste = '∥'
-let g:airline_symbols.spell = 'Ꞩ'
-let g:airline_symbols.notexists = '∄'
-let g:airline_symbols.whitespace = 'Ξ'
+set grepprg=/usr/local/bin/ag
