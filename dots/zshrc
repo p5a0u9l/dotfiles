@@ -1,3 +1,12 @@
+# Credit: https://kev.inburke.com/kevin/profiling-zsh-startup-time/
+PROFILE_STARTUP=false
+if [[ "$PROFILE_STARTUP" == true ]]; then
+    zmodload zsh/zprof # Output load-time statistics
+    # http://zsh.sourceforge.net/Doc/Release/Prompt-Expansion.html
+    PS4=$'%D{%M%S%.} %N:%i> '
+    exec 3>&2 2>"$HOME/.zsh_startup.$$"
+    setopt xtrace prompt_subst
+fi
 # my zshrc file
 
 # -------
@@ -55,13 +64,15 @@ if [ "$HOST" = "$MACBOOKHOST" ]; then
     # ZSH_THEME="zhann"
     source $DOTMODS/zsh/dracula-theme/dracula.zsh-theme
 else
-    # "powerline" "random" "zhann" "nebirhos" "awesomepanda" "agnoster" "jispwoso"
+    # "powerline" "random" "zhann" "nebirhos" "awesomepanda" "agnoster"
+    # "jispwoso"
     ZSH_THEME="agnoster"
 fi
 
 # ------------
 # ZSH SETTINGS
 # ------------
+bindkey "^P" up-line-or-search
 unsetopt correct
 fpath+=/usr/local/share/zsh-completions
 HIST_STAMPS="mm/dd/yyyy"
@@ -100,9 +111,10 @@ if which cmus > /dev/null; then
 fi
 
 if which pyenv-virtualenv-init > /dev/null; then
-    eval "$(pyenv init -)"
-    eval "$(pyenv virtualenv-init -)";
-    export PYENV_VIRTUALENV_DISABLE_PROMPT=0
+    pyenv() {
+        eval "$( command pyenv init - )"
+        pyenv "$@"
+    }
 fi
 
 # One editor to rule them all
@@ -128,3 +140,8 @@ echo ""
 
 # fix stupid default tmux window name
 tmux rename-window 'zsh*'
+if [[ "$PROFILE_STARTUP" == true ]]; then
+    zprof
+    unsetopt xtrace
+    exec 2>&3 3>&-
+fi

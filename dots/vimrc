@@ -13,7 +13,7 @@
     " let g:deoplete#sources#jedi#python_path="/Users/paul/.pyenv/versions/neovim3/bin/python"
 
     " neomake
-    autocmd! BufWritePost * Neomake
+    " autocmd! BufWritePost * Neomake
 
     " fugitive
     noremap <leader>gs :Gstatus<cr>
@@ -59,6 +59,7 @@
     set foldcolumn=0  " Folding settings
     set wildignore=*.o,*~,*.pyc  " Ignore compiled files
     set wildignore+=.git\*,.hg\*,.svn\*
+    set hlsearch
     set noswapfile
     set cmdheight=1  " Height of the command bar
     set whichwrap+=<,>,h,l
@@ -87,10 +88,11 @@
 
 " MAPS
 " ----
-    " Whwn you press <leader>r you can search and replace the selected text
+    " search and replace the selected text
     vnoremap <silent> <leader>r :call VisualSelection('replace', '')<CR>
     " Pressing ,ss will toggle and untoggle spell checking
     map <leader>ss :setlocal spell!<cr>
+    map <leader>dw :call DeleteTrailingWS()<cr>
     " Shortcuts using <leader>
     map <leader>sn ]s
     map <leader>sp [s
@@ -140,6 +142,13 @@
     " Toggle paste mode on and off
     map <leader>pp :setlocal paste!<cr>
 
+" Delete trailing white space on save, useful for Python
+func! DeleteTrailingWS()
+    exe "normal mz"
+    %s/\s\+$//ge
+    exe "normal `z"
+endfunc
+"
 function! VisualSelection(direction, extra_filter) range
     let l:saved_reg = @"
     execute "normal! vgvy"
@@ -164,4 +173,3 @@ endfunction
 " => Vim grep
 let Grep_Skip_Dirs = 'RCS CVS SCCS .svn generated'
 set grepprg=/usr/local/bin/ag
-}}}
