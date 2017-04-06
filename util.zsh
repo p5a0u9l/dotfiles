@@ -4,6 +4,7 @@ function gitignore() {
 
 function prompt_confirm() {
     echo "$1 [CR]" 
+    jnk=""
     vared jnk
 }
 
