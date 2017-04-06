@@ -17,7 +17,7 @@ function remove_gitmodule() {
 
     prompt_confirm "commit the change"
     git add -A
-    git commit
+    git commit -m "remove $1"
 
     prompt_confirm "remove $1 reference from .git/config"
     $EDITOR .git/config
@@ -30,7 +30,7 @@ function remove_gitmodule() {
 
     prompt_confirm "commit the change"
     git add -A
-    git commit
+    git commit -m "remove $1"
 
     prompt_confirm "finally, remove $1 from file system"
     rm -rf $1
