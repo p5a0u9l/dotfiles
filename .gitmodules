@@ -1,12 +1,19 @@
+# ---
+# zsh
+# ---
 [submodule "modules/zsh/dracula-theme"]
 	path = modules/zsh/dracula-theme
 	url = https://github.com/dracula/zsh.git
 [submodule "modules/zsh/zsh-autosuggestions"]
 	path = modules/zsh/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions
-[submodule "modules/zsh/oh-my-zsh.git"]
-	path = modules/zsh/oh-my-zsh.git
-	url = https://github.com/robbyrussell/oh-my-zsh.git
+[submodule "modules/zsh/oh-my-zsh"]
+	path = modules/zsh/oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh
+
+# ---
+# vim
+# ---
 [submodule "modules/vim/bundle/vim-colorschemes"]
 	path = modules/vim/bundle/vim-colorschemes
 	url = https://github.com/flazz/vim-colorschemes
@@ -43,9 +50,6 @@
 [submodule "modules/vim/bundle/neosnippet"]
 	path = modules/vim/bundle/neosnippet
 	url = https://github.com/Shougo/neosnippet
-[submodule "modules/vim/bundle/neosnippet-snippets"]
-	path = modules/vim/bundle/neosnippet-snippets
-	url = https://github.com/Shougo/neosnippet-snippets
 [submodule "modules/vim/bundle/deoplete-jedi"]
 	path = modules/vim/bundle/deoplete-jedi
 	url = https://github.com/zchee/deoplete-jedi
@@ -73,9 +77,6 @@
 [submodule "modules/vim/tagbar"]
 	path = modules/vim/tagbar
 	url = https://github.com/majutsushi/tagbar
-[submodule "modules/zsh/oh-my-zsh"]
-	path = modules/zsh/oh-my-zsh
-	url = https://github.com/robbyrussell/oh-my-zsh
 [submodule "modules/vim/bundle/vim-eunuch"]
 	path = modules/vim/bundle/vim-eunuch
 	url = https://github.com/tpope/vim-eunuch
@@ -85,3 +86,18 @@
 [submodule "modules/vim/bundle/vim-sensible"]
 	path = modules/vim/bundle/vim-sensible
 	url = https://github.com/tpope/vim-sensible
+[submodule "modules/vim/bundle/vim-sneak"]
+	path = modules/vim/bundle/vim-sneak
+	url = https://github.com/justinmk/vim-sneak
+[submodule "modules/python/pyenv"]
+	path = modules/python/pyenv
+	url = https://github.com/pyenv/pyenv
+[submodule "modules/tmux/plugins/tpm"]
+	path = modules/tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
+[submodule "modules/tmux/plugins/tmux-sensible"]
+	path = modules/tmux/plugins/tmux-sensible
+	url = https://github.com/tmux-plugins/tmux-sensible
+[submodule "modules/tmux/plugins/tmux-battery"]
+	path = modules/tmux/plugins/tmux-battery
+	url = https://github.com/tmux-plugins/tmux-battery
