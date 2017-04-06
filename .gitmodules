@@ -52,15 +52,9 @@
 [submodule "modules/vim/bundle/dracula-theme"]
 	path = modules/vim/bundle/dracula-theme
 	url = git@github.com:dracula/vim.git
-[submodule "modules/zsh/prezto"]
-	path = modules/zsh/prezto
-	url = https://github.com/zsh-users/prezto
 [submodule "modules/vim/bundle/julia.vim"]
 	path = modules/vim/bundle/julia.vim
 	url = https://github.com/JuliaEditorSupport/julia-vim
-[submodule "modules/vim/tagbar"]
-	path = modules/vim/tagbar
-	url = https://github.com/majutsushi/tagbar
 [submodule "modules/vim/bundle/vim-eunuch"]
 	path = modules/vim/bundle/vim-eunuch
 	url = https://github.com/tpope/vim-eunuch
