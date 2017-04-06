@@ -12,12 +12,12 @@ function remove_gitmodule() {
     prompt_confirm "start at top of repo"
     cd $DOTHOME
 
-    prompt_confirm "start with a clean repo"
-    git add -A
-    git commit
-
     prompt_confirm "remove $1 reference from .gitmodules"
     $EDITOR .gitmodules
+
+    prompt_confirm "commit the change"
+    git add -A
+    git commit
 
     prompt_confirm "remove $1 reference from .git/config"
     $EDITOR .git/config
