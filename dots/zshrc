@@ -22,9 +22,11 @@ export DOTMODS=$DOTHOME/modules
 export LANG=en_US.UTF-8
 export PAGER=less
 setopt EXTENDED_HISTORY
-export HISTSIZE=1000000000
+export HISTSIZE=100000000
 export SAVEHIST=$HISTSIZE
+export PYENV_ROOT="$HOME/.pyenv"
 # PATH APPENDAGES
+export PATH=$PYENV_ROOT/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 # GPG
@@ -45,13 +47,15 @@ alias hgrep="history|grep -n2 $1"
 alias C="|wc -l"
 alias trew="tmux rename-window"
 alias cdd="cd $DOTHOME"
-alias cddf="cd $DOTDOTS"
-alias cddm="cd $DOTMODS"
+alias cddf=cd $DOTDOTS
+alias cddm=cd $DOTMODS
+
+source $DOTHOME/util.zsh
 
 # ---------
 # OH-MY-ZSH
 # ---------
-export ZSH=$HOME/.oh-my-zsh
+export ZSH=$DOTMODS/zsh/oh-my-zsh
 plugins=(git colored-man-pages)
 DISABLE_AUTO_UPDATE=true
 source $ZSH/oh-my-zsh.sh
@@ -101,8 +105,8 @@ if false; then
     unset METATXT METACMD META CONF CMD
 fi
 
-if false && which pass > /dev/null; then
-    source /usr/local/etc/bash_completion.d/password-store
+if which pass > /dev/null; then
+    # source /usr/local/Cellar/zsh-completions/0.20.0/share/zsh-completions/_pass
 fi
 
 if which cmus > /dev/null; then
@@ -110,25 +114,14 @@ if which cmus > /dev/null; then
     alias cmus="/usr/local/bin/cmus 2>/dev/null"
 fi
 
-if which pyenv-virtualenv-init > /dev/null; then
+if which pyenv > /dev/null; then
     pyenv() {
         eval "$( command pyenv init - )"
-        pyenv "$@"
     }
 fi
 
 # One editor to rule them all
-if which nvim > /dev/null; then
-    export EDITOR='nvim'
-else
-    export EDITOR='vim'
-fi
-
-# google cli
-if which googler > /dev/null; then
-    alias googler="googler -n 3"
-    alias define="googler -n 2 define"
-fi
+export EDITOR='vim'
 
 # cute little welcome banner
 echo "|----------------------------------------------------"
