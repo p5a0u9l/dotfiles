@@ -10,7 +10,6 @@
 [submodule "modules/zsh/oh-my-zsh"]
 	path = modules/zsh/oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh
-
 # ---
 # vim
 # ---
@@ -50,9 +49,6 @@
 [submodule "modules/vim/bundle/neomake"]
 	path = modules/vim/bundle/neomake
 	url = https://github.com/neomake/neomake
-[submodule "modules/vim/ale"]
-	path = modules/vim/ale
-	url = https://github.com/w0rp/ale
 [submodule "modules/vim/bundle/dracula-theme"]
 	path = modules/vim/bundle/dracula-theme
 	url = git@github.com:dracula/vim.git
@@ -77,9 +73,15 @@
 [submodule "modules/vim/bundle/vim-sneak"]
 	path = modules/vim/bundle/vim-sneak
 	url = https://github.com/justinmk/vim-sneak
+# ------
+# python
+# ------
 [submodule "modules/python/pyenv"]
 	path = modules/python/pyenv
 	url = https://github.com/pyenv/pyenv
+# ----
+# tmux
+# ----
 [submodule "modules/tmux/plugins/tpm"]
 	path = modules/tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
