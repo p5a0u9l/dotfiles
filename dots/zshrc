@@ -115,9 +115,7 @@ if which cmus > /dev/null; then
 fi
 
 if which pyenv > /dev/null; then
-    pyenv() {
-        eval "$( command pyenv init - )"
-    }
+    eval "$( command pyenv init - )"
 fi
 
 # One editor to rule them all

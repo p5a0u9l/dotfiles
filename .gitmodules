@@ -85,3 +85,6 @@
 [submodule "modules/tmux/plugins/tmux-battery"]
 	path = modules/tmux/plugins/tmux-battery
 	url = https://github.com/tmux-plugins/tmux-battery
+[submodule "modules/python/pyenv-virtualenv"]
+	path = modules/python/pyenv-virtualenv
+	url = https://github.com/pyenv/pyenv-virtualenv

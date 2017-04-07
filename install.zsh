@@ -22,8 +22,8 @@ link_dots() {
     link_me $DOTDOTS/nvim_init.vim          $XDG/nvim/init.vim
     link_me $DOTDOTS/vifmrc                 $XDG/vifm/vifmrc
     link_me $DOTDOTS/gitconfig              $HOME/.gitconfig
-    link_me $DOTDOTS/gpg-agent.conf         $HOME/.gnupg/gpg
-    link_me $DOTDOTS/gpg.conf               $HOME/.gnupg/gpg
+    link_me $DOTDOTS/gpg-agent.conf         $HOME/.gnupg/gpg-agent.conf
+    link_me $DOTDOTS/gpg.conf               $HOME/.gnupg/gpg.conf
     link_me $DOTDOTS/ipython_config.py      $HOME/.ipython_config
     link_me $DOTDOTS/pandoc_default.latex   $HOME/.pandoc/default.latex
     link_me $DOTDOTS/pyrc                   $HOME/.pyrc
@@ -31,6 +31,8 @@ link_dots() {
     link_me $DOTDOTS/tmux.conf              $HOME/.tmux.conf
     link_me $DOTDOTS/vimrc                  $HOME/.vimrc
     link_me $DOTDOTS/zshrc                  $HOME/.zshrc
+    link_me $DOTDOTS/zshrc                  $HOME/.zshrc
+    link_me $DOTDOTS/juliarc                $HOME/.juliarc
 }
 
 # modules
@@ -39,6 +41,9 @@ link_modules() {
     link_me $DOTMODS/zsh/oh-my-zsh $HOME/.oh-my-zsh
     link_me $DOTMODS/vim $XDG/nvim
     link_me $DOTMODS/vim $HOME/.vim
+    link_me $DOTMODS/python/pyenv $HOME/.pyenv
+    link_me $DOTMODS/vim/bundle/vim-pathogen/autoload $DOTMODS/vim/autoload
+    link_me $DOTMODS/tmux/plugins/ $HOME/.tmux/plugins
 }
 
 # main
