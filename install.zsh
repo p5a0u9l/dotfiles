@@ -22,6 +22,7 @@ link_dots() {
     link $DOTDOTS/nvim_init.vim          $XDG/nvim/init.vim
     link $DOTDOTS/vifmrc                 $XDG/vifm/vifmrc
     link $DOTDOTS/gitconfig              $HOME/.gitconfig
+    link $DOTDOTS/gitignore              $HOME/.gitignore
     link $DOTDOTS/gpg-agent.conf         $HOME/.gnupg/gpg-agent.conf
     link $DOTDOTS/gpg.conf               $HOME/.gnupg/gpg.conf
     link $DOTDOTS/ipython_config.py      $HOME/.ipython_config

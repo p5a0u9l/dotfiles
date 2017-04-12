@@ -1,7 +1,10 @@
 [user]
+
 	email = pauladams509@gmail.com
 	name = Paul Adams
 [diff]
 	tool = vimdiff
 [merge]
 	tool = vimdiff
+[core]
+	excludesfile = /Users/paul/.gitignore
