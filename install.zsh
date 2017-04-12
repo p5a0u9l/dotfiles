@@ -4,7 +4,7 @@
 # inputs:
 # 1 --> src
 # 2 --> dst
-link_me() {
+link() {
     if [[ -h $2 ]]; then
         echo "removing link $2..."
         rm -f $2;
@@ -15,35 +15,41 @@ link_me() {
 
 # SUBFOLDERNAME_DOTFILENAME
 link_dots() {
-    link_me $DOTDOTS/beets_config.yaml      $XDG/beets/config.yaml
-    link_me $DOTDOTS/bpython_config         $XDG/bpython/config
-    link_me $DOTDOTS/cmus_autosave          $XDG/cmus_autosave
-    link_me $DOTDOTS/shairport-sync.conf    $XDG/shairport-sync/shairport-sync.conf
-    link_me $DOTDOTS/nvim_init.vim          $XDG/nvim/init.vim
-    link_me $DOTDOTS/vifmrc                 $XDG/vifm/vifmrc
-    link_me $DOTDOTS/gitconfig              $HOME/.gitconfig
-    link_me $DOTDOTS/gpg-agent.conf         $HOME/.gnupg/gpg-agent.conf
-    link_me $DOTDOTS/gpg.conf               $HOME/.gnupg/gpg.conf
-    link_me $DOTDOTS/ipython_config.py      $HOME/.ipython_config
-    link_me $DOTDOTS/pandoc_default.latex   $HOME/.pandoc/default.latex
-    link_me $DOTDOTS/pyrc                   $HOME/.pyrc
-    link_me $DOTDOTS/ssh_config             $HOME/.ssh/config
-    link_me $DOTDOTS/tmux.conf              $HOME/.tmux.conf
-    link_me $DOTDOTS/vimrc                  $HOME/.vimrc
-    link_me $DOTDOTS/zshrc                  $HOME/.zshrc
-    link_me $DOTDOTS/zshrc                  $HOME/.zshrc
-    link_me $DOTDOTS/juliarc                $HOME/.juliarc
+    link $DOTDOTS/beets_config.yaml      $XDG/beets/config.yaml
+    link $DOTDOTS/bpython_config         $XDG/bpython/config
+    link $DOTDOTS/cmus_autosave          $XDG/cmus_autosave
+    link $DOTDOTS/shairport-sync.conf    $XDG/shairport-sync/shairport-sync.conf
+    link $DOTDOTS/nvim_init.vim          $XDG/nvim/init.vim
+    link $DOTDOTS/vifmrc                 $XDG/vifm/vifmrc
+    link $DOTDOTS/gitconfig              $HOME/.gitconfig
+    link $DOTDOTS/gpg-agent.conf         $HOME/.gnupg/gpg-agent.conf
+    link $DOTDOTS/gpg.conf               $HOME/.gnupg/gpg.conf
+    link $DOTDOTS/ipython_config.py      $HOME/.ipython_config
+    link $DOTDOTS/pandoc_default.latex   $HOME/.pandoc/default.latex
+    link $DOTDOTS/pyrc                   $HOME/.pyrc
+    link $DOTDOTS/ssh_config             $HOME/.ssh/config
+    link $DOTDOTS/tmux.conf              $HOME/.tmux.conf
+    link $DOTDOTS/vimrc                  $HOME/.vimrc
+    link $DOTDOTS/zshrc                  $HOME/.zshrc
+    link $DOTDOTS/zshenv                 $HOME/.zshenv
+    link $DOTDOTS/juliarc                $HOME/.juliarc
 }
 
 # modules
 link_modules() {
     # git submodules
-    link_me $DOTMODS/zsh/oh-my-zsh $HOME/.oh-my-zsh
-    link_me $DOTMODS/vim $XDG/nvim
-    link_me $DOTMODS/vim $HOME/.vim
-    link_me $DOTMODS/python/pyenv $HOME/.pyenv
-    link_me $DOTMODS/vim/bundle/vim-pathogen/autoload $DOTMODS/vim/autoload
-    link_me $DOTMODS/tmux/plugins/ $HOME/.tmux/plugins
+    " zsh
+    " ---
+    link $DOTMODS/zsh/oh-my-zsh $HOME/.oh-my-zsh
+    link $DOTMODS/tmux/plugins/ $HOME/.tmux/plugins
+    " vim
+    " ---
+    link $DOTMODS/vim $VIMHOME
+    link $DOTMODS/vim/bundle/vim-pathogen/autoload $VIMHOME/autoload
+    " python
+    " ------
+    link $DOTMODS/python/pyenv $HOME/.pyenv
+    link $DOTMODS/python/pyenv-virtualenv $HOME/.pyenv/plugins/pyenv-virtualenv
 }
 
 # main

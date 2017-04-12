@@ -88,3 +88,6 @@
 [submodule "modules/python/pyenv-virtualenv"]
 	path = modules/python/pyenv-virtualenv
 	url = https://github.com/pyenv/pyenv-virtualenv
+[submodule "modules/vim/bundle/YouCompleteMe"]
+	path = modules/vim/bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe

@@ -7,130 +7,37 @@ if [[ "$PROFILE_STARTUP" == true ]]; then
     exec 3>&2 2>"$HOME/.zsh_startup.$$"
     setopt xtrace prompt_subst
 fi
+
 # my zshrc file
 
-# -------
-# EXPORTS
-# -------
-export MACBOOKHOST="amalthea"
-# dotfiles
-export VIMHOME=$HOME/.vim
-export XDG=$HOME/.config
-export DOTHOME=$HOME/dotfiles
-export DOTDOTS=$DOTHOME/dots
-export DOTMODS=$DOTHOME/modules
-export LANG=en_US.UTF-8
-export PAGER=less
-setopt EXTENDED_HISTORY
-export HISTSIZE=100000000
-export SAVEHIST=$HISTSIZE
-export PYENV_ROOT="$HOME/.pyenv"
-# PATH APPENDAGES
-export PATH=$PYENV_ROOT/bin:$PATH
-export PATH=/usr/local/bin:$PATH
-export PATH=/usr/local/sbin:$PATH
-# GPG
-export GPG_TTY=$TTY
-export PINENTRY_USER_DATA="USE_CURSES=1"
-export TARGPGKEY=834E117E       # key ID for encryption
-export PASSGPGKEY=EB47B5CA      # alt key ID for encryption
-# PYTHON
-export PYTHONSTARTUP=~/.pyrc
+# ---
+# ZSH
+# ---
 CASE_SENSITIVE="true"
-
-# -------
-# Aliases
-# -------
-alias H="history"
-alias lgrep="ls|grep $1"
-alias hgrep="history|grep -n2 $1"
-alias C="|wc -l"
-alias trew="tmux rename-window"
-alias cdd="cd $DOTHOME"
-alias cddf=cd $DOTDOTS
-alias cddm=cd $DOTMODS
-
-source $DOTHOME/util.zsh
-
-# ---------
-# OH-MY-ZSH
-# ---------
-export ZSH=$DOTMODS/zsh/oh-my-zsh
+setopt EXTENDED_HISTORY
 plugins=(git colored-man-pages)
 DISABLE_AUTO_UPDATE=true
 source $ZSH/oh-my-zsh.sh
 source $DOTMODS/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-# -----------------
-# PLATFORM SPECIFIC
-# -----------------
-if [ "$HOST" = "$MACBOOKHOST" ]; then
-    # ZSH_THEME="zhann"
-    source $DOTMODS/zsh/dracula-theme/dracula.zsh-theme
-else
-    # "powerline" "random" "zhann" "nebirhos" "awesomepanda" "agnoster"
-    # "jispwoso"
-    ZSH_THEME="agnoster"
-fi
-
-# ------------
-# ZSH SETTINGS
-# ------------
 bindkey "^P" up-line-or-search
 unsetopt correct
 fpath+=/usr/local/share/zsh-completions
-HIST_STAMPS="mm/dd/yyyy"
-unset SSH_AUTH_SOCK
 
-# --------------------
-# APPLICATION SPECIFIC
-# --------------------
-if false; then
-    CONF="~/.config/shairport-sync/shairport-sync.conf"
-    CMD="/usr/local/bin/shairport-sync"
-    METACMD="/usr/local/bin/shairport-sync-metadata-reader"
-    METAB="/tmp/shairport-sync-metadata"
-    METATXT="/tmp/shairport-sync-metadata.txt"
-    # alias shairport-sync="$CMD -d -c $CONF && $METACMD < $METAB > $METATXT&"
-    if ! ( pgrep "shairport-sync" > /dev/null ) ; then
-        $CMD -d -c $CONF
-        # $METACMD < $METAB > $METATXT&
-        shairport-sync
-        if ( pgrep "shairport-sync" > /dev/null ) ; then
-            echo "started shairport-sync daemon..."
-        else
-            echo "starting shairport-sync failed..."
-        fi
-    fi
-    unset METATXT METACMD META CONF CMD
-fi
-
-if which pass > /dev/null; then
-    # source /usr/local/Cellar/zsh-completions/0.20.0/share/zsh-completions/_pass
-fi
-
-if which cmus > /dev/null; then
-    # bc OSX has an irritating warning related to soudn library
-    alias cmus="/usr/local/bin/cmus 2>/dev/null"
-fi
-
-if which pyenv > /dev/null; then
-    eval "$( command pyenv init - )"
-fi
-
-# One editor to rule them all
-export EDITOR='vim'
+# ------
+# SOURCE
+# ------
+source $DOTDOTS/aliases.zsh
+source $DOTDOTS/util.zsh
+source $DOTDOTS/platform.zsh
+source $DOTDOTS/applications.zsh
 
 # cute little welcome banner
-echo "|----------------------------------------------------"
-echo "|  `date`                                            "
-echo "|                                                    "
-echo "|  Hello $USERNAME@`hostname`, you're running `uname`"
-echo "|----------------------------------------------------"
+echo $magenta"m"$green"g"$cyan"c"$blue"b"$white"w"$red"r"$yellow"y$default"
+echo ""
+echo " $magenta`date`"$default
+echo "      "$USERNAME'@'`hostname`", running `uname`"
 echo ""
 
-# fix stupid default tmux window name
-tmux rename-window 'zsh*'
 if [[ "$PROFILE_STARTUP" == true ]]; then
     zprof
     unsetopt xtrace
