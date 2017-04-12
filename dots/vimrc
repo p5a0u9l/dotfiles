@@ -45,7 +45,7 @@ endif
 
 " SETTINGS
 " --------
-set colorcolumn=80
+set colorcolumn=
 set number
 set noshowmode            " don't show the mode
 set so=15                 " when moving vertically using j/k
@@ -127,7 +127,6 @@ noremap <C-w>l :tabmove +1<cr>
 map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
 " Switch CWD to the directory of the open buffer
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
-
 " start of line
 cnoremap <C-A>		<Home>
 " back one character
