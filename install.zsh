@@ -1,5 +1,7 @@
 #!/bin/zsh
+
 # a script for installing links to activate dotfiles/modules
+source $HOME/dotfiles/dots/zshenv
 
 # inputs:
 # 1 --> src
@@ -27,28 +29,28 @@ link_dots() {
     link $DOTDOTS/gpg.conf               $HOME/.gnupg/gpg.conf
     link $DOTDOTS/ipython_config.py      $HOME/.ipython_config
     link $DOTDOTS/pandoc_default.latex   $HOME/.pandoc/default.latex
+    link $DOTDOTS/juliarc                $HOME/.juliarc
     link $DOTDOTS/pyrc                   $HOME/.pyrc
     link $DOTDOTS/ssh_config             $HOME/.ssh/config
     link $DOTDOTS/tmux.conf              $HOME/.tmux.conf
     link $DOTDOTS/vimrc                  $HOME/.vimrc
     link $DOTDOTS/zshrc                  $HOME/.zshrc
     link $DOTDOTS/zshenv                 $HOME/.zshenv
-    link $DOTDOTS/juliarc                $HOME/.juliarc
 }
 
 # modules
 link_modules() {
-    # git submodules
-    " zsh
-    " ---
+    # zsh
+    # ---
     link $DOTMODS/zsh/oh-my-zsh $HOME/.oh-my-zsh
     link $DOTMODS/tmux/plugins/ $HOME/.tmux/plugins
-    " vim
-    " ---
+    # vim
+    # ---
     link $DOTMODS/vim $VIMHOME
     link $DOTMODS/vim/bundle/vim-pathogen/autoload $VIMHOME/autoload
-    " python
-    " ------
+    link $DOTDOTS/filetypes.vim $DOTMODS/vim/filetypes.vim
+    # python
+    # ------
     link $DOTMODS/python/pyenv $HOME/.pyenv
     link $DOTMODS/python/pyenv-virtualenv $HOME/.pyenv/plugins/pyenv-virtualenv
 }
