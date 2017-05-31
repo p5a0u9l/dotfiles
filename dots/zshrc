@@ -1,5 +1,13 @@
 # my zshrc file
 
+# ------
+# SOURCE
+# ------
+source $DOTDOTS/aliases.zsh
+source $DOTDOTS/util.zsh
+source $DOTDOTS/platform.zsh
+source $DOTDOTS/applications.zsh
+
 # ---
 # ZSH
 # ---
@@ -12,14 +20,6 @@ source $DOTMODS/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 bindkey "^P" up-line-or-search
 unsetopt correct
 fpath+=/usr/local/share/zsh-completions
-
-# ------
-# SOURCE
-# ------
-source $DOTDOTS/aliases.zsh
-source $DOTDOTS/util.zsh
-source $DOTDOTS/platform.zsh
-source $DOTDOTS/applications.zsh
 
 # cute little welcome banner
 echo $magenta"m"$green"g"$cyan"c"$blue"b"$white"w"$red"r"$yellow"y$default"
