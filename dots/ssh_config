@@ -5,7 +5,7 @@ Host github.com
     IdentityFile ~/.ssh/github.com/p5a0u9l-id_rsa
 
 # Host ganymede
-Host 192.168.1.146
+Host ganymede
     IdentitiesOnly yes
     IdentityFile ~/.ssh/jupiter.lan/ganymede-id_rsa
 
@@ -17,7 +17,7 @@ Host io
     IdentitiesOnly yes
     IdentityFile ~/.ssh/jupiter.lan/io-id_rsa
 
-Host amalthea.jupiter.lan
+Host amalthea
     IdentitiesOnly yes
     IdentityFile ~/.ssh/jupiter.lan/amalthea-id_rsa
 

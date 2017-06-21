@@ -7,12 +7,8 @@ source $HOME/dotfiles/dots/zshenv
 # 1 --> src
 # 2 --> dst
 link() {
-    if [[ -h $2 ]]; then
-        echo "removing link $2..."
-        rm -f $2;
-    fi
-    echo "creating new link $1 --> $2..."
-    ln -s $1 $2
+    echo "linking $1 --> $2..."
+    ln -sf $1 $2
 }
 
 # SUBFOLDERNAME_DOTFILENAME

@@ -1,12 +1,42 @@
 # my zshrc file
 
-# ------
-# SOURCE
-# ------
-source $DOTDOTS/aliases.zsh
+# -------
+# Aliases
+# -------
+alias H="history"
+alias lgrep="ls|grep $1"
+alias hgrep="history|grep -n2 $1"
+alias trew="tmux rename-window $1"
+alias tres="tmux rename-session $1"
+alias cdd="cd $DOTHOME"
+alias cddf="cd $DOTDOTS"
+alias cddm="cd $DOTMODS"
+
 source $DOTDOTS/util.zsh
-source $DOTDOTS/platform.zsh
-source $DOTDOTS/applications.zsh
+
+# --------------------
+# APPLICATION SPECIFIC
+# --------------------
+if which pass > $DEVNULL; then
+    # source /usr/local/Cellar/zsh-completions/0.20.0/share/zsh-completions/_pass
+fi
+
+if which cmus > $DEVNULL; then
+    # bc OSX has an irritating warning related to soudn library
+    alias cmus="/usr/local/bin/cmus 2>/dev/null"
+fi
+
+if which pyenv > $DEVNULL; then
+    eval "$( command pyenv init - )"
+fi
+
+# fix stupid default tmux window name
+if which tmux > $DEVNULL; then
+    if tmux info > $DEVNULL; then
+        tmux rename-window 'zsh*'
+    fi
+fi
+
 
 # ---
 # ZSH
@@ -20,11 +50,12 @@ source $DOTMODS/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 bindkey "^P" up-line-or-search
 unsetopt correct
 fpath+=/usr/local/share/zsh-completions
+source $DOTDOTS/platform.zsh
 
 # cute little welcome banner
 echo $magenta"m"$green"g"$cyan"c"$blue"b"$white"w"$red"r"$yellow"y$default"
 echo ""
 echo " $magenta`date`"$default
-echo "      "$USERNAME'@'`hostname`", running `uname`"
+echo "      running "`uname -a`
 echo ""
 # screenfetch -t
