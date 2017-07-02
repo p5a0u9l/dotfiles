@@ -91,3 +91,9 @@
 [submodule "modules/vim/bundle/YouCompleteMe"]
 	path = modules/vim/bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe
+[submodule "modules/vim/bundle/ale"]
+	path = modules/vim/bundle/ale
+	url = https://github.com/w0rp/ale
+[submodule "modules/vim/bundle/completor.vim"]
+	path = modules/vim/bundle/completor.vim
+	url = https://github.com/maralla/completor.vim

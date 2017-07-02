@@ -1,6 +1,3 @@
-Host ee.washington.edu
-    IdentityFile ~/.ssh/ee.washington.edu/ee.washington.edu-p5a0u9l-id_rsa
-
 Host github.com
     IdentityFile ~/.ssh/github.com/p5a0u9l-id_rsa
 
@@ -12,6 +9,10 @@ Host ganymede
 Host callisto
     IdentitiesOnly yes
     IdentityFile ~/.ssh/jupiter.lan/callisto-id_rsa
+
+Host 192.168.1.120
+    IdentitiesOnly yes
+    IdentityFile ~/.ssh/jupiter.lan/io-id_rsa
 
 Host io
     IdentitiesOnly yes

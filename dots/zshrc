@@ -30,26 +30,18 @@ if which pyenv > $DEVNULL; then
     eval "$( command pyenv init - )"
 fi
 
-# fix stupid default tmux window name
-if which tmux > $DEVNULL; then
-    if tmux info > $DEVNULL; then
-        tmux rename-window 'zsh*'
-    fi
-fi
-
-
 # ---
 # ZSH
 # ---
+bindkey "^P" up-line-or-search
+unsetopt correct
+fpath+=/usr/local/share/zsh-completions
 CASE_SENSITIVE="true"
 setopt EXTENDED_HISTORY
 plugins=(git colored-man-pages)
 DISABLE_AUTO_UPDATE=true
 source $ZSH/oh-my-zsh.sh
 source $DOTMODS/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-bindkey "^P" up-line-or-search
-unsetopt correct
-fpath+=/usr/local/share/zsh-completions
 source $DOTDOTS/platform.zsh
 
 # cute little welcome banner
