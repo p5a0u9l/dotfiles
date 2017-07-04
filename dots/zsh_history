@@ -10293,3 +10293,38 @@ done
 : 1498967178:0;ls unused
 : 1498967183:0;gst
 : 1498967196:0;gwip
+: 1498967198:0;gst
+: 1498967222:0;mv unused/YouCompleteMe/ bundle
+: 1498967223:0;gst
+: 1498967319:0;vim dots/ssh_config
+: 1498967331:0;vim --version
+: 1498967338:0;which vim
+: 1498967347:0;brew install vim
+: 1498967436:0;which vim
+: 1498967508:0;man brew
+: 1498967606:0;brew info vim
+: 1498967677:0;brew ln vim
+: 1498967710:0;pwd
+: 1498967716:0;vim zshrc
+: 1498967725:0;vim dots/zsh
+: 1498967731:0;vim dots/zshrc
+: 1498967755:0;which vim
+: 1498967760:0;echo $PATH
+: 1498967813:0;ls /usr/local/Cellar/vim/8.0.0647/bin
+: 1498967820:0;ll /usr/local/Cellar/vim/8.0.0647/bin/vim
+: 1498967883:0;ls /usr/local/bin
+: 1498967886:0;ll /usr/local/bin
+: 1498967896:0;ll /usr/local/bin | grep vim
+: 1498967910:0;cd dots
+: 1498967911:0;ls
+: 1498967917:0;vim zshrc
+: 1498967925:0;cd
+: 1498967931:0;cd $OLDPWD
+: 1498967932:0;ls
+: 1498967937:0;mv bundle/ale unused
+: 1498967939:0;vim zshrc
+: 1498967982:0;echo $PATH
+: 1498968015:0;source dotfiles/dots/zshenv
+: 1498968016:0;echo $PATH
+: 1498968035:0;which vim
+: 1498968041:0;vim zshrc
