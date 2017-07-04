@@ -10328,3 +10328,55 @@ done
 : 1498968016:0;echo $PATH
 : 1498968035:0;which vim
 : 1498968041:0;vim zshrc
+: 1499141397:0;man ln
+: 1499141434:0;man mkdir
+: 1499141478:0;if [[ ls sss ]]; then echo hi; fi
+: 1499141493:0;if [[ `ls sss` ]]; then echo hi; fi
+: 1499141510:0;if [[ `ls sss` 2> /dev/null ]]; then echo hi; fi
+: 1499141521:0;if [[ `ls sss 2> /dev/null` ]]; then echo hi; fi
+: 1499141526:0;if ! [[ `ls sss 2> /dev/null` ]]; then echo hi; fi
+: 1499141532:0;vim install.zsh
+: 1499142119:0;gst
+: 1499142122:0;./install.zsh
+: 1499142126:0;cd
+: 1499142127:0;l
+: 1499142133:0;vim .zshrc
+: 1499142142:0;cdd
+: 1499142148:0;cd modules/vim
+: 1499142149:0;ls
+: 1499142152:0;ls autoload
+: 1499142154:0;l
+: 1499142165:0;rm vim
+: 1499142169:0;rm autoload
+: 1499142171:0;l
+: 1499142176:0;l bundle
+: 1499142199:0;l
+: 1499142255:0;vim ../../install.zsh
+: 1499142322:0;./install.zsh
+: 1499142325:0;...
+: 1499142326:0;./install.zsh
+: 1499142333:0;l ~/.vim
+: 1499142336:0;ls ~/.vim
+: 1499142341:0;ls ~/.vim/autoload
+: 1499142348:0;cd
+: 1499142348:0;l
+: 1499142353:0;vim .zshrc
+: 1499142427:0;$EDITOR a
+: 1499142435:0;sudo pacman -Syu
+: 1499142439:0;sudo pacman -Syu ctags
+: 1499142465:0;source .zshrc
+: 1499142468:0;ls
+: 1499142472:0;cd dotfiles
+: 1499142473:0;gst
+: 1499142481:0;rm modules/tmux/plugins/plugins
+: 1499142487:0;rm modules/vim/vim
+: 1499142490:0;gst
+: 1499142499:0;rm modules/python/pyenv/pyenv
+: 1499142505:0;rm modules/python/pyenv-virtualenv/pyenv-virtualenv
+: 1499142508:0;cd
+: 1499142509:0;l
+: 1499142516:0;vim dotfiles/install.zsh
+: 1499142560:0;cd dotfiles
+: 1499142562:0;./install.zsh
+: 1499142564:0;gst
+: 1499142582:0;gca -m "fix/update install.zsh"
