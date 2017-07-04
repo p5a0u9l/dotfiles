@@ -10380,3 +10380,83 @@ done
 : 1499142562:0;./install.zsh
 : 1499142564:0;gst
 : 1499142582:0;gca -m "fix/update install.zsh"
+: 1499143117:0;vim dotfiles/install.zsh
+: 1499143173:0;./dotfiles/install.zsh
+: 1499143180:0;l
+: 1499143182:0;cdd
+: 1499143183:0;gst
+: 1499143189:0;cd modules
+: 1499143190:0;l
+: 1499143194:0;cd vim
+: 1499143200:0;cd
+: 1499143200:0;l
+: 1499143207:0;cdd
+: 1499143208:0;l
+: 1499143209:0;gst
+: 1499143210:0;l
+: 1499143212:0;gst
+: 1499143219:0;cd modules
+: 1499143219:0;l
+: 1499143223:0;l tmux
+: 1499143238:0;git checkout modules/vim
+: 1499143244:0;git checkout vim
+: 1499143245:0;l
+: 1499143246:0;ls
+: 1499143250:0;ls vim
+: 1499143255:0;l vim
+: 1499143269:0;l
+: 1499143271:0;l tmux
+: 1499143275:0;git checkout tmux
+: 1499143276:0;l
+: 1499143278:0;l tmux
+: 1499143283:0;..
+: 1499143284:0;vim install.zsh
+: 1499143354:0;./install.zsh
+: 1499143363:0;gst
+: 1499143372:0;git checkout tmux
+: 1499143379:0;git checkout modules/tmux
+: 1499143380:0;gst
+: 1499143384:0;vim install.zsh
+: 1499143387:0;cd
+: 1499143388:0;l
+: 1499143395:0;l .vim
+: 1499143398:0;ls .vim
+: 1499143401:0;ls .vim/autoload
+: 1499143406:0;l .vim/autoload
+: 1499143420:0;ls dotfiles/modules/vim/bundle/vim-pathogen/
+: 1499143423:0;cdd
+: 1499143425:0;gst
+: 1499143434:0;git submodule update 
+: 1499143442:0;ls modules/vim/bundle/vim-pathogen
+: 1499143446:0;vim install.zsh
+: 1499143452:0;cd
+: 1499143454:0;l .vim/autoload
+: 1499143465:0;cdd
+: 1499143467:0;ls modules/vim/bundle/vim-pathogen
+: 1499143469:0;ls modules/vim/bundle/vim-pathogen/autoload
+: 1499143481:0;gst
+: 1499143485:0;vim install.zsh
+: 1499143528:0;./install.zsh
+: 1499143554:0;vim install.zsh
+: 1499143564:0;./install.zsh
+: 1499143568:0;gst
+: 1499143575:0;git checkout modules/tmux
+: 1499143576:0;gst
+: 1499143582:0;vim install.zsh
+: 1499143593:0;which vim
+: 1499143950:0;vim dots/zshrc
+: 1499143979:0;l .vim/
+: 1499143985:0;l ~/.vim
+: 1499143989:0;ls ~/.vim
+: 1499144013:0;cd
+: 1499144015:0;cd .vim
+: 1499144016:0;l
+: 1499144020:0;rm filetypes
+: 1499144045:0;cd
+: 1499144046:0;cdd
+: 1499144047:0;./install.zsh
+: 1499144050:0;vim dots/zshrc
+: 1499144065:0;gst
+: 1499144078:0;git checkout modules/tmux
+: 1499144079:0;gst
+: 1499144109:0;gwip
