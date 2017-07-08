@@ -34,6 +34,8 @@ export PASSGPGKEY=EB47B5CA      # alt key ID for encryption
 # PYTHON
 export PYTHONSTARTUP="$HOME/.pyrc"
 
+# ZSH
 export ZSH=$DOTMODS/zsh/oh-my-zsh
+export ZSH_AUTOSUGGEST_STRATEGY=histdb_top_here
 
 

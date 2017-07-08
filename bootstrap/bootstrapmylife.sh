@@ -25,6 +25,7 @@ mkdir buildrepos
 #       - source-code pro adobe-fonts/source-code-pro
 #       - pass --> peff/pass
 #       - ncdu -->
+#       - vifm -->
 #
 # 2. Programming
 #       - tmux --> tmux.github.io

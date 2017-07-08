@@ -5,13 +5,13 @@ call pathogen#helptags()
 source $VIMHOME/filetypes.vim
 let mapleader = "\<Space>"
 
-" neomake
-" autocmd! BufWritePost * Neomake
+" completor
+let g:completor_python_binary = '/usr/local/bin/python'
 
 " ale
 let g:ale_fixers = {
             \   'python': [
-            \       'autopep8',
+            \       'pyflakes', 'autopep8',
             \   ],
             \}
 

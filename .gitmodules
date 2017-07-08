@@ -97,3 +97,9 @@
 [submodule "modules/vim/bundle/completor.vim"]
 	path = modules/vim/bundle/completor.vim
 	url = https://github.com/maralla/completor.vim
+[submodule "modules/zsh/zsh-histdb"]
+	path = modules/zsh/zsh-histdb
+	url = https://github.com/larkery/zsh-histdb
+[submodule "completor.vim"]
+	path = completor.vim
+	url = https://github.com/maralla/completor.vim

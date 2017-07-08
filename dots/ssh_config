@@ -26,7 +26,7 @@ Host thebes
     IdentitiesOnly yes
     IdentityFile ~/.ssh/jupiter.lan/thebes-id_rsa
 
-Host 192.168.1.104
+Host 192.168.1.144
     IdentitiesOnly yes
     IdentityFile ~/.ssh/jupiter.lan/europa-id_rsa
 

@@ -44,6 +44,7 @@ plugins=(git colored-man-pages)
 DISABLE_AUTO_UPDATE=true
 source $ZSH/oh-my-zsh.sh
 source $DOTMODS/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $DOTMODS/zsh/zsh-histdb/sqlite-history.zsh
 source $DOTDOTS/platform.zsh
 
 # cute little welcome banner
