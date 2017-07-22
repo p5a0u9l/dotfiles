@@ -103,3 +103,9 @@
 [submodule "completor.vim"]
 	path = completor.vim
 	url = https://github.com/maralla/completor.vim
+[submodule "vim-table-mode"]
+	path = vim-table-mode
+	url = https://github.com/dhruvasagar/vim-table-mode
+[submodule "modules/vim/bundle/vim-table-mode"]
+	path = modules/vim/bundle/vim-table-mode
+	url = https://github.com/dhruvasagar/vim-table-mode
