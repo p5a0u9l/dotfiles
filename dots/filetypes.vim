@@ -17,5 +17,4 @@ autocmd BufWrite *.jl :call DeleteTrailingWS()
 " Matlab
 """""""""""
 autocmd BufWrite *.m :call DeleteTrailingWS()
-au FileType matlab set commentstring="% %s"
 
