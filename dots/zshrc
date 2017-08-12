@@ -20,7 +20,8 @@ source $DOTDOTS/util.zsh
 # APPLICATION SPECIFIC
 # --------------------
 if which pass > $DEVNULL; then
-    # source /usr/local/Cellar/zsh-completions/0.20.0/share/zsh-completions/_pass
+	export PASSWORD_STORE_DIR=$DOTHOME/password-store
+	 # /usr/local/Cellar/pass/1.7.1/share/zsh/site-functions/_pass
 fi
 
 if which cmus > $DEVNULL; then
@@ -44,7 +45,7 @@ plugins=(git colored-man-pages)
 DISABLE_AUTO_UPDATE=true
 source $ZSH/oh-my-zsh.sh
 source $DOTMODS/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $DOTMODS/zsh/zsh-histdb/sqlite-history.zsh
+# source $DOTMODS/zsh/zsh-histdb/sqlite-history.zsh
 source $DOTDOTS/platform.zsh
 
 # cute little welcome banner

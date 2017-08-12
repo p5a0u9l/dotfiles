@@ -31,9 +31,6 @@
 [submodule "modules/vim/bundle/vim-commentary"]
 	path = modules/vim/bundle/vim-commentary
 	url = https://github.com/tpope/vim-commentary
-[submodule "modules/vim/bundle/vim-matlab"]
-	path = modules/vim/bundle/vim-matlab
-	url = https://github.com/lazywei/vim-matlab
 [submodule "modules/vim/bundle/vim-easytags"]
 	path = modules/vim/bundle/vim-easytags
 	url = https://github.com/xolox/vim-easytags
@@ -109,3 +106,6 @@
 [submodule "modules/vim/bundle/vim-table-mode"]
 	path = modules/vim/bundle/vim-table-mode
 	url = https://github.com/dhruvasagar/vim-table-mode
+[submodule "matlab-vim"]
+	path = matlab-vim
+	url = https://github.com/tdehaeze/matlab-vim
