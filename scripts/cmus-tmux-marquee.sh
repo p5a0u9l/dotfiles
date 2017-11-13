@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # init
-MAX_TITLE_WIDTH=70
+MAX_TITLE_WIDTH=60
 CURTAG_FILE="/tmp/cur-status-tag"
 WHOSE=""
 
@@ -14,7 +14,7 @@ else
 fi
 
 # increment the INDEX
-INDEX=`expr ${INDEX} + 3`
+INDEX=`expr ${INDEX} + 14`
 
 # and save it for next time
 echo "${INDEX}" > "$CURTAG_FILE"

@@ -6,11 +6,14 @@ source $VIMHOME/filetypes.vim
 let mapleader = "\<Space>"
 
 " completor
-let g:completor_python_binary = '/usr/local/bin/python'
+let g:completor_python_binary='/Users/paul/.pyenv/shims/python'
 
 " ale
-let g:ale_python_executable='/usr/local/bin/python'
+let g:ale_python_executable='/Users/paul/.pyenv/shims/python'
 let g:ale_python_flake8_executable='/Users/paul/.pyenv/shims/flake8'
+let g:ale_python_pylint_executable='/Users/paul/.pyenv/shims/pylint'
+let g:ale_python_pyflakes_executable='/Users/paul/.pyenv/shims/pyflakes'
+
 " Bind F8 to fixing problems with ALE
 nmap <F8> <Plug>(ale_fix)
 let g:ale_fixers = {
@@ -21,6 +24,16 @@ let g:ale_fixers = {
 
 " fugitive
 noremap <leader>gs :Gstatus<cr>
+
+" tagbar 
+let g:tagbar_width = 32
+let g:tagbar_left = 1
+nnoremap <silent> <F9> :TagbarToggle<CR>
+
+" nerdtree
+" let g:NERDTreeWinPos = 'right'
+" autocmd VimEnter * NERDTree
+" autocmd BufWinEnter * NERDTreeMirror
 
 " CTRL-P
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:10'
@@ -57,6 +70,7 @@ endif
 " SETTINGS
 " --------
 set number
+set cursorline
 set noshowmode            " don't show the mode
 set so=15                 " when moving vertically using j/k
 set showcmd               " show the command

@@ -109,3 +109,15 @@
 [submodule "modules/vim/bundle/vim-matlab"]
 	path = modules/vim/bundle/vim-matlab
 	url = https://github.com/tdehaeze/matlab-vim
+[submodule "modules/vim/bundle/tagbar"]
+	path = modules/vim/bundle/tagbar
+	url = https://github.com/majutsushi/tagbar
+[submodule "modules/vim/bundle/fzf.vim"]
+	path = modules/vim/bundle/fzf.vim
+	url = https://github.com/junegunn/fzf.vim
+[submodule "modules/vim/bundle/nerdtree"]
+	path = modules/vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree
+[submodule "modules/vim/bundle/vim-vinegar"]
+	path = modules/vim/bundle/vim-vinegar
+	url = https://github.com/tpope/vim-vinegar
