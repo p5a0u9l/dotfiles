@@ -21,7 +21,7 @@ source $DOTDOTS/util.zsh
 # --------------------
 if which pass > $DEVNULL; then
     export PASSWORD_STORE_DIR=$DOTHOME/password-store
-    compinit /usr/local/Cellar/pass/1.7.1/share/zsh/site-functions/_pass
+    # compinit /usr/local/Cellar/pass/1.7.1/share/zsh/site-functions/_pass
 fi
 
 if which cmus > $DEVNULL; then
