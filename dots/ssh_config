@@ -1,23 +1,6 @@
 Host github.com
     IdentityFile ~/.ssh/github.com/p5a0u9l-id_rsa
 
-# Host ganymede
-Host ganymede
-    IdentitiesOnly yes
-    IdentityFile ~/.ssh/jupiter.lan/ganymede-id_rsa
-
-Host callisto
-    IdentitiesOnly yes
-    IdentityFile ~/.ssh/jupiter.lan/callisto-id_rsa
-
-Host 192.168.1.119
-    IdentitiesOnly yes
-    IdentityFile ~/.ssh/jupiter.lan/io-id_rsa
-
-Host io
-    IdentitiesOnly yes
-    IdentityFile ~/.ssh/jupiter.lan/io-id_rsa
-
 Host amalthea
     IdentitiesOnly yes
     IdentityFile ~/.ssh/jupiter.lan/amalthea-id_rsa
@@ -26,9 +9,9 @@ Host thebes
     IdentitiesOnly yes
     IdentityFile ~/.ssh/jupiter.lan/thebes-id_rsa
 
-Host 192.168.1.148
+Host lynx
     IdentitiesOnly yes
-    IdentityFile ~/.ssh/jupiter.lan/europa-id_rsa
+    IdentityFile ~/.ssh/jupiter.lan/lynx-id_rsa
 
 Host europa
     IdentitiesOnly yes
