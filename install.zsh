@@ -19,18 +19,14 @@ link() {
 
 # SUBFOLDERNAME_DOTFILENAME
 link_dots() {
-    link $DOTDOTS/bpython_config         $XDG/bpython/config
     link $DOTDOTS/cmus_autosave          $XDG/cmus_autosave
     link $DOTDOTS/shairport-sync.conf    $XDG/shairport-sync/shairport-sync.conf
     link $DOTDOTS/vifmrc                 $XDG/vifm/vifmrc
-
     link $DOTDOTS/gitconfig              $HOME/.gitconfig
     link $DOTDOTS/gitignore              $HOME/.gitignore
     link $DOTDOTS/gpg-agent.conf         $HOME/.gnupg/gpg-agent.conf
     link $DOTDOTS/gpg.conf               $HOME/.gnupg/gpg.conf
     link $DOTDOTS/ipython_config.py      $HOME/.ipython_config
-    link $DOTDOTS/pandoc_default.latex   $HOME/.pandoc/default.latex
-    link $DOTDOTS/juliarc                $HOME/.juliarc
     link $DOTDOTS/pyrc                   $HOME/.pyrc
     link $DOTDOTS/ssh_config             $HOME/.ssh/config
     link $DOTDOTS/tmux.conf              $HOME/.tmux.conf
@@ -59,5 +55,17 @@ link_modules() {
 }
 
 # main
-link_dots
-link_modules
+if [[ $1 = "dots" ]]; then
+    echo "installing dots..."
+    link_dots
+elif [[ $1 = "module" ]]; then
+    echo "installing modules..."
+    link_modules
+elif [[ $1 = "all" ]]; then
+    echo "installing all..."
+    link_dots
+    link_modules
+else
+    echo "unrecognized option $1..."
+fi
+    

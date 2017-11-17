@@ -10527,3 +10527,34 @@ done
 : 1510892775:0;ls MyOldWindowsMachine/*
 : 1510892780:0;ls MyOldWindowsMachine/Users/Paul
 : 1510897611:0;gwip
+: 1510897612:0;gpoat
+: 1510897626:0;git remote set-url origin git@github.com:p5a0u9l/dotfiles
+: 1510897629:0;gpoat
+: 1510897685:0;git clone https://github.com/p5a0u9l/clamm 
+: 1510897691:0;git clone https://github.com/p5a0u9l/lp2flac
+: 1510897702:0;git clone https://github.com/p5a0u9l/lichess-exploratory
+: 1510897703:0;ls
+: 1510897711:0;md code
+: 1510897722:0;mv lp2flac lichess-exploratory clamm code
+: 1510897724:0;cd code
+: 1510897724:0;ls
+: 1510897727:0;cd lichess-exploratory
+: 1510897727:0;ls
+: 1510897761:0;wget https://database.lichess.org/standard/lichess_db_standard_rated_2017-04.pgn.bz2
+: 1510897791:0;ls
+: 1510897812:0;which vifm
+: 1510897826:0;which gpg
+: 1510897993:0;echo $colour234
+: 1510897998:0;echo colour234
+: 1510898044:0;./install.zsh dots
+: 1510898058:0;which tig
+: 1510898065:0;sudo apt install tig
+: 1510898141:0;gst
+: 1510898150:0;cd modules/vim/bundle/vim-matlab
+: 1510898152:0;gst
+: 1510898159:0;rm doc/tags
+: 1510898161:0;....
+: 1510898162:0;gst
+: 1510898194:0;ls ~/.ssh
+: 1510898215:0;gst
+: 1510898218:0;gwip && gpoat

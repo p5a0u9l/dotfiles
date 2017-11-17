@@ -11,7 +11,6 @@ cd $HOME
 
 # clones
 git clone https://github.com/p5a0u9l/dotfiles
-git clone https://github.com/robbyrussel/oh-my-zsh.git
 
 # prepare to start building stuff
 mkdir buildrepos
@@ -51,6 +50,3 @@ mkdir buildrepos
 #       - shairport-sync --> mikebrady/shairport-sync
 #       - cmus--> cmus.github.io
 #       - pulseaudio --> pulseaudio/pulseaudio
-
-
-
