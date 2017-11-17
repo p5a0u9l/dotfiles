@@ -10472,3 +10472,57 @@ done
 : 1499144391:0;gca
 : 1499144409:0;git push origin master
 : 1499144416:0;glola
+: 1510813718:0;source .zshrc
+: 1510813720:0;ls
+: 1510813724:0;passwd
+: 1510813876:0;cd
+: 1510813877:0;ls
+: 1510813881:0;pyenv activate clamm
+: 1510813886:0;source .zshrc
+: 1510813899:0;pyenv virtualenv 3.6.2 default
+: 1510813907:0;pyenv install 3.6.2
+: 1510813939:0;sudo apt search gcc
+: 1510813948:0;which pip
+: 1510813950:0;ls
+: 1510813956:0;ls Downloads
+: 1510814008:0;sudo apt install gcc
+: 1510814018:0;sudo apt install binutils
+: 1510814029:0;sudo apt install g++
+: 1510814039:0;sudo apt install gfortran
+: 1510814058:0;pyenv install 3.6.2
+: 1510814085:0;sudo rm -rf /usr/local/anaconda3
+: 1510814095:0;sudo vim /etc/sudoers
+: 1510814136:0;sudo apt install zlib
+: 1510814143:0;sudo apt search zlib
+: 1510814149:0;sudo apt install zlibc
+: 1510814156:0;pyenv install 3.6.2
+: 1510814175:0;source .zshrc
+: 1510814184:0;groups
+: 1510814212:0;sudo whoami
+: 1510814223:0;sudo vim /etc/sudoers
+: 1510814228:0;su root
+: 1510814271:0;which python
+: 1510814278:0;ls .pyenv/
+: 1510814293:0;pass show
+: 1510814298:0;sudo apt install pass
+: 1510814332:0;visudo
+: 1510814335:0;sudo visudo
+: 1510814460:0;which pkexec
+: 1510814467:0;pkexec vim
+: 1510814539:0;pkexec visudo
+: 1510814549:0;reboot
+: 1510814568:0;systemctl reboot -i
+: 1510814801:0;source .zshrc
+: 1510814806:0;sudo whoami
+: 1510814809:0;pkexec visudo
+: 1510814919:0;su 
+: 1510892696:0;source .zshrc
+: 1510892702:0;ls
+: 1510892726:0;mv Documents Downloads Pictures Public Templates Videos Desktop
+: 1510892727:0;ls
+: 1510892732:0;mv Music Desktop
+: 1510892733:0;ls
+: 1510892736:0;ls MyOldWindowsMachine
+: 1510892770:0;ls MyOldWindowsMachine/Users/All\ Users/*
+: 1510892775:0;ls MyOldWindowsMachine/*
+: 1510892780:0;ls MyOldWindowsMachine/Users/Paul

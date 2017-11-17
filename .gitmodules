@@ -48,7 +48,7 @@
 	url = https://github.com/neomake/neomake
 [submodule "modules/vim/bundle/dracula-theme"]
 	path = modules/vim/bundle/dracula-theme
-	url = git@github.com:dracula/vim.git
+	url = https://github.com/dracula/vim.git
 [submodule "modules/vim/bundle/julia.vim"]
 	path = modules/vim/bundle/julia.vim
 	url = https://github.com/JuliaEditorSupport/julia-vim
