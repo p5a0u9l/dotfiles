@@ -124,3 +124,9 @@
 [submodule "modules/tmux/plugins/tmux-resurrect"]
 	path = modules/tmux/plugins/tmux-resurrect
 	url = https://github.com/tmux-plugins/tmux-resurrect
+[submodule "modules/vim/bundle/vim-obsession"]
+	path = modules/vim/bundle/vim-obsession
+	url = https://github.com/tpope/vim-obsession
+[submodule "modules/vim/bundle/vim-session"]
+	path = modules/vim/bundle/vim-session
+	url = https://github.com/xolox/vim-session
