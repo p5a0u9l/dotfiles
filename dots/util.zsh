@@ -56,6 +56,7 @@ function has() {
 prefix='\e['
 postfix='m'
 default=$prefix'39'$postfix
+white=$prefix'39'$postfix
 magenta=$prefix'35'$postfix
 cyan=$prefix'36'$postfix
 blue=$prefix'34'$postfix
