@@ -25,15 +25,16 @@ let g:ale_fixers = {
 " fugitive
 noremap <leader>gs :Gstatus<cr>
 
-" tagbar 
-let g:tagbar_width = 32
-let g:tagbar_left = 1
+" tagbar
+let g:tagbar_width = 45
+let g:tagbar_left = 0
 nnoremap <silent> <F9> :TagbarToggle<CR>
+autocmd BufEnter * nested :call tagbar#autoopen(0)
 
 " nerdtree
-" let g:NERDTreeWinPos = 'right'
-" autocmd VimEnter * NERDTree
-" autocmd BufWinEnter * NERDTreeMirror
+let g:NERDTreeWinPos = 'left'
+autocmd VimEnter * NERDTree
+autocmd BufWinEnter * NERDTreeMirror
 
 " CTRL-P
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:10'
@@ -66,6 +67,8 @@ if !exists('g:airline_symbols')
 	let g:airline_symbols.notexists = '∄'
 	let g:airline_symbols.whitespace = 'Ξ'
 endif
+
+autocmd BufWrite * :call DeleteTrailingWS()
 
 " SETTINGS
 " --------
@@ -115,6 +118,9 @@ map <leader>s? z=
 " move between windows
 noremap <c-k> gt
 noremap <c-j> gT
+" move between panes
+noremap <c-h> <c-w><left>
+noremap <c-l> <c-w><right>
 " move lines +-
 noremap - ddp
 noremap _ ddkP

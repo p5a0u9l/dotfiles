@@ -10558,3 +10558,58 @@ done
 : 1510898194:0;ls ~/.ssh
 : 1510898215:0;gst
 : 1510898218:0;gwip && gpoat
+: 1510898248:0;pyenv virtualenv anaconda3-4.4.0 default
+: 1510898269:0;ls
+: 1510898288:0;source .zshrc
+: 1510898294:0;vim pgn2sql.py
+: 1510898313:0;source .zshrc
+: 1510898327:0;sudo apt install ctags
+: 1510898358:0;ls
+: 1510898370:0;source .zshrc
+: 1510898386:0;pyenv activate default
+: 1510898392:0;pip install bpython
+: 1510898407:0;cd code/lichess-exploratory
+: 1510898451:0;source ~/.zshrc
+: 1510898465:0;;s
+: 1510898467:0;ls
+: 1510898494:0;bzcat lichess_db_standard_rated_2017-04.pgn.bz2 > lichess_db_standard_rated_2017-04.pgn
+: 1510898529:0;cd
+: 1510898532:0;cd .vim
+: 1510898532:0;ls
+: 1510898536:0;l
+: 1510898543:0;l bundle
+: 1510898549:0;cdd
+: 1510898559:0;git submodule update --merge
+: 1510898564:0;git submodule foreach 'git pull origin HEAD'
+: 1510898590:0;source ~/.zshrc
+: 1510898598:0;gst
+: 1510898605:0;git submodule update
+: 1510898607:0;gst
+: 1510898616:0;ls modules/vim/bundle/vim-matlab
+: 1510898619:0;ls modules/vim/bundle/vim-matlab/doc
+: 1510898660:0;cd code/clamm
+: 1510898661:0;ls
+: 1510898669:0;vim clamm/clamm.py
+: 1510898685:0;source ~/.zshrc
+: 1510898698:0;cd code/clamm
+: 1510898708:0;source .zshrc
+: 1510898740:0;source ~/.zshrc
+: 1510898962:0;ls
+: 1510898967:0;md clamm_env
+: 1510898978:0;pyenv install 3.6.2
+: 1510898990:0;ls
+: 1510899004:0;pyenv activate default
+: 1510899025:0;python pgn2sql.py lichess_db_standard_rated_2017-04.pgn
+: 1510899108:0;sudo apt install zlib
+: 1510899113:0;ls
+: 1510899116:0;sudo apt install zlibc
+: 1510899128:0;sudo apt search zlib
+: 1510899175:0;sudo apt install zlib1g
+: 1510899184:0;sudo apt install zlib1g-dev
+: 1510899196:0;pyenv install 3.6.2
+: 1510899242:0;cd code/lichess-exploratory
+: 1510899243:0;ls
+: 1510899245:0;l
+: 1510899249:0;l *sgl
+: 1510899252:0;l *sql
+: 1510899296:0;pyenv install 3.6.0

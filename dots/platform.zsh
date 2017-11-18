@@ -7,6 +7,6 @@ if [ "$HOST" = "$MACBOOKHOSTNAME" ]; then
 else
     # "powerline" "random" "zhann" "nebirhos" "awesomepanda" "agnoster"
     # "jispwoso"
-    ZSH_THEME="agnoster"
+    ZSH_THEME="jispwoso"
 fi
 

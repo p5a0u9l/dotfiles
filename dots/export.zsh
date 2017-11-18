@@ -33,6 +33,7 @@ export PASSGPGKEY=EB47B5CA      # alt key ID for encryption
 
 # PYTHON
 export PYTHONSTARTUP="$HOME/.pyrc"
+export PYTHONPATH="$HOME/.pyrc"
 
 # ZSH
 export ZSH=$DOTMODS/zsh/oh-my-zsh
