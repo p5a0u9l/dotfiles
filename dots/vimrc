@@ -9,13 +9,12 @@ let mapleader = "\<Space>"
 let g:session_autosave = 'yes'
 
 " completor
-let g:completor_python_binary='/Users/paul/.pyenv/shims/python'
+let g:completor_python_binary='$HOME/anaconda3/bin/python'
 
 " ale
-let g:ale_python_executable='/Users/paul/.pyenv/shims/python'
-let g:ale_python_flake8_executable='/Users/paul/.pyenv/shims/flake8'
-let g:ale_python_pylint_executable='/Users/paul/.pyenv/shims/pylint'
-let g:ale_python_pyflakes_executable='/Users/paul/.pyenv/shims/pyflakes'
+let g:ale_python_executable='/home/paul/anaconda3/bin/python'
+" let g:ale_python_flake8_executable='$HOME/anaconda3/bin/flake8'
+" let g:ale_python_pylint_executable='$HOME/anaconda3/bin/pylint'
 
 " Bind F8 to fixing problems with ALE
 nmap <F8> <Plug>(ale_fix)

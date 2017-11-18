@@ -21,9 +21,11 @@ export EDITOR='vim'
 export PYENV_ROOT="$HOME/.pyenv"
 
 # PATH APPENDAGES
-export PATH=/usr/local/bin:$PATH
-export PATH=/usr/local/sbin:$PATH
-export PATH=$PYENV_ROOT/bin:$PATH
+
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+# stick anaconda on front
+export PATH=$HOME/anaconda3/bin:$PATH
+export PATH=$PATH:$PYENV_ROOT/bin
 
 # GPG
 export GPG_TTY=$TTY
@@ -33,7 +35,7 @@ export PASSGPGKEY=EB47B5CA      # alt key ID for encryption
 
 # PYTHON
 export PYTHONSTARTUP="$HOME/.pyrc"
-export PYTHONPATH="$HOME/.pyrc"
+export PYTHONPATH="$HOME/anaconda3:$HOME/.local/lib/python/"
 
 # ZSH
 export ZSH=$DOTMODS/zsh/oh-my-zsh
