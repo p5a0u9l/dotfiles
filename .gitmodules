@@ -121,3 +121,6 @@
 [submodule "modules/vim/bundle/vim-vinegar"]
 	path = modules/vim/bundle/vim-vinegar
 	url = https://github.com/tpope/vim-vinegar
+[submodule "modules/tmux/plugins/tmux-resurrect"]
+	path = modules/tmux/plugins/tmux-resurrect
+	url = https://github.com/tmux-plugins/tmux-resurrect
