@@ -5,6 +5,9 @@ call pathogen#helptags()
 source $VIMHOME/filetypes.vim
 let mapleader = "\<Space>"
 
+" sessions
+let g:session_autosave = 'yes'
+
 " completor
 let g:completor_python_binary='/Users/paul/.pyenv/shims/python'
 
