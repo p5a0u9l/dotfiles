@@ -116,6 +116,13 @@
     path = modules/vim/bundle/vim-vinegar
     url = https://github.com/tpope/vim-vinegar
 
+[submodule "modules/vim/bundle/vim-pyenv"]
+	path = modules/vim/bundle/vim-pyenv
+	url = https://github.com/lambdalisue/vim-pyenv
+
+[submodule "modules/vim/bundle/vim-python-pep8-indent"]
+	path = modules/vim/bundle/vim-python-pep8-indent
+	url = https://github.com/Vimjas/vim-python-pep8-indent
 
 # ------
 # python
@@ -148,9 +155,3 @@
 	path = modules/tmux/plugins/tmux-resurrect
 	url = https://github.com/tmux-plugins/tmux-resurrect
 
-[submodule "modules/vim/bundle/vim-pyenv"]
-	path = modules/vim/bundle/vim-pyenv
-	url = https://github.com/lambdalisue/vim-pyenv
-[submodule "modules/vim/bundle/vim-python-pep8-indent"]
-	path = modules/vim/bundle/vim-python-pep8-indent
-	url = https://github.com/Vimjas/vim-python-pep8-indent

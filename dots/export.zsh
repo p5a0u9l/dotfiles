@@ -30,8 +30,6 @@ export PATH=$PATH:$PYENV_ROOT/bin
 # GPG
 export GPG_TTY=$TTY
 export PINENTRY_USER_DATA="USE_CURSES=1"
-export TARGPGKEY=834E117E       # key ID for encryption
-export PASSGPGKEY=EB47B5CA      # alt key ID for encryption
 
 # PYTHON
 export PYTHONSTARTUP="$HOME/.pyrc"
