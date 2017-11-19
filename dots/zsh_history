@@ -10618,3 +10618,18 @@ done
 : 1511065626:0;gwip && gpoat
 : 1511065635:0;git remote set-url origin git@github.com:p5a0u9l/dotfiles
 : 1511065637:0;gwip && gpoat
+: 1511065677:0;sudo mount -t nfs -o resvport router:ssd nfs/ssd
+: 1511065680:0;ls
+: 1511065681:0;cd
+: 1511065681:0;ls
+: 1511065689:0;cd dotfiles
+: 1511065690:0;ls
+: 1511065698:0;md etc
+: 1511065701:0;cd etc
+: 1511065710:0;vim hosts
+: 1511065726:0;sudo vim hosts
+: 1511065846:0;ls
+: 1511065849:0;..
+: 1511065850:0;ls
+: 1511065856:0;gaa
+: 1511065865:0;gca -m "add etc hosts"
