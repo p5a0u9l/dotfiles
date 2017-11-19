@@ -10616,3 +10616,5 @@ done
 : 1511065607:0;git diff
 : 1511065622:0;gst
 : 1511065626:0;gwip && gpoat
+: 1511065635:0;git remote set-url origin git@github.com:p5a0u9l/dotfiles
+: 1511065637:0;gwip && gpoat
