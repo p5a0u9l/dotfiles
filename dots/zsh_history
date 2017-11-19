@@ -10613,3 +10613,57 @@ done
 : 1510899249:0;l *sgl
 : 1510899252:0;l *sql
 : 1510899296:0;pyenv install 3.6.0
+: 1511065607:0;git diff
+: 1511065622:0;gst
+: 1511065626:0;gwip && gpoat
+: 1511065635:0;git remote set-url origin git@github.com:p5a0u9l/dotfiles
+: 1511065637:0;gwip && gpoat
+: 1511065677:0;sudo mount -t nfs -o resvport router:ssd nfs/ssd
+: 1511065680:0;ls
+: 1511065681:0;cd
+: 1511065681:0;ls
+: 1511065689:0;cd dotfiles
+: 1511065690:0;ls
+: 1511065698:0;md etc
+: 1511065701:0;cd etc
+: 1511065710:0;vim hosts
+: 1511065726:0;sudo vim hosts
+: 1511065846:0;ls
+: 1511065849:0;..
+: 1511065850:0;ls
+: 1511065856:0;gaa
+: 1511065865:0;gca -m "add etc hosts"
+: 1511065867:0;ls
+: 1511065883:0;sudo vim /etc/hosts
+: 1511065899:0;sudo cat etc/hosts >> /etc/hosts
+: 1511065961:0;sudo sh -c 'cat etc/hosts >> /etc/hosts'
+: 1511065965:0;less /etc/hosts
+: 1511065972:0;ping router
+: 1511065975:0;gst
+: 1511065979:0;ls
+: 1511065989:0;mv remodulize.zsh scripts
+: 1511065994:0;less scripts/re
+: 1511065997:0;less scripts/remodulize.zsh
+: 1511066009:0;ls dots
+: 1511066011:0;ls bootstrap
+: 1511066016:0;ls password-store
+: 1511066021:0;rmdir password-store
+: 1511066025:0;ls -al password-store
+: 1511066036:0;mv password-store/.gpg-id ~/.password-store
+: 1511066039:0;rmdir password-store
+: 1511066041:0;pass show
+: 1511066045:0;cd
+: 1511066047:0;l
+: 1511066053:0;echo $PASSWORD_STORE_DIR
+: 1511066065:0;vim dotfiles/dots/export.zsh
+: 1511066114:0;source .zshrc
+: 1511066129:0;pass show 
+: 1511066137:0;compinit /usr/local/Cellar/pass/1.7.1/share/zsh/site-functions/_pass
+: 1511066152:0;man compinit
+: 1511066162:0;compinit /usr/local/Cellar/pass/1.7.1/share/zsh/site-functions/_pass
+: 1511066224:0;sudo chmod -R 775 /usr/local/share/zsh/site-functions
+: 1511066227:0;source .zshrc
+: 1511066270:0;compinit /usr/local/Cellar/pass/1.7.1/share/zsh/site-functions/_pass
+: 1511066281:0;cdd
+: 1511066282:0;gst
+: 1511066289:0;gwip && gpoat

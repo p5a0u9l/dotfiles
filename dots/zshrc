@@ -20,7 +20,7 @@ source $DOTDOTS/util.zsh
 # APPLICATION SPECIFIC
 # --------------------
 if which pass > $DEVNULL; then
-    export PASSWORD_STORE_DIR=$DOTHOME/password-store
+    export PASSWORD_STORE_DIR=$HOME/.password-store
     # compinit /usr/local/Cellar/pass/1.7.1/share/zsh/site-functions/_pass
 fi
 
