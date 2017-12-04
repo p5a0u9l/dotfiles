@@ -10667,3 +10667,450 @@ done
 : 1511066281:0;cdd
 : 1511066282:0;gst
 : 1511066289:0;gwip && gpoat
+: 1511067934:0;ls ~/vim
+: 1511067937:0;ls ~/.vim
+: 1511067940:0;l ~/.vim
+: 1511067948:0;vim julia/problem003.jl
+: 1511067965:0;ls
+: 1511067967:0;vim readme.py
+: 1511068272:0;ls
+: 1511068274:0;cd
+: 1511068276:0;cd code/project-euler.jl
+: 1511068277:0;ls
+: 1511068281:0;./readme.py
+: 1511068311:0;pyenv virtualenv 3.6.2 project-euler
+: 1511068319:0;pyenv local project-euler
+: 1511068328:0;pip install bs4
+: 1511068333:0;pip install requests
+: 1511068335:0;ls
+: 1511068339:0;gst
+: 1511068351:0;python readme.py
+: 1511125088:0;tmux attach-session
+: 1511125098:0;k 
+: 1511125208:0;jupyter console
+: 1511125594:0;pyenv deactivate
+: 1511125597:0;ls
+: 1511125606:0;which python
+: 1511125608:0;ls
+: 1511125624:0;python pgn2sql.py lichess_db_standard_rated_2017-04.pgn
+: 1511125739:0;pip install pytaglib
+: 1511125756:0;sudo apt install taglib
+: 1511125763:0;sudo apt search taglib
+: 1511125804:0;sudo apt install libtaglib2.1
+: 1511125811:0;pip install pytaglib
+: 1511125830:0;gcc --version
+: 1511125863:0;pip install pytaglib
+: 1511125923:0;sudo apt search taglib1
+: 1511125926:0;sudo apt search taglib
+: 1511125949:0;sudo apt install libtaglib-cil-dev
+: 1511125953:0;pip install pytaglib
+: 1511126001:0;cd $PYENV_ROOT/versions/3.6.2/envs/clamm/include/
+: 1511126002:0;ls
+: 1511126004:0;..
+: 1511126010:0;ls
+: 1511126072:0;pip install --global-option=build_ext --global-option="-I/usr/local/include/" --global-option="-L/usr/local/lib" pytaglib
+: 1511126091:0;pip install --global-option=build_ext --global-option="-I/usr/include/" --global-option="-L/usr/lib" pytaglib
+: 1511126124:0;sudo apt search taglib
+: 1511126164:0;sudo apt install python3-taglib
+: 1511126168:0;python
+: 1511126182:0;cd
+: 1511126186:0;cd code/clamm
+: 1511126188:0;python
+: 1511126211:0;ls /usr/local/lib/python3.5/
+: 1511126213:0;ls /usr/local/lib/python3.5/dist-packages
+: 1511126238:0;ls /usr/lib/python3
+: 1511126243:0;ls /usr/lib/python3/dist-packages
+: 1511126256:0;/usr/bin/python
+: 1511126287:0;python3
+: 1511126297:0;/usr/bin/python3
+: 1511126387:0;cp /usr/lib/python3/dist-packages/taglib.cpython-35m-x86_64-linux-gnu.so $PYENV_ROOT/versions/3.6.2/lib/python3.6/site-packages/
+: 1511126390:0;python
+: 1511126415:0;ls /usr/lib/python3/dist-packages
+: 1511126418:0;ls /usr/lib/python3/dist-packages | grep tag
+: 1511126447:0;cp /usr/lib/python3/dist-packages/pytaglib-0.3.6.egg-info $PYENV_ROOT/versions/3.6.2/lib/python3.6/site-packages/
+: 1511126452:0;cp -r /usr/lib/python3/dist-packages/pytaglib-0.3.6.egg-info $PYENV_ROOT/versions/3.6.2/lib/python3.6/site-packages/
+: 1511126454:0;python
+: 1511126472:0;cd /usr/lib/python3/dist-packages/pytaglib-0.3.6.egg-info
+: 1511126473:0;ls
+: 1511126480:0;cat PKG-INFO
+: 1511126486:0;ls
+: 1511126488:0;..
+: 1511126488:0;ls
+: 1511126504:0;cd
+: 1511126505:0;cd code/clamm
+: 1511126508:0;python
+: 1511126521:0;pyenv versions
+: 1511126531:0;python
+: 1511126549:0;pip install --global-option=build_ext --global-option="-I/usr/include/" --global-option="-L/usr/lib" pytaglib
+: 1511126595:0;cxs
+: 1511126596:0;xs
+: 1511126597:0;cd
+: 1511126599:0;cd buildrepos
+: 1511126599:0;ls
+: 1511126606:0;wget https://pypi.python.org/packages/98/ee/ed8abae88bc77de9c8d6de164c6450ab2563c45c73645347b5ddc4b3023b/pytaglib-1.4.1.tar.gz#md5=29e1fd2ddad8929d5ab3ff3206702227
+: 1511126609:0;ls
+: 1511126617:0;md5sum pytaglib-1.4.1.tar.gz
+: 1511126633:0;tar xvzf pytaglib-1.4.1.tar.gz
+: 1511126636:0;cd pytaglib-1.4.1/
+: 1511126636:0;ls
+: 1511126642:0;ls src
+: 1511126653:0;pip install --global-option=build_ext --global-option="-I/usr/include/" --global-option="-L/usr/lib" .
+: 1511126663:0;which pip
+: 1511126667:0;pip --version
+: 1511126674:0;..
+: 1511126685:0;mv pytaglib-1.4.1 ~/code/clamm
+: 1511126691:0;cd ~/code/clamm/`\
+
+: 1511126692:0;cd ~/code/clamm/
+: 1511126693:0;ls
+: 1511126696:0;cd pytaglib-1.4.1
+: 1511126697:0;ls
+: 1511126714:0;pip install setup.py
+: 1511126719:0;pip install .
+: 1511126762:0;pip install --global-option=build_ext --global-option="-I/usr/local/include/" --global-option="-L/usr/local/lib" .
+: 1511126769:0;locate taglib
+: 1511126803:0;sudo apt remove python3-taglib
+: 1511126811:0;ls /usr/lib
+: 1511126866:0;sudo updatedb
+: 1511126870:0;locate taglib
+: 1511126919:0;rm -rf /home/paul/dotfiles/modules/python/pyenv/versions/3.6.2/lib/python3.6/site-packages/pytaglib-0.3.6.egg-info/
+: 1511126936:0;rm -f /home/paul/dotfiles/modules/python/pyenv/versions/3.6.2/lib/python3.6/site-packages/taglib.cpython-35m-x86_64-linux-gnu.so
+: 1511127025:0;sudo apt remove libtaglib-cil-dev
+: 1511127040:0;sudo apt remove libtaglib2.1
+: 1511127047:0;sudo updatedb
+: 1511127049:0;locate taglib
+: 1511127082:0;sudo apt install libtag1-dev
+: 1511127090:0;sudo updatedb
+: 1511127091:0;locate taglib
+: 1511127101:0;pip install .
+: 1511127105:0;..
+: 1511127108:0;rm -rf pytaglib-1.4.1
+: 1511127110:0;ls
+: 1511127113:0;python
+: 1511127127:0;pip list
+: 1511127170:0;which clamm
+: 1511127176:0;clamm -h
+: 1511127226:0;pip install py-translate
+: 1511127229:0;clamm -h
+: 1511127234:0;python
+: 1511127262:0;l
+: 1511127270:0;vim clamm/tags.py
+: 1511127304:0;python
+: 1511127330:0;clamm -h
+: 1511127390:0;ls
+: 1511127434:0;cd clamm
+: 1511127435:0;ls
+: 1511127437:0;ls json
+: 1511127454:0;ls templates
+: 1511127484:0;..
+: 1511127490:0;pip install -e .
+: 1511127493:0;clamm -h
+: 1511127516:0;ls ~/.config
+: 1511127678:0;mv templates/config.json json
+: 1511127705:0;python
+: 1511127712:0;jupyter console
+: 1511127720:0;python
+: 1511128259:0;pip install -e .
+: 1511128263:0;python
+: 1511128384:0;pip install -e .
+: 1511128387:0;clamm -h
+: 1511128673:0;python 
+: 1511129108:0;clamm -h
+: 1511130076:0;clamm tags -h
+: 1511130088:0;clamm config edit
+: 1511130091:0;clamm config show
+: 1511130227:0;which bpython
+: 1511130229:0;bpython
+: 1511130235:0;cd
+: 1511130251:0;sudo apt install bpython
+: 1511130268:0;bpython
+: 1511130283:0;pip remove bpython
+: 1511130288:0;pip -h
+: 1511130298:0;pip uninstallbpython
+: 1511130303:0;pip uninstall bpython
+: 1511130309:0;bpython
+: 1511130431:0;sudo apt install ffmpeg
+: 1511130441:0;sudo apt install cmus-remote
+: 1511130447:0;sudo apt install shairport-sync
+: 1511130455:0;which sed
+: 1511130459:0;which osascript
+: 1511130466:0;sudo apt install osascript
+: 1511153452:0;tmux attach-session
+: 1511153458:0;l
+: 1511153523:0;python 
+: 1511153586:0;python pgn2sql.py lichess_db_standard_rated_2017-04.pgn
+: 1511153816:0;cmus-remote
+: 1511154191:0;bpython
+: 1511155303:0;clamm -h
+: 1511155311:0;pyenv activate clamm
+: 1511155314:0;clamm -h
+: 1511155322:0;clamm tags -h
+: 1511155333:0;clamm tags show
+: 1511155363:0;ls
+: 1511155369:0;md test
+: 1511155642:0;mv test clamm
+: 1511155644:0;cd clamm
+: 1511155748:0;python test/test_clamm.py
+: 1511156149:0;clamm -h
+: 1511156168:0;pip install -e .
+: 1511156170:0;..
+: 1511156174:0;cd clamm
+: 1511156175:0;pip install -e .
+: 1511156178:0;clamm -h
+: 1511156207:0;pip install -e .
+: 1511156209:0;clamm -h
+: 1511156298:0;cd clamm
+: 1511156299:0;ls
+: 1511156300:0;ls templates
+: 1511156331:0;cp templates/tags.json templates/tags-template.json
+: 1511156553:0;python test/test_clamm.py
+: 1511156568:0;md .config/clamm
+: 1511156589:0;cp code/clamm/clamm/templates/tags.json .config/clamm
+: 1511156616:0;python test/test_clamm.py
+: 1511156680:0;echo $STDOUT
+: 1511156741:0;python test/test_clamm.py
+: 1511156960:0;pip list
+: 1511156969:0;pip freeze
+: 1511156982:0;gst
+: 1511157016:0;cp code/clamm/clamm/json/config.json .config/clamm
+: 1511157164:0;clamm -h
+: 1511157302:0;ls
+: 1511157304:0;cd clamm
+: 1511157304:0;ls
+: 1511157308:0;cd code/clamm
+: 1511157309:0;ls
+: 1511157543:0;grep -r ffmpeg
+: 1511157603:0;sudo apt install flac
+: 1511157612:0;which _metaflac
+: 1511157621:0;sudo apt install metaflac
+: 1511157627:0;sudo apt search flac
+: 1511157666:0;metaflac
+: 1511157676:0;which flac
+: 1511157690:0;sudo apt remove flac
+: 1511157694:0;metaflac
+: 1511157708:0;sudo apt install flac
+: 1511157881:0;grep -r shairport
+: 1511158223:0;cd doc
+: 1511158225:0;make html
+: 1511158248:0;pyenv deactivate
+: 1511158258:0;pyenv local
+: 1511158263:0;pyenv list
+: 1511158265:0;pyenv versions
+: 1511158290:0;pyenv virtualenv 3.6.2 clamm-doc
+: 1511158305:0;pyenv local clamm-doc
+: 1511158318:0;pip install sphinx
+: 1511158325:0;ls
+: 1511158326:0;make html
+: 1511158337:0;pip install sphinx_rtd_theme
+: 1511158341:0;make html
+: 1511158589:0;ls
+: 1511158594:0;cd _build
+: 1511158595:0;ls
+: 1511158596:0;cd html
+: 1511158610:0;python -m SimpleHttpServer
+: 1511158621:0;python -m simpleserver
+: 1511158643:0;python -m http.server
+: 1511158774:0;make clean
+: 1511158819:0;cd
+: 1511158823:0;clamm -h
+: 1511158827:0;cd code/clamm
+: 1511158829:0;clamm -h
+: 1511159457:0;python
+: 1511159508:0;ls
+: 1511159847:0;bpython
+: 1511159990:0;ls json
+: 1511159998:0;mv json/* templates
+: 1511160024:0;ls
+: 1511160473:0;ls templates
+: 1511160501:0;rm templates/tags-template.json
+: 1511160510:0;cat templates/listing.json
+: 1511160535:0;clamm -h
+: 1511160773:0;clamm setup files
+: 1511160959:0;python
+: 1511160991:0;clamm setup files
+: 1511161299:0;clamm tags show
+: 1511161378:0;clamm tags edit
+: 1511161404:0;clamm tags show
+: 1511161408:0;clamm config show
+: 1511161412:0;clamm -h
+: 1511161433:0;clamm library -h
+: 1511161639:0;clamm streams -h
+: 1511161746:0;clamm config show
+: 1511161754:0;clamm setup files
+: 1511161809:0;gaa
+: 1511161831:0;gca -m "add setup to cli. start unittests"
+: 1511161833:0;git push origin master
+: 1511161950:0;which flake8
+: 1511161955:0;flake8 -h
+: 1511161959:0;ls
+: 1511161973:0;echo $PYTHONPATH
+: 1511162050:0;python pgn2sql.py lichess_db_standard_rated_2017-04.pgn
+: 1511162086:0;cd
+: 1511162087:0;ls
+: 1511162096:0;rm -rf anaconda3
+: 1511162098:0;ls
+: 1511162101:0;ls amalthean-music
+: 1511162152:0;whixh bsdtar
+: 1511162156:0;bsdtar
+: 1511162165:0;ls
+: 1511162169:0;ls nfs
+: 1511162174:0;rmdir nfs
+: 1511162175:0;ls
+: 1511162179:0;l
+: 1511162186:0;rm .tigrc
+: 1511162188:0;l
+: 1511162199:0;ls .local/lib
+: 1511162213:0;which pip
+: 1511162220:0;pip install sphinx_rtd_theme
+: 1511162226:0;pip install flake8
+: 1511162240:0;pip install pylint
+: 1511162249:0;which pylint
+: 1511162381:0;source ~/.zshrc
+: 1511162388:0;source .zshrc
+: 1511162393:0;source ~/.zshrc
+: 1511162399:0;vim clamm/tags.py
+: 1511162445:0;source ~/.zshrc
+: 1511162452:0;vim pgn2sql.py
+: 1511162463:0;source ~/.zshrc
+: 1511162464:0;vim pgn2sql.py
+: 1511162472:0;vim clamm/tags.py
+: 1511162602:0;vim dots/zshrc
+: 1511162618:0;cd
+: 1511162619:0;l
+: 1511162621:0;l .vim/
+: 1511241944:0;tmux attach-session
+: 1511241967:0;clamm -h
+: 1511241972:0;ls
+: 1511241975:0;s
+: 1511241977:0;ls
+: 1511241980:0;ls amalthean-music
+: 1511241983:0;ls amalthean-music/classical
+: 1511241992:0;ls amalthean-music/playlists
+: 1511241997:0;ls amalthean-music/streams
+: 1511245803:0;tmux attach-session
+: 1511245837:0;sudo apt-config
+: 1511245859:0;sudo apt-ftparchive -h
+: 1511245875:0;sudo apt-clone -h
+: 1511245883:0;sudo apt-cache -h
+: 1511245905:0;sudo apt-cache pkgnames
+: 1511245998:0;df -h
+: 1511246013:0;lsblk
+: 1511246024:0;ls 
+: 1511246025:0;cd
+: 1511246026:0;ls
+: 1511246030:0;ls /mnt
+: 1511246057:0;sudo fdisk /dev/sdb
+: 1511246088:0;sudo mkfs.ext4 /dev/sdb1
+: 1511246100:0;sudo mount /dev/sdb1 /mnt/data
+: 1511246111:0;sudo mkdir /mnt/data
+: 1511246113:0;sudo mount /dev/sdb1 /mnt/data
+: 1511246126:0;sudo apt install apt-mirroe
+: 1511246128:0;sudo apt install apt-mirror
+: 1511246139:0;sudo apt-mirror -h
+: 1511246187:0;sudo vim /etc/apt/mirror.list
+: 1511246219:0;sudo apt-mirror
+: 1511246233:0;ls /mnt/data
+: 1511246243:0;sudo mkdir /mnt/data/apt-mirror
+: 1511246248:0;sudo apt-mirror
+: 1511246310:0;source ~/.zshrc
+: 1511246314:0;cd /mnt/data
+: 1511246320:0;du -hs .
+: 1511246323:0;sudo du -hs .
+: 1511247242:0;watch sudo du -hs .
+: 1511247262:0;watch sudo du -s .
+: 1511322199:0;tmux attach-session
+: 1511322228:0;cd /mnt/data/apt-mirror/var/
+: 1511322229:0;ls
+: 1511322239:0;cd
+: 1511322241:0;du -hs .
+: 1511322244:0;df -h
+: 1512368357:0;grep -r audio2preferr clamm/*py
+: 1512368568:0;git submodule deinit -f vim-pyenv
+: 1512368574:0;ls
+: 1512368577:0;ls vim-pyenv
+: 1512368578:0;ls
+: 1512368608:0;vim clamm/audiolib.py
+: 1512368658:0;python
+: 1512368871:0;			cd
+: 1512368876:0;sudo apt install libncurses5-dev libgnome2-dev libgnomeui-dev \\
+    libgtk2.0-dev libatk1.0-dev libbonoboui2-dev \\
+    libcairo2-dev libx11-dev libxpm-dev libxt-dev python-dev \\
+    python3-dev ruby-dev lua5.1 lua5.1-dev libperl-dev git
+: 1512368940:0;sudo apt remove vim vim-runtime gvim
+: 1512368952:0;sudo apt remove vim-tiny vim-common vim-gui-common vim-nox
+: 1512368979:0;cd buildrepos
+: 1512368982:0;git clone https://github.com/vim/vim.git
+: 1512368994:0;cd vim
+: 1512369026:0;ls /usr/lib/python2.7/config-x86_64-linux-gnu
+: 1512369074:0;./configure --with-features=huge \\
+            --enable-multibyte \\
+            --enable-rubyinterp=yes \\
+            --enable-pythoninterp=yes \\
+            --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu \\
+            --enable-python3interp=yes \\
+            --with-python3-config-dir=/usr/lib/python3.5/config-3.5m-x86_64-linux-gnu \\
+            --enable-perlinterp=yes \\
+            --enable-luainterp=yes \\
+            --enable-gui=gtk2 \\
+            --enable-cscope \\
+            --prefix=/usr/local
+: 1512369101:0;make VIMRUNTIMEDIR=/usr/local/share/vim/vim80
+: 1512369173:0;pyenv versions
+: 1512369208:0;sudo apt install checkinstall
+: 1512369215:0;sudo checkinstall
+: 1512369242:0;ls
+: 1512369252:0;sudo update-alternatives --install /usr/bin/editor editor /usr/bin/vim 1\
+sudo update-alternatives --set editor /usr/bin/vim\
+sudo update-alternatives --install /usr/bin/vi vi /usr/bin/vim 1\
+sudo update-alternatives --set vi /usr/bin/vim
+: 1512369258:0;which vim
+: 1512369261:0;vim --version
+: 1512369286:0;pyenv activate system
+: 1512369298:0;pyenv activate default
+: 1512369308:0;make clean
+: 1512369317:0;./configure --with-features=huge \\
+            --enable-multibyte \\
+            --enable-rubyinterp=yes \\
+            --enable-pythoninterp=yes \\
+            --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu \\
+            --enable-python3interp=yes \\
+            --with-python3-config-dir=/usr/lib/python3.5/config-3.5m-x86_64-linux-gnu \\
+            --enable-perlinterp=yes \\
+            --enable-luainterp=yes \\
+            --enable-gui=gtk2 \\
+            --enable-cscope \\
+            --prefix=/usr/local
+: 1512369333:0;make -j8 VIMRUNTIMEDIR=/usr/local/share/vim/vim80
+: 1512369356:0;sudo make install
+: 1512369361:0;vim --version
+: 1512369386:0;git tag
+: 1512369397:0;vim clamm/audiolib.py
+: 1512369403:0;vim --version
+: 1512369433:0;vim clamm/audiolib.py
+: 1512369450:0;make clean
+: 1512369478:0;./configure --with-features=huge \\
+            --enable-multibyte \\
+            --enable-rubyinterp=yes \\
+            --enable-pythoninterp=yes \\
+            --enable-python3interp=yes \\
+            --enable-perlinterp=yes \\
+            --enable-luainterp=yes \\
+            --enable-cscope \\
+            --prefix=/usr/local
+: 1512369487:0;make -j8 VIMRUNTIMEDIR=/usr/local/share/vim/vim80
+: 1512369508:0;sudo make install
+: 1512369514:0;vim --version
+: 1512369532:0;make clean
+: 1512369541:0;./configure --with-features=huge \\
+            --enable-multibyte \\
+            --enable-rubyinterp=yes \\
+            --enable-pythoninterp=yes \\
+            --enable-python3interp=yes \\
+            --enable-perlinterp=yes \\
+            --enable-luainterp=yes \\
+            --enable-cscope \\
+            --prefix=/usr/local
+: 1512369582:0;python2
+: 1512369613:0;cd
+: 1512369633:0;source ~/.zshrc
+: 1512369637:0;which pyenv

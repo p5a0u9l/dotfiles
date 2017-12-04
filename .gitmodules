@@ -155,3 +155,6 @@
 	path = modules/tmux/plugins/tmux-resurrect
 	url = https://github.com/tmux-plugins/tmux-resurrect
 
+[submodule "modules/vim/bundle/jedi-vim"]
+	path = modules/vim/bundle/jedi-vim
+	url = https://github.com/davidhalter/jedi-vim

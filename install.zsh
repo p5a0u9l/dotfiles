@@ -21,20 +21,17 @@ link() {
 link_dots() {
     link $DOTDOTS/cmus_autosave          $XDG/cmus_autosave
     link $DOTDOTS/shairport-sync.conf    $XDG/shairport-sync/shairport-sync.conf
-    link $DOTDOTS/vifmrc                 $XDG/vifm/vifmrc
     link $DOTDOTS/gitconfig              $HOME/.gitconfig
     link $DOTDOTS/gitignore              $HOME/.gitignore
     link $DOTDOTS/gpg-agent.conf         $HOME/.gnupg/gpg-agent.conf
     link $DOTDOTS/gpg.conf               $HOME/.gnupg/gpg.conf
-    link $DOTDOTS/ipython_config.py      $HOME/.ipython_config
-    link $DOTDOTS/pyrc                   $HOME/.pyrc
+    link $DOTDOTS/pylintrc               $HOME/.pylintrc
     link $DOTDOTS/ssh_config             $HOME/.ssh/config
     link $DOTDOTS/tmux.conf              $HOME/.tmux.conf
     link $DOTDOTS/vimrc                  $HOME/.vimrc
     link $DOTDOTS/filetypes.vim          $VIMHOME/filetypes.vim
     link $DOTDOTS/zshrc                  $HOME/.zshrc
     link $DOTDOTS/zsh_history            $HOME/.zsh_history
-    link $DOTDOTS/tigrc                  $HOME/.tigrc
 }
 
 # modules
@@ -68,4 +65,4 @@ elif [[ $1 = "all" ]]; then
 else
     echo "unrecognized option $1..."
 fi
-    
+

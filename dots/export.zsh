@@ -24,7 +24,7 @@ export PYENV_ROOT="$HOME/.pyenv"
 
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # stick anaconda on front
-export PATH=$HOME/anaconda3/bin:$PATH
+export PATH=PYENV_ROOT/versions/anaconda3-4.4.0/bin:$PATH
 export PATH=$PATH:$PYENV_ROOT/bin
 
 # GPG
@@ -32,8 +32,7 @@ export GPG_TTY=$TTY
 export PINENTRY_USER_DATA="USE_CURSES=1"
 
 # PYTHON
-export PYTHONSTARTUP="$HOME/.pyrc"
-export PYTHONPATH="$HOME/anaconda3:$HOME/.local/lib/python/"
+export PYTHONPATH=$PYENV_ROOT/versions/anaconda3-4.4.0
 
 # ZSH
 export ZSH=$DOTMODS/zsh/oh-my-zsh
