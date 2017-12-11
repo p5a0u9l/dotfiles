@@ -22,10 +22,8 @@ export PYENV_ROOT="$HOME/.pyenv"
 
 # PATH APPENDAGES
 
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # stick anaconda on front
-export PATH=PYENV_ROOT/versions/anaconda3-4.4.0/bin:$PATH
-export PATH=$PATH:$PYENV_ROOT/bin
+export PATH=$PATH:$HOME/.local/bin:$PYENV_ROOT/bin
 
 # GPG
 export GPG_TTY=$TTY
