@@ -10667,3 +10667,48 @@ done
 : 1511066281:0;cdd
 : 1511066282:0;gst
 : 1511066289:0;gwip && gpoat
+: 1511066358:0;cd
+: 1511066359:0;ls
+: 1511066362:0;ls nfs
+: 1511066365:0;ls nfs/passport
+: 1511066370:0;ls nfs/passport/Dev
+: 1511066378:0;ls nfs/macssd
+: 1511066381:0;l nfs/macssd
+: 1511066430:0;ls /Volumes/
+: 1511066452:0;sudo mount -t nfs -o resvport router:e0a21255-8b9d-45bf-a830-fac8c0e70fec nfs/macssd
+: 1511066478:0;sudo mount -t nfs -o resvport router:/e0a21255-8b9d-45bf-a830-fac8c0e70fec nfs/macssd
+: 1511066486:0;rm nfs/macssd
+: 1511066487:0;sudo mount -t nfs -o resvport router:/e0a21255-8b9d-45bf-a830-fac8c0e70fec nfs/macssd
+: 1511066499:0;md nfs/macssd
+: 1511066500:0;sudo mount -t nfs -o resvport router:/e0a21255-8b9d-45bf-a830-fac8c0e70fec nfs/macssd
+: 1511066507:0;sudo mount -t nfs -o resvport router:e0a21255-8b9d-45bf-a830-fac8c0e70fec nfs/macssd
+: 1511066542:0;ls /Volumes/
+: 1511066547:0;ls /Volumes/e0a21255-8b9d-45bf-a830-fac8c0e70fec
+: 1511066548:0;ls
+: 1511066551:0;cd nfs
+: 1511066551:0;ls
+: 1511066556:0;./mountr.zsh
+: 1511066558:0;ls
+: 1511066561:0;ls passport
+: 1511066564:0;ls macssd
+: 1511066572:0;cd passport
+: 1511066576:0;rm -rf Dev Users
+: 1511066577:0;ls
+: 1511066580:0;ls cache
+: 1511066586:0;ls cache/albumart
+: 1511066592:0;ls
+: 1511066603:0;cd
+: 1511066607:0;du -hs music
+: 1511066617:0;df -h
+: 1511066640:0;cp -rf music nfs/passport
+: 1511066648:0;glances
+: 1511066664:0;cd nfs/passport
+: 1511066902:0;df -h
+: 1511066910:0;ping jupiter
+: 1511067216:0;ls
+: 1511067224:0;du -hs music
+: 1511125084:0;ssh paul@lynx
+: 1511130143:0;du -hs music
+: 1511153445:0;ssh paul@lynx
+: 1511153826:0;tmux attach-session
+: 1511241940:0;ssh paul@lynx

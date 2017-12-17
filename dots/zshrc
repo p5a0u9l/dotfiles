@@ -29,10 +29,6 @@ if which cmus > $DEVNULL; then
     alias cmus="/usr/local/bin/cmus 2>/dev/null"
 fi
 
-if which pyenv > $DEVNULL; then
-    eval "$( command pyenv init - )"
-fi
-
 # ---
 # ZSH
 # ---
@@ -43,9 +39,9 @@ CASE_SENSITIVE="true"
 setopt EXTENDED_HISTORY
 plugins=(git colored-man-pages)
 DISABLE_AUTO_UPDATE=true
+ZSH_THEME="jispwoso"
 source $ZSH/oh-my-zsh.sh
 source $DOTMODS/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $DOTDOTS/platform.zsh
 
 # cute little welcome banner
 echo $magenta"m"$green"g"$cyan"c"$blue"b"$default"w"$red"r"$yellow"y$default"

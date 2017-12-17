@@ -18,14 +18,10 @@ export HISTSIZE=100000000
 export SAVEHIST=$HISTSIZE
 export HIST_STAMPS="mm/dd/yyyy"
 export EDITOR='vim'
-export PYENV_ROOT="$HOME/.pyenv"
 
 # PATH APPENDAGES
 
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# stick anaconda on front
-export PATH=$HOME/anaconda3/bin:$PATH
-export PATH=$PATH:$PYENV_ROOT/bin
+export PATH=/usr/local/bin:$PATH
 
 # GPG
 export GPG_TTY=$TTY
