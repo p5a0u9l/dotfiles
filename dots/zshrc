@@ -26,7 +26,7 @@ fi
 
 if which cmus > $DEVNULL; then
     # bc OSX has an irritating warning related to soudn library
-    alias cmus="/usr/local/bin/cmus 2>/dev/null"
+    # alias cmus="/usr/local/bin/cmus 2>/dev/null"
 fi
 
 # ---
@@ -44,7 +44,7 @@ source $ZSH/oh-my-zsh.sh
 source $DOTMODS/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # cute little welcome banner
-echo $magenta"m"$green"g"$cyan"c"$blue"b"$default"w"$red"r"$yellow"y$default"
+echo $magenta"m"$green"g"$cyan"c"$blue"b"$white"w"$red"r"$yellow"y$default"
 echo ""
 echo " $magenta`date`"$default
 echo "      running "`uname -a`

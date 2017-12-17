@@ -1,1 +1,1 @@
-/Users/paul/dotfiles/dots/filetypes.vim
+/home/paul/dotfiles/dots/filetypes.vim

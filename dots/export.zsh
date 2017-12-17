@@ -26,12 +26,6 @@ export PATH=/usr/local/bin:$PATH
 # GPG
 export GPG_TTY=$TTY
 export PINENTRY_USER_DATA="USE_CURSES=1"
-export TARGPGKEY=834E117E       # key ID for encryption
-export PASSGPGKEY=EB47B5CA      # alt key ID for encryption
-
-# PYTHON
-export PYTHONSTARTUP="$HOME/.pyrc"
-export PYTHONPATH="$HOME/anaconda3:$HOME/.local/lib/python/"
 
 # ZSH
 export ZSH=$DOTMODS/zsh/oh-my-zsh
