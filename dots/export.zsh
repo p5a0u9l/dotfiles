@@ -30,7 +30,7 @@ export GPG_TTY=$TTY
 export PINENTRY_USER_DATA="USE_CURSES=1"
 
 # PYTHON
-export PYTHONPATH=$PYENV_ROOT/versions/anaconda3-4.4.0
+export PYTHONPATH="$HOME/.local/lib/python3.6/site-packages"
 
 # ZSH
 export ZSH=$DOTMODS/zsh/oh-my-zsh
