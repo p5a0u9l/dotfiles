@@ -36,7 +36,7 @@ link_dots() {
 
 # modules
 link_modules() {
-    # zsh
+    # tmux
     # ---
     link $DOTMODS/tmux/plugins $HOME/.tmux/plugins
 
@@ -44,11 +44,6 @@ link_modules() {
     # ---
     link $DOTMODS/vim $VIMHOME
     link $DOTMODS/vim/bundle/vim-pathogen/autoload $VIMHOME/autoload
-
-    # python
-    # ------
-    link $DOTMODS/python/pyenv $HOME/.pyenv
-    link $DOTMODS/python/pyenv-virtualenv $HOME/.pyenv/plugins/pyenv-virtualenv
 }
 
 # main
