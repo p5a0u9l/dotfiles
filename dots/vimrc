@@ -1,21 +1,19 @@
 " PLUGINS
 " -------
-call pathogen#infect('$VIMHOME/bundle/{}')
+call pathogen#infect('$HOME/.vim/bundle/{}')
 call pathogen#helptags()
-source $VIMHOME/filetypes.vim
 let mapleader = "\<Space>"
 
 " sessions
 let g:session_autosave = 'yes'
 
 " completor
-let g:completor_python_binary=expand('~/.pyenv/shims/python')
+let g:completor_python_binary='$PYTHON/bin/python3'
 
 " ale
-let g:ale_python_executable=expand('~/.pyenv/shims/python')
-let g:ale_python_flake8_executable=expand('~/.pyenv/versions/anaconda3-4.4.0/envs/default/bin/flake8')
-let g:ale_python_pylint_executable=expand('~/.pyenv/versions/anaconda3-4.4.0/envs/default/bin/pylint')
-let g:ale_python_autopep8_executable=expand('~/.pyenv/versions/anaconda3-4.4.0/envs/default/bin/autopep8')
+let g:ale_python_executable='$PYTHON/bin/python3'
+let g:ale_python_flake8_executable='$PYTHON/bin/flake8'
+let g:ale_python_autopep8_executable='$PYTHON/bin/autopep8'
 
 " Bind F8 to fixing problems with ALE
 nmap <F8> <Plug>(ale_fix)
@@ -73,6 +71,25 @@ if !exists('g:airline_symbols')
 endif
 
 autocmd BufWrite * :call DeleteTrailingWS()
+
+" Python
+""""""""
+let python_highlight_all = 1
+au FileType python syn keyword pythonDecorator True None False self
+au FileType python map <buffer> F :set foldmethod=indent<cr>
+au FileType python map <buffer> <leader>1 /\<class\><cr>
+au FileType python map <buffer> <leader>2 /\<def\><cr>
+au FileType python map <buffer> <leader>3 /\<import\><cr>
+au FileType python map <buffer> <leader>db iimport bpdb; bpdb.set_trace()<esc>
+au FileType python set colorcolumn=80
+
+" Julia
+"""""""
+autocmd BufWrite *.jl :call DeleteTrailingWS()
+
+" Matlab
+"""""""""""
+autocmd BufWrite *.m :call DeleteTrailingWS()
 
 " SETTINGS
 " --------

@@ -158,3 +158,6 @@
 [submodule "modules/vim/bundle/jedi-vim"]
 	path = modules/vim/bundle/jedi-vim
 	url = https://github.com/davidhalter/jedi-vim
+[submodule "modules/vim/bundle/vim-rsi"]
+	path = modules/vim/bundle/vim-rsi
+	url = git@github.com:tpope/vim-rsi
