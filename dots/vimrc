@@ -1,8 +1,7 @@
 " PLUGINS
 " -------
-call pathogen#infect('$VIMHOME/bundle/{}')
+call pathogen#infect('$HOME/.vim/bundle/{}')
 call pathogen#helptags()
-source $VIMHOME/filetypes.vim
 let mapleader = "\<Space>"
 
 " sessions
@@ -73,6 +72,25 @@ if !exists('g:airline_symbols')
 endif
 
 autocmd BufWrite * :call DeleteTrailingWS()
+
+" Python
+""""""""
+let python_highlight_all = 1
+au FileType python syn keyword pythonDecorator True None False self
+au FileType python map <buffer> F :set foldmethod=indent<cr>
+au FileType python map <buffer> <leader>1 /\<class\><cr>
+au FileType python map <buffer> <leader>2 /\<def\><cr>
+au FileType python map <buffer> <leader>3 /\<import\><cr>
+au FileType python map <buffer> <leader>db iimport bpdb; bpdb.set_trace()<esc>
+au FileType python set colorcolumn=80
+
+" Julia
+"""""""
+autocmd BufWrite *.jl :call DeleteTrailingWS()
+
+" Matlab
+"""""""""""
+autocmd BufWrite *.m :call DeleteTrailingWS()
 
 " SETTINGS
 " --------

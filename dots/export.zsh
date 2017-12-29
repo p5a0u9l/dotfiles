@@ -20,8 +20,12 @@ export HIST_STAMPS="mm/dd/yyyy"
 export EDITOR='vim'
 
 # PATH APPENDAGES
-
 export PATH=/usr/local/bin:$PATH
+if [[ -d /opt/python3 ]]; then
+    export PYTHON=/opt/python3
+    export PATH=$PYTHON/bin:$PATH
+    export LD_LIBRARY_PATH=$PYTHON/lib
+fi
 
 # GPG
 export GPG_TTY=$TTY
@@ -30,5 +34,3 @@ export PINENTRY_USER_DATA="USE_CURSES=1"
 # ZSH
 export ZSH=$DOTMODS/zsh/oh-my-zsh
 export ZSH_AUTOSUGGEST_STRATEGY=histdb_top_here
-
-

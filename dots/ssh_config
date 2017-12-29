@@ -1,18 +1,18 @@
 Host github.com
     IdentityFile ~/.ssh/github.com/p5a0u9l-id_rsa
 
-Host amalthea
+Host amalthea.local
     IdentitiesOnly yes
     IdentityFile ~/.ssh/jupiter.lan/amalthea-id_rsa
 
-Host thebes
+Host thebes.local
     IdentitiesOnly yes
     IdentityFile ~/.ssh/jupiter.lan/thebes-id_rsa
 
-Host lynx
+Host lynx.local
     IdentitiesOnly yes
     IdentityFile ~/.ssh/jupiter.lan/lynx-id_rsa
 
-Host europa
+Host europa.local
     IdentitiesOnly yes
     IdentityFile ~/.ssh/jupiter.lan/europa-id_rsa
