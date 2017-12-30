@@ -1,5 +1,4 @@
 # my zshrc file
-
 source $HOME/dotfiles/dots/export.zsh
 
 # -------
@@ -26,7 +25,7 @@ fi
 
 if which cmus > $DEVNULL; then
     # bc OSX has an irritating warning related to soudn library
-    # alias cmus="/usr/local/bin/cmus 2>/dev/null"
+    alias cmus="/usr/local/bin/cmus 2>/dev/null"
 fi
 
 # ---
@@ -49,4 +48,3 @@ echo ""
 echo " $magenta`date`"$default
 echo "      running "`uname -a`
 echo ""
-# screenfetch -t

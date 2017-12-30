@@ -174,7 +174,7 @@ filextype *.djvu open -a MacDjView.app
 fileviewer *.mp3 mp3info
 
 filetype *.flac
-        \ {Open in nvim}
+        \ {Open in vim}
         \ $HOME/code/python/clamm/clamm/scripts/gretaflac.sh
 
 " fileviewer *.flac metaflac --list %c | grep "ALBUM\|ARTIST\|COMPOSER\|TITLE"

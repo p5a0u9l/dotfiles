@@ -20,12 +20,15 @@ export HIST_STAMPS="mm/dd/yyyy"
 export EDITOR='vim'
 
 # PATH APPENDAGES
-export PATH=/usr/local/bin:$PATH
-if [[ -d /opt/python3 ]]; then
-    export PYTHON=/opt/python3
-    export PATH=$PYTHON/bin:$PATH
-    export LD_LIBRARY_PATH=$PYTHON/lib
-fi
+function addpath {
+    case ":$PATH:" in
+        *":$1:"*) :;; # already there
+        *) PATH="$1:$PATH";; # or PATH="$PATH:$1"
+    esac
+}
+addpath /usr/local/bin
+addpath $HOME/.local/bin
+export PATH
 
 # GPG
 export GPG_TTY=$TTY

@@ -8,13 +8,16 @@ let mapleader = "\<Space>"
 let g:session_autosave = 'yes'
 
 " " completor
-" let g:completor_python_binary=expand('~/.pyenv/shims/python')
+" let g:completor_python_binary=
 
 " " ale
-" let g:ale_python_executable=expand('~/.pyenv/shims/python')
-" let g:ale_python_flake8_executable=expand('~/.pyenv/versions/anaconda3-4.4.0/envs/default/bin/flake8')
-" let g:ale_python_pylint_executable=expand('~/.pyenv/versions/anaconda3-4.4.0/envs/default/bin/pylint')
-" let g:ale_python_autopep8_executable=expand('~/.pyenv/versions/anaconda3-4.4.0/envs/default/bin/autopep8')
+" let g:ale_python_executable=
+" let g:ale_python_flake8_executable=
+" let g:ale_python_pylint_executable=
+" let g:ale_python_autopep8_executable=
+" Move between linting errors
+nnoremap ]r :ALENextWrap<CR>
+nnoremap [r :ALEPreviousWrap<CR>
 
 " Bind F8 to fixing problems with ALE
 nmap <F8> <Plug>(ale_fix)
@@ -91,6 +94,31 @@ autocmd BufWrite *.jl :call DeleteTrailingWS()
 " Matlab
 """""""""""
 autocmd BufWrite *.m :call DeleteTrailingWS()
+
+" When editing a file, always jump to the last known cursor position.
+" Don't do it for commit messages, when the position is invalid, or when
+" inside an event handler (happens when dropping a file on gvim).
+autocmd BufReadPost *
+            \ if &ft != 'gitcommit' && line("'\"") > 0 && line("'\"") <= line("$") |
+            \   exe "normal g`\"" |
+            \ endif
+
+" Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
+if executable('ag')
+    " Use Ag over Grep
+    set grepprg=ag\ --nogroup\ --nocolor
+
+    " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+    let g:ctrlp_user_command = 'ag --literal --files-with-matches --nocolor --hidden -g "" %s'
+
+    " ag is fast enough that CtrlP doesn't need to cache
+    let g:ctrlp_use_caching = 1
+
+    if !exists(":Ag")
+        command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+        nnoremap \ :Ag<SPACE>
+    endif
+endif
 
 " SETTINGS
 " --------
@@ -176,24 +204,6 @@ noremap <C-w>l :tabmove +1<cr>
 map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
 " Switch CWD to the directory of the open buffer
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
-" start of line
-cnoremap <C-A>		<Home>
-" back one character
-cnoremap <C-B>		<Left>
-" delete character under cursor
-cnoremap <C-D>		<Del>
-" end of line
-cnoremap <C-E>		<End>
-" forward one character
-cnoremap <C-F>		<Right>
-" recall newer command-line
-cnoremap <C-N>		<Down>
-" recall previous (older) command-line
-cnoremap <C-P>		<Up>
-" back one word
-cnoremap <Esc><C-B>	<S-Left>
-" forward one word
-cnoremap <Esc><C-F>	<S-Right>
 
 " FUNCTIONS
 " --------
