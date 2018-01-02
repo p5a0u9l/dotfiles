@@ -8,7 +8,7 @@ let mapleader = "\<Space>"
 let g:session_autosave = 'no'
 
 " " completor
-let g:completor_python_binary='/usr/bin/env python'
+" let g:completor_python_binary='/usr/bin/env python'
 
 " virtualenv
 let g:virtualenv_directory='/home/$USER/.pyenv/versions'
