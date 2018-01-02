@@ -8,8 +8,12 @@ let mapleader = "\<Space>"
 let g:session_autosave = 'yes'
 
 " " completor
-" let g:completor_python_binary=
+let g:completor_python_binary='/usr/bin/env python'
 
+" virtualenv
+let g:virtualenv_directory='~/code/python/environments'
+let g:virtualenv_stl_format = '[%n]'
+let g:virtualenv_auto_activate=1
 " " ale
 " let g:ale_python_executable=
 " let g:ale_python_flake8_executable=
@@ -19,59 +23,61 @@ let g:session_autosave = 'yes'
 nnoremap ]r :ALENextWrap<CR>
 nnoremap [r :ALEPreviousWrap<CR>
 
+" pymode
+let g:pymode_motion = 1
+let g:pymode_indent = 1
+let g:pymode_doc = 0
+let g:pymode_lint = 0
+let g:pymode_rope = 0
+let g:pymode_rope_completion = 0
+
 " Bind F8 to fixing problems with ALE
 nmap <F8> <Plug>(ale_fix)
 let g:ale_fixers = {
-			\   'python': [
-			\       'autopep8',
-			\   ],
-			\}
+            \   'python': [
+            \       'autopep8',
+            \   ],
+            \}
 
 " fugitive
 noremap <leader>gs :Gstatus<cr>
 
 " tagbar
 let g:tagbar_width = 45
-let g:tagbar_left = 0
+let g:tagbar_left = 1
 nnoremap <silent> <F9> :TagbarToggle<CR>
-autocmd BufEnter * nested :call tagbar#autoopen(0)
-
-" nerdtree
-let g:NERDTreeShowHidden=1
-let g:NERDTreeWinPos='left'
-autocmd VimEnter * NERDTree
-autocmd BufWinEnter * NERDTreeMirror
+autocmd BufEnter * nested :call tagbar#autoopen(1)
 
 " CTRL-P
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:10'
 let g:ctrlp_working_path_mode=0
 let g:ctrlp_max_height=20
 let g:ctrlp_custom_ignore = {
-			\ 'dir':  '\v[\/]\.(git|hg|svn)$',
-			\ 'file': '\v\.(exe|so|dll)$'
-			\ }
+            \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+            \ 'file': '\v\.(exe|so|dll)$'
+            \ }
 
 " airline
 if !exists('g:airline_symbols')
-	let g:airline_symbols = {}
-	" unicode symbols
-	let g:airline_left_sep = '»'
-	let g:airline_left_sep = '▶'
-	let g:airline_right_sep = '«'
-	let g:airline_right_sep = '◀'
-	let g:airline_symbols.crypt = '🔒'
-	let g:airline_symbols.linenr = '␊'
-	let g:airline_symbols.linenr = '␤'
-	let g:airline_symbols.linenr = '¶'
-	let g:airline_symbols.maxlinenr = '☰'
-	let g:airline_symbols.maxlinenr = ''
-	let g:airline_symbols.branch = '⎇'
-	let g:airline_symbols.paste = 'ρ'
-	let g:airline_symbols.paste = 'Þ'
-	let g:airline_symbols.paste = '∥'
-	let g:airline_symbols.spell = 'Ꞩ'
-	let g:airline_symbols.notexists = '∄'
-	let g:airline_symbols.whitespace = 'Ξ'
+    let g:airline_symbols = {}
+    " unicode symbols
+    let g:airline_left_sep = '»'
+    let g:airline_left_sep = '▶'
+    let g:airline_right_sep = '«'
+    let g:airline_right_sep = '◀'
+    let g:airline_symbols.crypt = '🔒'
+    let g:airline_symbols.linenr = '␊'
+    let g:airline_symbols.linenr = '␤'
+    let g:airline_symbols.linenr = '¶'
+    let g:airline_symbols.maxlinenr = '☰'
+    let g:airline_symbols.maxlinenr = ''
+    let g:airline_symbols.branch = '⎇'
+    let g:airline_symbols.paste = 'ρ'
+    let g:airline_symbols.paste = 'Þ'
+    let g:airline_symbols.paste = '∥'
+    let g:airline_symbols.spell = 'Ꞩ'
+    let g:airline_symbols.notexists = '∄'
+    let g:airline_symbols.whitespace = 'Ξ'
 endif
 
 autocmd BufWrite * :call DeleteTrailingWS()
@@ -169,8 +175,9 @@ map <leader>s? z=
 noremap <c-k> gt
 noremap <c-j> gT
 " move between panes
-noremap <c-h> <c-w><left>
-noremap <c-l> <c-w><right>
+" managing tabs
+noremap <c-w>h <c-w><left>
+noremap <c-w>l <c-w><right>
 " move lines +-
 noremap - ddp
 noremap _ ddkP
@@ -179,16 +186,9 @@ noremap ciq ci"
 noremap diq di"
 " yank everything from the cursor to the end of the line.
 noremap Y y$
-" cmd-like navigation
-inoremap <C-e> <C-o>$
-inoremap <C-a> <C-o>0
-inoremap <C-f> <C-o><Right>
-inoremap <C-b> <C-o><Left>
 " Fast saving
 nmap <leader>w :w!<cr>
 nmap <leader>q :q!<cr>
-" inset line below cursor
-nmap <CR> o<esc>
 " replace the current word and all its occurrences.
 nnoremap <Leader>rc :%s/\<<C-r><C-w>\>/
 vnoremap <Leader>rc y:%s/<C-r>"/
@@ -197,9 +197,6 @@ vnoremap <silent> * :call VisualSelection('f', '')<CR>
 vnoremap <silent> # :call VisualSelection('b', '')<CR>
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>
-" managing tabs
-noremap <C-w>h :tabmove -1<cr>
-noremap <C-w>l :tabmove +1<cr>
 " Open a new tab with the current buffer's path
 map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
 " Switch CWD to the directory of the open buffer
@@ -209,38 +206,38 @@ map <leader>cd :cd %:p:h<cr>:pwd<cr>
 " --------
 " Return to last edit position when opening files (You want this!)
 autocmd BufReadPost *
-			\ if line("'\"") > 0 && line("'\"") <= line("$") |
-			\   exe "normal! g`\"" |
-			\ endif
+            \ if line("'\"") > 0 && line("'\"") <= line("$") |
+            \   exe "normal! g`\"" |
+            \ endif
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
 
 " Delete trailing white space on save, useful for Python
 func! DeleteTrailingWS()
-	exe "normal mz"
-	%s/\s\+$//ge
-	exe "normal `z"
+    exe "normal mz"
+    %s/\s\+$//ge
+    exe "normal `z"
 endfunc
 "
 function! VisualSelection(direction, extra_filter) range
-	let l:saved_reg = @"
-	execute "normal! vgvy"
+    let l:saved_reg = @"
+    execute "normal! vgvy"
 
-	let l:pattern = escape(@", '\\/.*$^~[]')
-	let l:pattern = substitute(l:pattern, "\n$", "", "")
+    let l:pattern = escape(@", '\\/.*$^~[]')
+    let l:pattern = substitute(l:pattern, "\n$", "", "")
 
-	if a:direction == 'b'
-		execute "normal ?" . l:pattern . "^M"
-	elseif a:direction == 'gv'
-		call CmdLine("Ag \"" . l:pattern . "\" " )
-	elseif a:direction == 'replace'
-		call CmdLine("%s" . '/'. l:pattern . '/')
-	elseif a:direction == 'f'
-		execute "normal /" . l:pattern . "^M"
-	endif
+    if a:direction == 'b'
+        execute "normal ?" . l:pattern . "^M"
+    elseif a:direction == 'gv'
+        call CmdLine("Ag \"" . l:pattern . "\" " )
+    elseif a:direction == 'replace'
+        call CmdLine("%s" . '/'. l:pattern . '/')
+    elseif a:direction == 'f'
+        execute "normal /" . l:pattern . "^M"
+    endif
 
-	let @/ = l:pattern
-	let @" = l:saved_reg
+    let @/ = l:pattern
+    let @" = l:saved_reg
 endfunction
 
 " => Vim grep

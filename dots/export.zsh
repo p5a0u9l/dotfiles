@@ -20,15 +20,7 @@ export HIST_STAMPS="mm/dd/yyyy"
 export EDITOR='vim'
 
 # PATH APPENDAGES
-function addpath {
-    case ":$PATH:" in
-        *":$1:"*) :;; # already there
-        *) PATH="$1:$PATH";; # or PATH="$PATH:$1"
-    esac
-}
-addpath /usr/local/bin
-addpath $HOME/.local/bin
-export PATH
+PATH=$HOME/.local/bin:/usr/local/bin:$PATH
 
 # GPG
 export GPG_TTY=$TTY
