@@ -1,0 +1,220 @@
+################################################################################
+## Revision: A
+##
+## ref: \\edpsfile01\Software\Open_Source_or_Free\Git\Git-Config-Files\.gitattributes
+##
+## examples:  https://github.com/alexkaratarakis/gitattributes
+#             https://github.com/alexkaratarakis/gitattributes/blob/master/Common.gitattributes
+##
+################################################################################
+#
+################################################################################
+## If not otherwise mentioned here, tell Git to auto-handle text files.
+################################################################################
+*               text=auto
+
+
+################################################################################
+## Declare text files that should be normalized on commit, and
+## converted to native line endings on checkout.
+################################################################################
+*.adoc          text
+*.c             text
+*.cc            text
+*.cxx           text
+*.cpp           text
+*.c++           text
+*.cs            text
+*.csv           text
+*.h             text
+*.hpp           text
+*.h++           text
+*.hh            text
+*.hex           text
+*.html          text
+*.java          text
+*.js            text
+*.json          text
+*.ld            text
+*.log           text
+*.md            text
+*.mustache      text
+*.py            text
+*.py3           text
+*.pxd           text
+*.pyx           text
+*.pyw           text
+*.rb            text
+*.[Ss]          text
+*.sql           text
+*.textile       text
+*.tab           text
+*.tsv           text
+*.txt           text
+*.xml           text
+
+#Quartus
+.v		text
+.vhd		text
+.sdc		text
+
+
+################################################################################
+## Declare text files that should always have line endings converted to CRLF on 
+## checkout (applies to Win,OSX, and *NIX) 
+##
+## Below are common file extensions that should use this option.
+################################################################################
+
+################
+## Visual Studio
+################
+*.csproj        text eol=crlf
+*.dbproj        text eol=crlf
+*.filters       text eol=crlf
+*.fsproj        text eol=crlf
+*.lsproj        text eol=crlf
+*.modelproj     text eol=crlf
+*.props         text eol=crlf
+*.sln           text eol=crlf
+*.sqlproj       text eol=crlf
+*.vbproj        text eol=crlf
+*.vcproj        text eol=crlf
+*.vcxitems      text eol=crlf
+*.vcxproj       text eol=crlf
+*.wixproj       text eol=crlf
+*.wmaproj       text eol=crlf
+*.xproj         text eol=crlf
+
+###############
+## IAR
+###############
+*.ewd           text eol=crlf
+*.ewp           text eol=crlf
+*.eww           text eol=crlf
+
+#################
+## Altera Quartus
+#################
+*.qpf text eol=crlf
+*.qsf text eol=crlf
+*.qpf text eol=crlf
+*.qip text eol=crlf
+*.stp text eol=crlf
+
+######################
+## MATLAB and Simulink
+##
+## Declare files that git should not diff, merge or perform automatic line feed
+## adjustment (applies to Win,OSX, and *NIX) 
+##
+## refs: 
+##       https://www.mathworks.com/help/simulink/ug/set-up-git-source-control.html?requestedDomain=www.mathworks.com
+##       https://www.mathworks.com/help/simulink/ug/set-up-git-source-control.html
+##       http://www.mathworks.com/help/matlab/matlab_prog/set-up-git-source-control.html#buhx2d6-1_3
+##       https://www.mathworks.com/help/releases/R2017b/matlab/matlab_env/mathworks-file-extensions.html
+##       https://github.com/alexkaratarakis/gitattributes/blob/master/Matlab.gitattributes
+######################
+*.fig -crlf -diff -merge
+*.mat -crlf -diff -merge
+*.mdl -crlf -diff -merge
+*.mlx -crlf -diff -merge
+*.mdlp -crlf -diff -merge
+*.mexa64 -crlf -diff -merge
+*.mexmaci64 -crlf -diff -merge
+*.mexw32 -crlf -diff -merge
+*.mexw64 -crlf -diff -merge
+*.mlappinstall -crlf -diff -merge
+*.mlpkginstall -crlf -diff -merge
+*.mltbx -crlf -diff -merge
+*.mn -crlf -diff -merge
+*.mu -crlf -diff -merge
+*.sldd -crlf -diff -merge
+*.slx -crlf -diff -merge
+*.slxc -crlf -diff -merge
+*.slxp -crlf -diff -merge
+*.p -crlf -diff -merge
+
+################################################################################
+## Tell Git to not modify files with these file-type extensions.
+################################################################################
+
+################
+## image formats
+################
+*.bmp           binary
+*.bpg           binary
+*.eps           binary
+*.gif           binary
+*.ico           binary
+*.jpeg          binary
+*.jpg           binary
+*.png           binary
+*.svg           binary
+*.tif           binary
+*.tiff          binary
+
+###################
+## document formats
+###################
+*.doc           diff=astextplain
+*.DOC           diff=astextplain
+*.docx          diff=astextplain
+*.DOCX          diff=astextplain
+*.dot           diff=astextplain
+*.DOT           diff=astextplain
+*.pdf           diff=astextplain
+*.PDF           diff=astextplain
+*.rtf           diff=astextplain
+*.RTF           diff=astextplain
+*.ppt           binary
+*.pptx          binary
+*.vsd           binary
+*.vsdx          binary
+*.xls           binary
+*.xlsx          binary
+
+###################
+## Compiled formats
+###################
+*.a             binary
+*.app           binary
+*.bin           binary
+*.d             binary
+*.dll           binary
+*.dylib         binary
+*.exe           binary
+*.gch           binary
+*.img           binary
+*.la            binary
+*.lai           binary
+*.lib           binary
+*.lo            binary
+*.msi           binary
+*.o             binary
+*.obj           binary
+*.out           binary
+*.pch           binary
+*.slo           binary
+*.so            binary
+#Python
+*.db		binary
+*.p 		binary
+*.pkl 		binary
+*.pyc 		binary
+*.pyd		binary
+*.pyo 		binary
+
+################################
+## archive & compression formats
+################################
+*.7z            binary
+*.bz2           binary
+*.cab           binary
+*.dmg           binary
+*.gz            binary
+*.iso           binary
+*.jar           binary
+*.rar           binary
+*.tar           binary
+*.zip           binary

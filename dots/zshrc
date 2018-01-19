@@ -12,6 +12,7 @@ alias tres="tmux rename-session $1"
 alias cdd="cd $DOTHOME"
 alias cddf="cd $DOTDOTS"
 alias cddm="cd $DOTMODS"
+alias rezshrc='source ~/.zshrc'
 
 source $DOTDOTS/util.zsh
 
@@ -33,12 +34,13 @@ fi
 # ---
 bindkey "^P" up-line-or-search
 unsetopt correct
-fpath+=/usr/local/share/zsh-completions
+fpath+=$DOTMODS/zsh/zsh-completions
 CASE_SENSITIVE="true"
 setopt EXTENDED_HISTORY
 plugins=(git colored-man-pages)
 DISABLE_AUTO_UPDATE=true
 ZSH_THEME="jispwoso"
+export DISPLAY=:0.0
 source $ZSH/oh-my-zsh.sh
 source $DOTMODS/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
@@ -48,3 +50,5 @@ echo ""
 echo " $magenta`date`"$default
 echo "      running "`uname -a`
 echo ""
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

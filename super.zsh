@@ -6,6 +6,12 @@
 
 source $HOME/dotfiles/dots/export.zsh
 
+mk_quad() {
+    tmux split-window -h
+    tmux split-window -v
+    tmux select-pane -t1
+    tmux split-window -v
+}
 # inputs:
 # 1 --> src
 # 2 --> dst
@@ -47,7 +53,8 @@ link_dots() {
         link $DOTDOTS/filetypes.vim          $VIMHOME/filetypes.vim
     fi
     if which ag > $DEVNULL; then
-        link $DOTDOTS/agignore               $HOME/.agignore
+        # see alias ag in .zshrc
+        link $DOTDOTS/ignore                 $HOME/.ignore
     fi
     if which zsh > $DEVNULL; then
         link $DOTDOTS/zshrc                  $HOME/.zshrc
@@ -78,6 +85,8 @@ elif [[ $1 = "link-all" ]]; then
     echo "installing all..."
     link_dots
     link_modules
+elif [[ $1 = "quad-pane" ]]; then
+    mk_quad
 elif [[ $1 = "self-install" ]]; then
     link $PWD/super.zsh $HOME/.local/bin/super
 else

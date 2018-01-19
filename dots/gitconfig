@@ -1,29 +1,40 @@
 [user]
-	email = pauladams509@gmail.com
+	email = padams@echodyne.com
 	name = Paul R. Adams
 [diff]
 	tool = vimdiff
 [merge]
 	tool = vimdiff
 [core]
-	excludesfile = /Users/paul/.gitignore
+	excludesfile = /home/paul/.gitignore
 [push]
   default = current
-[color]
-  ui = auto
-[alias]
-  aa = add --all
-  ap = add --patch
-  ci = commit -v
-  co = checkout
-  pf = push --force-with-lease
-  st = status
 [core]
-  excludesfile = ~/.gitignore
-  autocrlf = input
-[merge]
-  ff = only
-[fetch]
-  prune = true
-[rebase]
-  autosquash = true
+    autocrlf = input
+    ## Disable all whitespace checks performed by Git
+    whitespace = -blank-at-eol,-space-before-tab,-blank-at-eof,cr-at-eol
+
+    ## Configure Git to enable case-sensitivity
+    ignoreCase = false
+
+    ## Disable line ending related warnings when adding files
+    safecrlf = false
+
+[apply]
+    ## Turn off whitespace warnings when applying a patch
+    whitespace = nowarn
+
+[color]
+    ## Set syntax highlighting
+    ui = auto
+
+
+## Global difftool and mergetool settings
+[difftool]
+    prompt = false
+
+[mergetool]
+    prompt = false
+    keepBackup = false
+    trustExitCode = true
+

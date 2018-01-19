@@ -20,11 +20,13 @@ export HIST_STAMPS="mm/dd/yyyy"
 export EDITOR='vim'
 
 # PATH APPENDAGES
-PATH=$HOME/.local/bin:/usr/local/bin:$PATH
 
 # GPG
 export GPG_TTY=$TTY
 export PINENTRY_USER_DATA="USE_CURSES=1"
+export PYENV_ROOT=$HOME/.pyenv
+
+PATH=$HOME/.local/bin:/usr/local/bin:$PYENV_ROOT/bin:$PATH
 
 # ZSH
 export ZSH=$DOTMODS/zsh/oh-my-zsh
