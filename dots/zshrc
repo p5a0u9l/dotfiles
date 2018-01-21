@@ -35,6 +35,7 @@ fi
 bindkey ^P up-line-or-search
 unsetopt correct
 fpath+=$DOTMODS/zsh/zsh-completions
+fpath+=$DOTMODS/zsh/spaceship-prompt/spaceship.zsh
 CASE_SENSITIVE="true"
 setopt EXTENDED_HISTORY
 plugins=(git colored-man-pages)
@@ -52,3 +53,8 @@ echo "      running "`uname -a`
 echo ""
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Set Spaceship ZSH as a prompt
+fpath=($fpath "/home/$USER/.zfunctions")
+autoload -U promptinit; promptinit
+prompt spaceship

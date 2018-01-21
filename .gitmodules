@@ -170,3 +170,6 @@
 [submodule "modules/zsh/zsh-completions"]
 	path = modules/zsh/zsh-completions
 	url = git://github.com/zsh-users/zsh-completions.git
+[submodule "modules/zsh/spaceship-prompt"]
+	path = modules/zsh/spaceship-prompt
+	url = https://github.com/denysdovhan/spaceship-prompt
