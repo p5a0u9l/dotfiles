@@ -6,12 +6,21 @@
 
 source $HOME/dotfiles/dots/export.zsh
 
-mk_quad() {
+function mk_quad() {
     tmux split-window -h
     tmux split-window -v
     tmux select-pane -t1
     tmux split-window -v
 }
+
+function init_tmux() {
+    tmux new-window -n dots -c ~/dotfiles
+    sleep 0.5
+    tmux split-window -v -c ~/dotfiles -p 20
+    tmux select-pane -t:1.1
+    tmux split-window -h -c ~/dotfiles
+}
+
 # inputs:
 # 1 --> src
 # 2 --> dst
@@ -87,6 +96,11 @@ elif [[ $1 = "link-all" ]]; then
     link_modules
 elif [[ $1 = "quad-pane" ]]; then
     mk_quad
+elif [[ $1 = "init-tmux" ]]; then
+    echo "init'ing tmux session..."
+    init_tmux
+elif [[ $1 = "quad-pane" ]]; then
+    quad
 elif [[ $1 = "self-install" ]]; then
     link $PWD/super.zsh $HOME/.local/bin/super
 else

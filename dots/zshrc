@@ -32,7 +32,7 @@ fi
 # ---
 # ZSH
 # ---
-bindkey "^P" up-line-or-search
+bindkey ^P up-line-or-search
 unsetopt correct
 fpath+=$DOTMODS/zsh/zsh-completions
 CASE_SENSITIVE="true"
