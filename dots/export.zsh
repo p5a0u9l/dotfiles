@@ -25,6 +25,7 @@ export EDITOR='vim'
 export GPG_TTY=$TTY
 export PINENTRY_USER_DATA="USE_CURSES=1"
 export PYENV_ROOT=$HOME/.pyenv
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 
 PATH=$HOME/.local/bin:/usr/local/bin:$PYENV_ROOT/bin:$PATH
 
