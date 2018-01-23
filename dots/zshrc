@@ -58,3 +58,4 @@ echo ""
 fpath=($fpath "/home/$USER/.zfunctions")
 autoload -U promptinit; promptinit
 prompt spaceship
+fpath=($fpath "/home/padams/.zfunctions")

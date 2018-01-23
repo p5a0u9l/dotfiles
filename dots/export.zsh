@@ -31,3 +31,4 @@ PATH=$HOME/.local/bin:/usr/local/bin:$PYENV_ROOT/bin:$PATH
 # ZSH
 export ZSH=$DOTMODS/zsh/oh-my-zsh
 export ZSH_AUTOSUGGEST_STRATEGY=histdb_top_here
+export SPACESHIP_BATTERY_SHOW=false
