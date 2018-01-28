@@ -96,10 +96,6 @@
     path = modules/vim/bundle/vim-table-mode
     url = https://github.com/dhruvasagar/vim-table-mode
 
-[submodule "modules/vim/bundle/vim-matlab"]
-    path = modules/vim/bundle/vim-matlab
-    url = https://github.com/tdehaeze/matlab-vim
-
 [submodule "modules/vim/bundle/tagbar"]
     path = modules/vim/bundle/tagbar
     url = https://github.com/majutsushi/tagbar
