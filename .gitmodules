@@ -96,10 +96,6 @@
     path = modules/vim/bundle/vim-table-mode
     url = https://github.com/dhruvasagar/vim-table-mode
 
-[submodule "modules/vim/bundle/vim-matlab"]
-    path = modules/vim/bundle/vim-matlab
-    url = https://github.com/tdehaeze/matlab-vim
-
 [submodule "modules/vim/bundle/tagbar"]
     path = modules/vim/bundle/tagbar
     url = https://github.com/majutsushi/tagbar
@@ -157,7 +153,7 @@
 
 [submodule "modules/vim/bundle/jedi-vim"]
 	path = modules/vim/bundle/jedi-vim
-	url = https://github.com/davidhalter/jedi-vim
+	url = git@github.com:davidhalter/jedi-vim.git
 [submodule "modules/vim/bundle/vim-rsi"]
 	path = modules/vim/bundle/vim-rsi
 	url = https://github.com/tpope/vim-rsi
@@ -173,3 +169,9 @@
 [submodule "modules/zsh/spaceship-prompt"]
 	path = modules/zsh/spaceship-prompt
 	url = https://github.com/denysdovhan/spaceship-prompt
+[submodule "modules/vim/bundle/vim-matlab"]
+	path = modules/vim/bundle/vim-matlab
+	url = https://github.com/daeyun/vim-matlab
+[submodule "vim-matlab"]
+	path = vim-matlab
+	url = https://github.com/daeyun/vim-matlab
