@@ -38,3 +38,4 @@ fi
 # ZSH
 export ZSH=$DOTMODS/zsh/oh-my-zsh
 export ZSH_AUTOSUGGEST_STRATEGY=histdb_top_here
+export SPACESHIP_BATTERY_SHOW=false

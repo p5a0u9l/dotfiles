@@ -15,6 +15,7 @@ let g:virtualenv_directory='/home/$USER/.pyenv/versions'
 let g:virtualenv_stl_format = '[%n]'
 let g:virtualenv_auto_activate=1
 " " ale
+let g:ale_matlab_mlint_executable=
 " let g:ale_python_executable=
 " let g:ale_python_flake8_executable=
 " let g:ale_python_pylint_executable=
