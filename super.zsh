@@ -75,7 +75,7 @@ link_dots() {
 link_modules() {
     # tmux
     # ---
-    link $DOTMODS/tmux/plugins $HOME/.tmux/plugins
+    link $DOTMODS/tmux $HOME/.tmux
 
     # vim
     # ---

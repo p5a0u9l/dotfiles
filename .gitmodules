@@ -171,3 +171,6 @@
 [submodule "modules/vim/bundle/vim-matlab"]
 	path = modules/vim/bundle/vim-matlab
 	url = https://github.com/daeyun/vim-matlab
+[submodule "modules/vim/bundle/vim-colorschemes"]
+	path = modules/vim/bundle/vim-colorschemes
+	url = https://github.com/flazz/vim-colorschemes
