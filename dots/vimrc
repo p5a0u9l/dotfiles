@@ -103,6 +103,8 @@ autocmd BufWrite *.jl :call DeleteTrailingWS()
 " Matlab
 """""""""""
 autocmd BufWrite *.m :call DeleteTrailingWS()
+au FileType matlab set colorcolumn=80
+
 
 " When editing a file, always jump to the last known cursor position.
 " Don't do it for commit messages, when the position is invalid, or when
@@ -163,7 +165,7 @@ let g:lasttab=1
 nmap tl :exe "tabn ".g:lasttab<CR>
 au TabLeave * let g:lasttab = tabpagenr()
 
-colorscheme Tomorrow-Night-Eighties
+colorscheme PaperColor
 
 " MAPS
 " ----

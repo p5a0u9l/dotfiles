@@ -2,7 +2,7 @@ Host git.echodyne.int
     IdentityFile ~/.ssh/echo_id_rsa
 
 Host github.com
-    IdentityFile ~/.ssh/github.com/p5a0u9l-id_rsa
+    IdentityFile ~/.ssh/github-id_rsa
 
 Host amalthea.local
     IdentitiesOnly yes

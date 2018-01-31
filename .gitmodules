@@ -98,7 +98,7 @@
 
 [submodule "modules/vim/bundle/vim-matlab"]
     path = modules/vim/bundle/vim-matlab
-    url = https://github.com/tdehaeze/matlab-vim
+    url = https://github.com/p5a0u9l/vim-matlab
 
 [submodule "modules/vim/bundle/tagbar"]
     path = modules/vim/bundle/tagbar
