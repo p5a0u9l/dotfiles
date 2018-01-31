@@ -11,7 +11,7 @@ let g:session_autosave = 'no'
 " let g:completor_python_binary='/usr/bin/env python'
 
 " virtualenv
-let g:virtualenv_directory='/home/$USER/.pyenv/versions'
+let g:virtualenv_directory='$HOME/.pyenv/versions'
 let g:virtualenv_stl_format = '[%n]'
 let g:virtualenv_auto_activate=1
 " " ale
