@@ -10,7 +10,7 @@
 [push]
   default = current
 [core]
-    autocrlf = input
+	autocrlf = false
     ## Disable all whitespace checks performed by Git
     whitespace = -blank-at-eol,-space-before-tab,-blank-at-eof,cr-at-eol
 
