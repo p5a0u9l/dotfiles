@@ -92,9 +92,6 @@
     path = modules/vim/bundle/vim-table-mode
     url = https://github.com/dhruvasagar/vim-table-mode
 
-[submodule "modules/vim/bundle/vim-matlab"]
-    path = modules/vim/bundle/vim-matlab
-    url = https://github.com/p5a0u9l/vim-matlab
 [submodule "modules/vim/bundle/tagbar"]
     path = modules/vim/bundle/tagbar
     url = https://github.com/majutsushi/tagbar
@@ -171,9 +168,9 @@
 [submodule "modules/vim/bundle/base16-vim"]
 	path = modules/vim/bundle/base16-vim
 	url = https://github.com/chriskempson/base16-vim
-[submodule "modules/vim/bundle/vim-matlab"]
-	path = modules/vim/bundle/vim-matlab
-	url = https://github.com/daeyun/vim-matlab
 [submodule "modules/vim/bundle/vim-colorschemes"]
 	path = modules/vim/bundle/vim-colorschemes
 	url = https://github.com/flazz/vim-colorschemes
+[submodule "modules/vim/bundle/vim-matlab"]
+	path = modules/vim/bundle/vim-matlab
+	url = https://github.com/p5a0u9l/vim-matlab
