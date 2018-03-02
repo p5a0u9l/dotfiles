@@ -21,19 +21,7 @@ export EDITOR='vim'
 
 # PATH APPENDAGES
 
-# GPG
-export GPG_TTY=$TTY
-export PINENTRY_USER_DATA="USE_CURSES=1"
-
-# pyenv
-export PYENV_ROOT=$HOME/.pyenv
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-
-PATH=$HOME/.local/bin:/usr/local/bin:$PYENV_ROOT/bin:$PATH
-if command -v pyenv 1>/dev/null 2>&1; then
-    eval "$(pyenv init -)"
-    eval "$(pyenv virtualenv-init -)"
-fi
+PATH=$HOME/.local/bin:/usr/local/bin:$PATH
 
 # ZSH
 export ZSH=$DOTMODS/zsh/oh-my-zsh
