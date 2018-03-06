@@ -156,9 +156,6 @@
 [submodule "modules/vim/bundle/vim-virtualenv"]
 	path = modules/vim/bundle/vim-virtualenv
 	url = https://github.com/jmcantrell/vim-virtualenv
-[submodule "modules/vim/bundle/python-mode"]
-	path = modules/vim/bundle/python-mode
-	url = https://github.com/python-mode/python-mode
 [submodule "modules/zsh/zsh-completions"]
 	path = modules/zsh/zsh-completions
 	url = git://github.com/zsh-users/zsh-completions.git

@@ -16,19 +16,6 @@ alias rezshrc='source ~/.zshrc'
 
 source $DOTDOTS/util.zsh
 
-# --------------------
-# APPLICATION SPECIFIC
-# --------------------
-if which pass > $DEVNULL; then
-    export PASSWORD_STORE_DIR=$HOME/.password-store
-    # compinit /usr/local/Cellar/pass/1.7.1/share/zsh/site-functions/_pass
-fi
-
-if which cmus > $DEVNULL; then
-    # bc OSX has an irritating warning related to soudn library
-    alias cmus="/usr/local/bin/cmus 2>/dev/null"
-fi
-
 # ---
 # ZSH
 # ---
@@ -44,8 +31,6 @@ ZSH_THEME="jispwoso"
 export DISPLAY=:0.0
 source $ZSH/oh-my-zsh.sh
 source $DOTMODS/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
 
 # cute little welcome banner
 echo $magenta"m"$green"g"$cyan"c"$blue"b"$white"w"$red"r"$yellow"y$default"
@@ -60,5 +45,3 @@ echo ""
 fpath=($fpath "/home/$USER/.zfunctions")
 autoload -U promptinit; promptinit
 prompt spaceship
-fpath=($fpath "/home/padams/.zfunctions")
-fpath=($fpath "/home/padams/.zfunctions")

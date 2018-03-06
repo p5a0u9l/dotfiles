@@ -24,14 +24,6 @@ let g:ale_matlab_mlint_executable='/usr/local/bin/mlint'
 nnoremap ]r :ALENextWrap<CR>
 nnoremap [r :ALEPreviousWrap<CR>
 
-" pymode
-let g:pymode_motion = 1
-let g:pymode_indent = 1
-let g:pymode_doc = 1
-let g:pymode_lint = 0
-let g:pymode_rope = 0
-let g:pymode_rope_completion = 0
-
 " Bind F8 to fixing problems with ALE
 nmap <F8> <Plug>(ale_fix)
 let g:ale_fixers = {
