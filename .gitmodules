@@ -17,6 +17,9 @@
 [submodule "modules/tmux/plugins/tmux-resurrect"]
 	path = modules/tmux/plugins/tmux-resurrect
 	url = https://github.com/tmux-plugins/tmux-resurrect
+[submodule "modules/zsh/spaceship-prompt"]
+	path = modules/zsh/spaceship-prompt
+	url = https://github.com/denysdovhan/spaceship-prompt
 [submodule "modules/zsh/oh-my-zsh"]
 	path = modules/zsh/oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git

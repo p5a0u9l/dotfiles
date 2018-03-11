@@ -7,15 +7,16 @@
 source $HOME/dotfiles/dots/export.zsh
 
 function install_new_environment() {
-    sh $DOTHOME/scripts/install_font_adobe_source_code_pro.sh
-    mkdir $DOTHOME/build
-    git clone https://github.com/sharkdp/fd $DOTHOME/build/fd
-    git clone https://github.com/junegunn/fzf $DOTHOME/build/fzf
-    git clone https://github.com/git/git $DOTHOME/build/git
-    git clone https://github.com/jonas/tig $DOTHOME/build/tig
-    git clone https://github.com/vim/vim $DOTHOME/build/vim
+    # sh $DOTHOME/scripts/install_font_adobe_source_code_pro.sh
+    # mkdir $DOTHOME/build
+    # git clone https://github.com/sharkdp/fd $DOTHOME/build/fd
+    # git clone https://github.com/junegunn/fzf $DOTHOME/build/fzf
+    # git clone https://github.com/git/git $DOTHOME/build/git
+    # git clone https://github.com/jonas/tig $DOTHOME/build/tig
+    # git clone https://github.com/vim/vim $DOTHOME/build/vim
     sudo apt update && sudo apt -y upgrade
-    sudo apt install zsh tmux git openssh-server libgmp3-dev libturbojpeg libpng-dev npm nodejs-legacy curl libmpich-dev
+    sudo apt install zsh tmux git ctags python3-dev openssh-server libgmp3-dev libturbojpeg libpng-dev npm nodejs-legacy curl libmpich-dev
+    sudo apt install libreadline6-dev libssl-dev zlib1g-dev libbz2-dev libsqlite3-dev python-dev python3 python3-dev python3-venv
 }
 
 function mk_quad() {
@@ -75,11 +76,11 @@ link_dots() {
     fi
     if which ag > $DEVNULL; then
         # see alias ag in .zshrc
+        link $DOTDOTS/agignore                 $HOME/.agignore
         link $DOTDOTS/ignore                 $HOME/.ignore
     fi
     if which zsh > $DEVNULL; then
         link $DOTDOTS/zshrc                  $HOME/.zshrc
-        link $DOTDOTS/zsh_history            $HOME/.zsh_history
     fi
 }
 
@@ -108,6 +109,8 @@ elif [[ $1 = "init-tmux" ]]; then
     init_tmux
 elif [[ $1 = "quad-pane" ]]; then
     quad
+elif [[ $1 = "bootstrap" ]]; then
+    install_new_environment
 elif [[ $1 = "self-install" ]]; then
     link $PWD/super.zsh $HOME/.local/bin/super
 else
