@@ -7,16 +7,32 @@
 source $HOME/dotfiles/dots/export.zsh
 
 function install_new_environment() {
-    # sh $DOTHOME/scripts/install_font_adobe_source_code_pro.sh
-    # mkdir $DOTHOME/build
-    # git clone https://github.com/sharkdp/fd $DOTHOME/build/fd
-    # git clone https://github.com/junegunn/fzf $DOTHOME/build/fzf
-    # git clone https://github.com/git/git $DOTHOME/build/git
-    # git clone https://github.com/jonas/tig $DOTHOME/build/tig
-    # git clone https://github.com/vim/vim $DOTHOME/build/vim
+    ! [ -d $DOTHOME/build ] && mkdir $DOTHOME/build
+
     sudo apt update && sudo apt -y upgrade
-    sudo apt install zsh tmux git ctags python3-dev openssh-server libgmp3-dev libturbojpeg libpng-dev npm nodejs-legacy curl libmpich-dev
+    sudo apt install silversearcher-ag zsh tmux git ctags python3-dev openssh-server libgmp3-dev libturbojpeg libpng-dev npm nodejs-legacy curl libmpich-dev
     sudo apt install libreadline6-dev libssl-dev zlib1g-dev libbz2-dev libsqlite3-dev python-dev python3 python3-dev python3-venv
+
+    which fzf > $DEVNULL
+    if [ $? -eq 1 ]; then
+        git clone https://github.com/junegunn/fzf $DOTHOME/build/fzf
+        cd $DOTHOME/build/fzf
+        ./install -y
+        cd $OLDPWD
+    fi
+    which fd > $DEVNULL
+    if [ $? -eq 1 ]; then
+        cd $DOTHOME/build
+        wget https://github.com/sharkdp/fd/releases/download/v6.3.0/fd-musl_6.3.0_amd64.deb
+        sudo dpkg -i fd-musl_6.3.0_amd64.deb
+        cd $OLDPWD
+    fi
+    vim --version | grep 'Paul Adams'>$DEVNULL
+    if [ $? -eq 1 ]; then
+        git clone https://github.com/vim/vim $DOTHOME/build/vim
+        source $DOTHOME/scripts/build_vim8.zsh
+    fi
+    ! [ -d ~/.local/share/fonts/adobe-fonts/source-code-pro/ ] && sh $DOTHOME/scripts/install_font_adobe_source_code_pro.sh
 }
 
 function mk_quad() {
