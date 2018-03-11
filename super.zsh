@@ -88,11 +88,6 @@ link_modules() {
     # tmux
     # ---
     link $DOTMODS/tmux $HOME/.tmux
-
-    # vim
-    # ---
-    link $DOTMODS/vim $VIMHOME
-    link $DOTMODS/vim/bundle/vim-pathogen/autoload $VIMHOME/autoload
 }
 
 # main

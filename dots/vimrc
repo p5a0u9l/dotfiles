@@ -16,9 +16,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-
 " Utility
-
 Plugin 'w0rp/ale'
 Plugin 'maralla/completor.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
