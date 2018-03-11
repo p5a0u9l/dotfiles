@@ -17,17 +17,6 @@ alias rezshrc='source ~/.zshrc'
 
 source $DOTDOTS/util.zsh
 
-# Antigen
-# Load the oh-my-zsh's library.
-antigen use oh-my-zsh
-
-#  -- Syntax highlighting bundle.
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-autosuggestions
-
-#  -- Tell Antigen that you're done.
-antigen apply
-#
 # ---
 # ZSH
 # ---
@@ -37,6 +26,9 @@ fpath+=$DOTMODS/zsh/spaceship-prompt/spaceship.zsh
 CASE_SENSITIVE="true"
 setopt EXTENDED_HISTORY
 plugins=(git colored-man-pages)
+source $DOTMODS/zsh/oh-my-zsh/oh-my-zsh.sh
+source $DOTMODS/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $DOTMODS/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # cute little welcome banner
 echo $magenta"m"$green"g"$cyan"c"$blue"b"$white"w"$red"r"$yellow"y$default"
