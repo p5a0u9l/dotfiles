@@ -6,6 +6,18 @@
 
 source $HOME/dotfiles/dots/export.zsh
 
+function install_new_environment() {
+    sh $DOTHOME/scripts/install_font_adobe_source_code_pro.sh
+    mkdir $DOTHOME/build
+    git clone https://github.com/sharkdp/fd $DOTHOME/build/fd
+    git clone https://github.com/junegunn/fzf $DOTHOME/build/fzf
+    git clone https://github.com/git/git $DOTHOME/build/git
+    git clone https://github.com/jonas/tig $DOTHOME/build/tig
+    git clone https://github.com/vim/vim $DOTHOME/build/vim
+    sudo apt update && sudo apt -y upgrade
+    sudo apt install zsh tmux git openssh-server libgmp3-dev libturbojpeg libpng-dev npm nodejs-legacy curl libmpich-dev
+}
+
 function mk_quad() {
     tmux split-window -h
     tmux split-window -v

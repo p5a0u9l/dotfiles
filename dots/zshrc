@@ -1,5 +1,6 @@
 # my zshrc file
 source $HOME/dotfiles/dots/export.zsh
+source $HOME/dotfiles/antigen.zsh
 
 # -------
 # Aliases
@@ -16,21 +17,26 @@ alias rezshrc='source ~/.zshrc'
 
 source $DOTDOTS/util.zsh
 
+# Antigen
+# Load the oh-my-zsh's library.
+antigen use oh-my-zsh
+
+#  -- Syntax highlighting bundle.
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-autosuggestions
+
+#  -- Tell Antigen that you're done.
+antigen apply
+#
 # ---
 # ZSH
 # ---
 bindkey ^P up-line-or-search
 unsetopt correct
-fpath+=$DOTMODS/zsh/zsh-completions
 fpath+=$DOTMODS/zsh/spaceship-prompt/spaceship.zsh
 CASE_SENSITIVE="true"
 setopt EXTENDED_HISTORY
 plugins=(git colored-man-pages)
-DISABLE_AUTO_UPDATE=true
-ZSH_THEME="jispwoso"
-export DISPLAY=:0.0
-source $ZSH/oh-my-zsh.sh
-source $DOTMODS/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # cute little welcome banner
 echo $magenta"m"$green"g"$cyan"c"$blue"b"$white"w"$red"r"$yellow"y$default"
@@ -39,6 +45,7 @@ echo " $magenta`date`"$default
 echo "      running "`uname -a`
 echo ""
 
+[ -f $DOTHOME/antigen.zsh ] && source $DOTHOME/antigen.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Set Spaceship ZSH as a prompt

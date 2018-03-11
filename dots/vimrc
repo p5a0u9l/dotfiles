@@ -1,25 +1,85 @@
 " PLUGINS
 " -------
-call pathogen#infect('$HOME/.vim/bundle/{}')
-call pathogen#helptags()
 let mapleader = "\<Space>"
 
 " sessions
 let g:session_autosave = 'no'
+" set the runtime path to include Vundle and initialize
+filetype off
+
+" VUNDLE
+" ------
+" boostrap
+" git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" Utility
+
+Plugin 'w0rp/ale'
+Plugin 'maralla/completor.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'davidhalter/jedi-vim.git'
+Plugin 'JuliaEditorSupport/julia-vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'tpope/vim-commentary'
+Plugin 'xolox/vim-easytags'
+Plugin 'xolox/vim-misc'
+Plugin 'tpope/vim-eunuch'
+Plugin 'tpope/vim-fugitive'
+Plugin 'p5a0u9l/vim-matlab'
+Plugin 'Vimjas/vim-python-pep8-indent'
+Plugin 'tpope/vim-rsi'
+Plugin 'tpope/vim-sensible'
+Plugin 'tpope/vim-surround'
+Plugin 'justinmk/vim-sneak'
+Plugin 'dhruvasagar/vim-table-mode'
+Plugin 'tpope/vim-vinegar'
+Plugin 'jmcantrell/vim-virtualenv'
+Plugin 'scrooloose/nerdtree'
+Plugin 'majutsushi/tagbar'
+Plugin 'SirVer/ultisnips'
+Plugin 'junegunn/fzf.vim'
+Plugin 'junegunn/fzf'
+Plugin 'benmills/vimux'
+
+" Markdown / Writting
+Plugin 'tpope/vim-markdown'
+Plugin 'jtratner/vim-flavored-markdown'
+
+" Theme / Interface
+Plugin 'sjl/badwolf'
+Plugin 'tomasr/molokai'
+Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
+Plugin 'junegunn/limelight.vim'
+Plugin 'mkarmona/colorsbox'
+Plugin 'romainl/Apprentice'
+Plugin 'Lokaltog/vim-distinguished'
+Plugin 'chriskempson/base16-vim'
+Plugin 'w0ng/vim-hybrid'
+Plugin 'AlessandroYorba/Sierra'
+Plugin 'daylerees/colour-schemes'
+Plugin 'effkay/argonaut.vim'
+Plugin 'ajh17/Spacegray.vim'
+Plugin 'atelierbram/Base2Tone-vim'
+Plugin 'colepeters/spacemacs-theme.vim'
+call vundle#end()
+filetype plugin indent on
 
 " " completor
 " let g:completor_python_binary='/usr/bin/env python'
 
 " virtualenv
-let g:virtualenv_directory='$HOME/.pyenv/versions'
+" let g:virtualenv_directory='$HOME/.pyenv/versions'
 let g:virtualenv_stl_format = '[%n]'
 let g:virtualenv_auto_activate=1
 " " ale
-let g:ale_matlab_mlint_executable='/usr/local/bin/mlint'
-" let g:ale_python_executable=
-" let g:ale_python_flake8_executable=
-" let g:ale_python_pylint_executable=
-" let g:ale_python_autopep8_executable=
+let g:ale_matlab_mlint_executable='/home/paul/opt/matlab_R2017b_glnxa64/bin/glnxa64/mlint'
 " Move between linting errors
 nnoremap ]r :ALENextWrap<CR>
 nnoremap [r :ALEPreviousWrap<CR>
@@ -157,7 +217,7 @@ let g:lasttab=1
 nmap tl :exe "tabn ".g:lasttab<CR>
 au TabLeave * let g:lasttab = tabpagenr()
 
-colorscheme PaperColor
+colorscheme dracula
 
 " MAPS
 " ----

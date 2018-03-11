@@ -5,14 +5,6 @@
 	path = modules/zsh/dracula-theme
 	url = https://github.com/dracula/zsh.git
 
-[submodule "modules/zsh/zsh-autosuggestions"]
-	path = modules/zsh/zsh-autosuggestions
-	url = https://github.com/zsh-users/zsh-autosuggestions
-
-[submodule "modules/zsh/oh-my-zsh"]
-	path = modules/zsh/oh-my-zsh
-	url = https://github.com/robbyrussell/oh-my-zsh
-
 [submodule "modules/zsh/zsh-histdb"]
 	path = modules/zsh/zsh-histdb
 	url = https://github.com/robbyrussell/oh-my-zsh
@@ -156,9 +148,6 @@
 [submodule "modules/vim/bundle/vim-virtualenv"]
 	path = modules/vim/bundle/vim-virtualenv
 	url = https://github.com/jmcantrell/vim-virtualenv
-[submodule "modules/zsh/zsh-completions"]
-	path = modules/zsh/zsh-completions
-	url = git://github.com/zsh-users/zsh-completions.git
 [submodule "modules/zsh/spaceship-prompt"]
 	path = modules/zsh/spaceship-prompt
 	url = https://github.com/denysdovhan/spaceship-prompt
