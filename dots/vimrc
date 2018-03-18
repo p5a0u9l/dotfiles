@@ -77,7 +77,8 @@ filetype plugin indent on
 let g:virtualenv_stl_format = '[%n]'
 let g:virtualenv_auto_activate=1
 " " ale
-let g:ale_matlab_mlint_executable='/home/paul/opt/matlab_R2017b_glnxa64/bin/glnxa64/mlint'
+let g:ale_matlab_mlint_executable='/home/paul/opt/matlab_r2017b/bin/glnxa64/mlint'
+"
 " Move between linting errors
 nnoremap ]r :ALENextWrap<CR>
 nnoremap [r :ALEPreviousWrap<CR>
@@ -92,12 +93,22 @@ let g:ale_fixers = {
 
 " fugitive
 noremap <leader>gs :Gstatus<cr>
+noremap <leader>gc :Gcommit<cr>
 
 " tagbar
 let g:tagbar_width = 45
-let g:tagbar_left = 1
+let g:tagbar_left = 0
 nnoremap <silent> <F9> :TagbarToggle<CR>
-" autocmd BufEnter * nested :call tagbar#autoopen(1)
+autocmd BufEnter * nested :call tagbar#autoopen(1)
+
+" NERDTree
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" autocmd vimenter * NERDTree
+map <C-n> :NERDTreeToggle<CR>
+let g:NERDTreeMirror = 1
+let g:NERDTreeCWD = 1
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
 
 " CTRL-P
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:10'
@@ -170,7 +181,7 @@ if executable('ag')
     set grepprg=ag\ --nogroup\ --nocolor
 
     " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-    let g:ctrlp_user_command = 'ag -p ~/.ignore --literal --files-with-matches --nocolor --hidden -g "" %s'
+    let g:ctrlp_user_command = 'ag -p ~/.agignore --literal --files-with-matches --nocolor --hidden -g "" %s'
 
     " ag is fast enough that CtrlP doesn't need to cache
     let g:ctrlp_use_caching = 1

@@ -10,7 +10,7 @@ function install_new_environment() {
     ! [ -d $DOTHOME/build ] && mkdir $DOTHOME/build
 
     sudo apt update && sudo apt -y upgrade
-    sudo apt install silversearcher-ag zsh tmux git ctags python3-dev openssh-server libgmp3-dev libturbojpeg libpng-dev npm nodejs-legacy curl libmpich-dev
+    sudo apt install tig silversearcher-ag zsh tmux git ctags python3-dev openssh-server libgmp3-dev libturbojpeg libpng-dev npm nodejs-legacy curl libmpich-dev
     sudo apt install libreadline6-dev libssl-dev zlib1g-dev libbz2-dev libsqlite3-dev python-dev python3 python3-dev python3-venv
 
     which fzf > $DEVNULL

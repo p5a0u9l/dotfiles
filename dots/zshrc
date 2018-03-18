@@ -1,6 +1,5 @@
 # my zshrc file
 source $HOME/dotfiles/dots/export.zsh
-source $HOME/dotfiles/antigen.zsh
 
 # -------
 # Aliases
@@ -37,11 +36,9 @@ echo " $magenta`date`"$default
 echo "      running "`uname -a`
 echo ""
 
-[ -f $DOTHOME/antigen.zsh ] && source $DOTHOME/antigen.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Set Spaceship ZSH as a prompt
-fpath=($fpath "/home/$USER/.zfunctions")
+fpath=($fpath "$HOME/.zfunctions")
 autoload -U promptinit; promptinit
 prompt spaceship
-fpath=($fpath "/home/paul/.zfunctions")
