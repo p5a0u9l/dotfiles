@@ -16,39 +16,36 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
+
 " Utility
-Plugin 'w0rp/ale'
 Plugin 'maralla/completor.vim'
+Plugin 'w0rp/ale'
+
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'davidhalter/jedi-vim.git'
 Plugin 'JuliaEditorSupport/julia-vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'flazz/vim-colorschemes'
+
 Plugin 'tpope/vim-commentary'
-Plugin 'xolox/vim-easytags'
-Plugin 'xolox/vim-misc'
 Plugin 'tpope/vim-eunuch'
 Plugin 'tpope/vim-fugitive'
-Plugin 'p5a0u9l/vim-matlab'
-Plugin 'Vimjas/vim-python-pep8-indent'
 Plugin 'tpope/vim-rsi'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-vinegar'
+Plugin 'tpope/vim-markdown'
+
+Plugin 'xolox/vim-easytags'
+Plugin 'xolox/vim-misc'
+Plugin 'majutsushi/tagbar'
+
+Plugin 'p5a0u9l/vim-matlab'
 Plugin 'justinmk/vim-sneak'
 Plugin 'dhruvasagar/vim-table-mode'
-Plugin 'tpope/vim-vinegar'
-Plugin 'jmcantrell/vim-virtualenv'
-Plugin 'scrooloose/nerdtree'
-Plugin 'majutsushi/tagbar'
 Plugin 'SirVer/ultisnips'
 Plugin 'junegunn/fzf.vim'
 Plugin 'junegunn/fzf'
-Plugin 'benmills/vimux'
-
-" Markdown / Writting
-Plugin 'tpope/vim-markdown'
-Plugin 'jtratner/vim-flavored-markdown'
 
 " Theme / Interface
 Plugin 'sjl/badwolf'
@@ -69,13 +66,7 @@ Plugin 'colepeters/spacemacs-theme.vim'
 call vundle#end()
 filetype plugin indent on
 
-" " completor
-" let g:completor_python_binary='/usr/bin/env python'
 
-" virtualenv
-" let g:virtualenv_directory='$HOME/.pyenv/versions'
-let g:virtualenv_stl_format = '[%n]'
-let g:virtualenv_auto_activate=1
 " " ale
 let g:ale_matlab_mlint_executable='/home/paul/opt/matlab_r2017b/bin/glnxa64/mlint'
 "
@@ -104,11 +95,14 @@ autocmd BufEnter * nested :call tagbar#autoopen(1)
 " NERDTree
 " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " autocmd vimenter * NERDTree
-map <C-n> :NERDTreeToggle<CR>
-let g:NERDTreeMirror = 1
-let g:NERDTreeCWD = 1
-let NERDTreeMinimalUI = 1
-let NERDTreeDirArrows = 1
+" map <C-n> :NERDTreeToggle<CR>
+" let g:NERDTreeMirror = 1
+" let g:NERDTreeCWD = 1
+" let NERDTreeMinimalUI = 1
+" let NERDTreeDirArrows = 1
+" Use deoplete.
+
+let g:deoplete#enable_at_startup = 1
 
 " CTRL-P
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:10'

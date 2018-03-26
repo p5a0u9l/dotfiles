@@ -10,6 +10,7 @@
 [push]
   default = current
 [core]
+    editor = vim
 	autocrlf = false
     ## Disable all whitespace checks performed by Git
     whitespace = -blank-at-eol,-space-before-tab,-blank-at-eof,cr-at-eol

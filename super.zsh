@@ -81,8 +81,9 @@ link_dots() {
         link $DOTDOTS/gpg-agent.conf         $HOME/.gnupg/gpg-agent.conf
         link $DOTDOTS/gpg.conf               $HOME/.gnupg/gpg.conf
     fi
-    link $DOTDOTS/pylintrc               $HOME/.pylintrc
-    link $DOTDOTS/ssh_config             $HOME/.ssh/config
+    link $DOTDOTS/config.fish               $HOME/.config/fish/config.fish
+    link $DOTDOTS/pylintrc                  $HOME/.pylintrc
+    link $DOTDOTS/ssh_config                $HOME/.ssh/config
     if which tmux > $DEVNULL; then
         link $DOTDOTS/tmux.conf              $HOME/.tmux.conf
     fi
