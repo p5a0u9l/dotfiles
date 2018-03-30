@@ -4,6 +4,9 @@ Host git.echodyne.int
 Host github.com
     IdentityFile ~/.ssh/github-id_rsa
 
+Host John-Glenn-A
+    IdentityFile ~/.ssh/john-glenn_id_rsa
+
 Host bze
     IdentityFile ~/.ssh/bze-id_rsa
 

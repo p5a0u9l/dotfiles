@@ -43,7 +43,7 @@ set -gx DEVNULL "/dev/null"
 
 # environment
 set -gx LANG en_US.UTF-8
-set -gx PAGER less
+set -gx PAGER most
 set -gx HISTSIZE 100000000
 set -gx SAVEHIST $HISTSIZE
 set -gx HIST_STAMPS "mm/dd/yyyy"

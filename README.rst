@@ -1,7 +1,7 @@
 README
 ======
 
-This repo is intended to contain all the files I need to quickly and securely replicate my environment on a new machine. The actual dotfiles are free for comment and usage, Please comment, contribute, or borrow at will.
+This repo is intended to contain all the files I need to quickly and securely replicate my environment on a new machine. comment, contribute, or borrow at will.
 
 Configuring Ubuntu
 ------------------
@@ -20,9 +20,8 @@ Configuring Ubuntu
 
 * Set up an ssh key from this machine to internal git server::
 
-    $ ssh-keygen -C padams@echodyne.int.tortoise
-    $ cat ~/.ssh/id_rsa.pub
-    $ git clone ssh://git@git.echodyne.int:7999/rs/cm_sllm.git
+    $ ssh-keygen -C $USER@$HOSTNAME-$DOMAIN
+    $ cat ~/.ssh/$SSH_TARGET-id_rsa.pub
 
 * Set Up Python for virtual environments::
 
@@ -30,6 +29,8 @@ Configuring Ubuntu
 
 Install/configure vim 8::
 ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Example::
 
     $ sudo apt install ctags    # vim
     $ sudo add-apt-repository ppa:jonathonf/vim
