@@ -1,7 +1,6 @@
 # -------
 # EXPORTS
 # -------
-export MACBOOKHOSTNAME="amalthea"
 
 # dotfiles
 export VIMHOME=$HOME/.vim
@@ -20,10 +19,13 @@ export HIST_STAMPS="mm/dd/yyyy"
 export EDITOR='vim'
 
 # PATH APPENDAGES
-
 PATH=$HOME/.local/bin:/usr/local/bin:$PATH
 
 # ZSH
 export ZSH=$DOTMODS/zsh/oh-my-zsh
 export ZSH_AUTOSUGGEST_STRATEGY=histdb_top_here
 export SPACESHIP_BATTERY_SHOW=false
+
+# FZF
+export FZF_DEFAULT_COMMAND="fd --type file --color=always --exclude .git"
+export FZF_DEFAULT_OPTS="--ansi"

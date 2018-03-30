@@ -4,18 +4,9 @@ Host git.echodyne.int
 Host github.com
     IdentityFile ~/.ssh/github-id_rsa
 
-Host amalthea.local
-    IdentitiesOnly yes
-    IdentityFile ~/.ssh/jupiter.lan/amalthea-id_rsa
+Host John-Glenn-A
+    IdentityFile ~/.ssh/john-glenn_id_rsa
 
-Host thebes.local
-    IdentitiesOnly yes
-    IdentityFile ~/.ssh/jupiter.lan/thebes-id_rsa
+Host bze
+    IdentityFile ~/.ssh/bze-id_rsa
 
-Host lynx.local
-    IdentitiesOnly yes
-    IdentityFile ~/.ssh/jupiter.lan/lynx-id_rsa
-
-Host europa.local
-    IdentitiesOnly yes
-    IdentityFile ~/.ssh/jupiter.lan/europa-id_rsa

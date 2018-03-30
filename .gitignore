@@ -2,3 +2,4 @@ password-store/
 *gpg
 modules/vim/bundle/YouCompleteMe
 modules/vim/autoload
+build/

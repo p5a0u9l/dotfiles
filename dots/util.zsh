@@ -6,6 +6,10 @@ function find_and_replace() {
     done
 }
 
+function install_vimdev() {
+    pip install ipykernel jupyterthemes bpython jedi flake8 autopep8 mccabe rope pyflakes yapf
+}
+
 function gitignore() {
     printf "$1\n" >> $PWD/.gitignore
 }

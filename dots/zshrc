@@ -21,16 +21,13 @@ source $DOTDOTS/util.zsh
 # ---
 bindkey ^P up-line-or-search
 unsetopt correct
-fpath+=$DOTMODS/zsh/zsh-completions
 fpath+=$DOTMODS/zsh/spaceship-prompt/spaceship.zsh
 CASE_SENSITIVE="true"
 setopt EXTENDED_HISTORY
 plugins=(git colored-man-pages)
-DISABLE_AUTO_UPDATE=true
-ZSH_THEME="jispwoso"
-export DISPLAY=:0.0
-source $ZSH/oh-my-zsh.sh
+source $DOTMODS/zsh/oh-my-zsh/oh-my-zsh.sh
 source $DOTMODS/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $DOTMODS/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # cute little welcome banner
 echo $magenta"m"$green"g"$cyan"c"$blue"b"$white"w"$red"r"$yellow"y$default"
@@ -42,6 +39,6 @@ echo ""
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Set Spaceship ZSH as a prompt
-fpath=($fpath "/home/$USER/.zfunctions")
+fpath=($fpath "$HOME/.zfunctions")
 autoload -U promptinit; promptinit
 prompt spaceship

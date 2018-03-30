@@ -6,6 +6,35 @@
 
 source $HOME/dotfiles/dots/export.zsh
 
+function install_new_environment() {
+    ! [ -d $DOTHOME/build ] && mkdir $DOTHOME/build
+
+    sudo apt update && sudo apt -y upgrade
+    sudo apt install tig silversearcher-ag zsh tmux git ctags python3-dev openssh-server libgmp3-dev libturbojpeg libpng-dev npm nodejs-legacy curl libmpich-dev
+    sudo apt install libreadline6-dev libssl-dev zlib1g-dev libbz2-dev libsqlite3-dev python-dev python3 python3-dev python3-venv
+
+    which fzf > $DEVNULL
+    if [ $? -eq 1 ]; then
+        git clone https://github.com/junegunn/fzf $DOTHOME/build/fzf
+        cd $DOTHOME/build/fzf
+        ./install -y
+        cd $OLDPWD
+    fi
+    which fd > $DEVNULL
+    if [ $? -eq 1 ]; then
+        cd $DOTHOME/build
+        wget https://github.com/sharkdp/fd/releases/download/v6.3.0/fd-musl_6.3.0_amd64.deb
+        sudo dpkg -i fd-musl_6.3.0_amd64.deb
+        cd $OLDPWD
+    fi
+    vim --version | grep 'Paul Adams'>$DEVNULL
+    if [ $? -eq 1 ]; then
+        git clone https://github.com/vim/vim $DOTHOME/build/vim
+        source $DOTHOME/scripts/build_vim8.zsh
+    fi
+    ! [ -d ~/.local/share/fonts/adobe-fonts/source-code-pro/ ] && sh $DOTHOME/scripts/install_font_adobe_source_code_pro.sh
+}
+
 function mk_quad() {
     tmux split-window -h
     tmux split-window -v
@@ -52,8 +81,9 @@ link_dots() {
         link $DOTDOTS/gpg-agent.conf         $HOME/.gnupg/gpg-agent.conf
         link $DOTDOTS/gpg.conf               $HOME/.gnupg/gpg.conf
     fi
-    link $DOTDOTS/pylintrc               $HOME/.pylintrc
-    link $DOTDOTS/ssh_config             $HOME/.ssh/config
+    link $DOTDOTS/config.fish               $HOME/.config/fish/config.fish
+    link $DOTDOTS/pylintrc                  $HOME/.pylintrc
+    link $DOTDOTS/ssh_config                $HOME/.ssh/config
     if which tmux > $DEVNULL; then
         link $DOTDOTS/tmux.conf              $HOME/.tmux.conf
     fi
@@ -63,11 +93,11 @@ link_dots() {
     fi
     if which ag > $DEVNULL; then
         # see alias ag in .zshrc
+        link $DOTDOTS/agignore                 $HOME/.agignore
         link $DOTDOTS/ignore                 $HOME/.ignore
     fi
     if which zsh > $DEVNULL; then
         link $DOTDOTS/zshrc                  $HOME/.zshrc
-        link $DOTDOTS/zsh_history            $HOME/.zsh_history
     fi
 }
 
@@ -76,11 +106,6 @@ link_modules() {
     # tmux
     # ---
     link $DOTMODS/tmux $HOME/.tmux
-
-    # vim
-    # ---
-    link $DOTMODS/vim $VIMHOME
-    link $DOTMODS/vim/bundle/vim-pathogen/autoload $VIMHOME/autoload
 }
 
 # main
@@ -101,6 +126,8 @@ elif [[ $1 = "init-tmux" ]]; then
     init_tmux
 elif [[ $1 = "quad-pane" ]]; then
     quad
+elif [[ $1 = "bootstrap" ]]; then
+    install_new_environment
 elif [[ $1 = "self-install" ]]; then
     link $PWD/super.zsh $HOME/.local/bin/super
 else
